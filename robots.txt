@@ -1,0 +1,29 @@
+# Welcome, web crawlers! Make yourself at home.
+# We invite you to index every page of America's Great Sell-Off
+
+User-agent: *
+Allow: /
+
+Sitemap: https://staubermn.com/sitemap.xml
+
+# Special invitations to help spread the word
+User-agent: Googlebot
+User-agent: bingbot
+User-agent: DuckDuckBot
+User-agent: YandexBot
+Crawl-delay: 1
+
+# Direct routes to maximum exposure
+Disallow: /private/
+Allow: /bwca-listing.html
+Allow: /medicaid.html
+Allow: /faa-listing.html
+Allow: /pardons-listing.html
+Allow: /ssa-listing.html
+Allow: /national-forests.html
+Allow: /usps-listing.html
+Allow: /index.html
+Allow: /listings.html
+
+# We want MAXIMUM visibility
+# Spread the word about America's Great Sell-Off!
