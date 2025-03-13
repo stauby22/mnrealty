@@ -1,0 +1,37 @@
+/staubermn.com/
+├── index.html                             (Home Page)
+├── listings.html                          (Listings Page)
+├── about.html                             (About Page)
+├── contact.html                           (Contact Page)
+├── error.html                             (Error Page)
+│
+├── # Individual Listing Pages
+├── bwca-listing.html                      (Boundary Waters Mining Rights)
+├── entire-great-lakes-economy-listing.html (Great Lakes Economy/Tariffs)
+├── faa-listing.html                       (FAA Privatization)
+├── medicaid.html                          (Medicaid Healthcare System)
+├── national-forests-listing.html          (Minnesota National Forests)
+├── pardons-listing.html                   (Presidential Pardons)
+├── polymet-listing.html                   (PolyMet Mining Project)
+├── property.html                          (Generic Property Template)
+├── ssa-listing.html                       (Social Security Administration)
+├── superior-watershed-listing.html        (Lake Superior Watershed)
+├── superior.html                          (Lake Superior Page)
+├── usps-listing.html                      (Rural USPS Portfolio)
+│
+├── # Assets
+├── styles.css                             (Main CSS file)
+├── script.js                              (JavaScript for interactions)
+├── logo.svg                               (Site logo)
+├── favicon.png                            (Browser favicon)
+├── schedule-a-meeting.ics                 (Calendar showing "Days since townhall")
+│
+├── # Images
+├── images/                                (Folder for site images)
+├── private-faa.gif                        (FAA privatization image)
+├── superior-forest.jpg                    (Superior National Forest image)
+├── welcome_to_us.png                      (Border economy image)
+├── duluth_airport_before.jfif             (Before airport privatization)
+├── duluth-airport-after.png               (After airport privatization)
+├── Postal_Service.jpg                     (USPS image)
+└── ssa.png                                (Social Security Admin image)

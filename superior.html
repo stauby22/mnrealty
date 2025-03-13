@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stauber MN Realty</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- Header/Navigation -->
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="logo.svg" style="padding-left: 25px;" alt="Fake Realty Logo" />
+        </div>
+        <nav aria-label="Main Navigation">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="property-details">
+        <h2>Lake Superior </h2><h3>Available for All Your Taconite mining and Petroleum Transport Needs!</h3>
+        <img style="padding-top: 10px;" 
+          src="https://stateofgreatlakes.net/wp-content/uploads/2022/06/Lake-Superior-banner-01-1536x452.jpg"
+          alt="Close-up of a cardboard box interior"
+        />
+        <p>
+          Lake Superior is the largest freshwater lake in the world by surface area and the third-largest freshwater lake by volume, holding 13% of the fresh water in all of the world's rivers and lakes.
+       <br><br>
+          100% recycled materials<br>
+            Eco-friendly and rain-resistant (for 5 minutes)
+            <br>Prime location (under a bridge near downtown) </p>
+        <button onclick="scheduleVisit()">Schedule a Visit</button>
+      </section>
+
+      <!-- Image Carousel Section -->
+      <section class="carousel">
+        <h2>More Views</h2>
+        <div class="carousel-container">
+          <!-- Replace these placeholders with your own images -->
+          <img style="max-width: 600px;" src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Breakers%2C_Canal_Park%2C_Duluth_%2826901444062%29.jpg" alt="Exterior view of cardboard box" class="active">
+          <img style="max-width: 600px;" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Gfp-michigan-lake-superior-bay.jpg" alt="Interior view of cardboard box">
+          <img style="max-width: 600px;" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Lake_Superior_from_Pictured_Rocks_National_Lakeshore.jpg" alt="Neighborhood view">
+           <img style="max-width: 600px;" src="https://upload.wikimedia.org/wikipedia/commons/0/07/Muskallonge_Lake_State_Park%2C_Lake_Superior_%28June_2021%29.jpg" alt="Neighborhood view">
+            <img style="max-width: 600px;" src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Rhyolite_beach_on_Lake_Superior.jpg" alt="Neighborhood view">
+        </div>
+        <button id="prevBtn">&laquo; Previous</button>
+        <button id="nextBtn">Next &raquo;</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Call our hotline: 1-800-FAKE-REAL</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

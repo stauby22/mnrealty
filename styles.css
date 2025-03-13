@@ -1,0 +1,5250 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #003366; /* deep blue */
+  color: #fff;
+  padding: 1rem 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  max-width: 120px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1703641852531-45e588841a21?fm=jpg&q=80&w=2000&ixlib=rb-4.0.3') center center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2rem;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+.hero h1 span {
+  font-size: 1.2rem;
+}
+.search-form {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  z-index: 1;
+}
+.search-form input, .search-form select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.search-form input {
+  width: 220px;
+}
+.search-form select {
+  width: 160px;
+}
+.search-form button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  background: #ffcc00;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.search-form button:hover {
+  background: #ffdd33;
+}
+.hero-label {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+}
+
+/* Featured Listings */
+.featured-listings {
+  padding: 2rem 1rem;
+}
+.featured-listings h2 {
+  color: #003366;
+}
+.listing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.listing-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.listing-card img {
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.card-content {
+  padding: 0.75rem 1rem 1rem;
+}
+.listing-card h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #003366;
+}
+.listing-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.buy-now {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: #ffcc00;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+}
+.buy-now:hover {
+  background: #ffdd33;
+}
+
+/* Buttons */
+.buy-now-listing, .listing-details button {
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.buy-now-listing:hover {
+  background-color: #ffdd33;
+}
+.buy-now-listing {
+  animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+  from { box-shadow: 0 0 5px #ffcc00; }
+  to { box-shadow: 0 0 20px #ffcc00; }
+}
+
+/* Categories Section */
+.categories {
+  background: #fefefe;
+  padding: 2rem 1rem;
+}
+.categories h2 {
+  color: #003366;
+}
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.category-card {
+  background: #fff;
+  width: 150px;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.cat-icon {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+.category-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.category-card button {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.category-card button:hover {
+  background: #002244;
+}
+
+/* Deals of the Week */
+.deals {
+  padding: 2rem 1rem;
+}
+.deals h2 {
+  color: #003366;
+}
+.deals-list {
+  list-style: none;
+  margin-top: 1rem;
+}
+.deals-list li {
+  margin: 0.5rem 0;
+}
+.deals-list a {
+  color: #b20000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.deals-list a:hover {
+  text-decoration: underline;
+}
+
+/* Position the dropdown relative to its parent */
+.dropdown {
+  position: relative;
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* positions below the parent */
+  left: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Show the dropdown content when hovering over the parent */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+/* Style for links inside the dropdown */
+.dropdown-content li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+
+/* Testimonials */
+.testimonials {
+  padding: 2rem 1rem;
+}
+.testimonials h2 {
+  color: #003366;
+  text-align: center;
+}
+.testimonial {
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: center;
+}
+.testimonial p {
+  font-style: italic;
+  color: #333;
+}
+.testimonial .author {
+  font-style: normal;
+  font-weight: bold;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+/* Footer Styles */
+footer {
+  background: #003366;
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-main {
+  margin-bottom: 1.5rem;
+}
+
+.footer-main p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.disclaimer {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .footer-main {
+    margin-bottom: 0;
+  }
+}
+
+/* Error Page styling */
+.error-page {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.error-page h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+.error-page p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.error-page a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+}
+.error-page a:hover {
+  text-decoration: underline;
+}
+
+/* Listing Page Specific Styles */
+.hero.listing-hero {
+  background: none;
+  padding: 0;
+}
+.hero.listing-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.listing-details, .description, .features, .carousel, .map-section, .financing, .comments {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.listing-details h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.price .status {
+  background: #008000;
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+.price .negstatus {
+  background: darkred;
+  color: #fff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+.address {
+  color: #555;
+  font-style: italic;
+  margin-top: 1rem;
+}
+.secondary-btn {
+  background: #003366;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.secondary-btn:hover {
+  background: #002244;
+}
+.description p {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.features ul {
+  text-align: left;
+  list-style: disc outside;
+  margin: 1rem 0 1rem 2rem;
+}
+.features li {
+  margin: 0.5rem 0;
+}
+.carousel-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.carousel-container img {
+  display: none;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.carousel-container img.active {
+  display: block;
+}
+.carousel button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.carousel button:hover {
+  background: #002244;
+}
+.property-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.property {
+  background: #fff;
+  border-radius: 0.5rem;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.property img {
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.property h4 {
+  font-size: 1rem;
+  margin: 0.5rem;
+  color: #003366;
+}
+.property p {
+  font-size: 0.85rem;
+  margin: 0 0.5rem 0.5rem;
+  color: #555;
+}
+.map-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.map-section iframe {
+  width: 100%;
+}
+.comments .comment {
+  max-width: 800px;
+  margin: 0.5rem auto;
+  text-align: left;
+}
+section h2 {
+  margin-bottom: 1rem;
+}
+section h3 {
+  margin-bottom: 0.75rem;
+}
+/* Testimonials Section Styling */
+.testimonials {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Reduced gap for closer spacing */
+}
+
+.testimonial {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 350px;
+  padding: 15px; /* Reduced padding for a more compact design */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+}
+
+.testimonial-content p {
+  font-size: 1em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 1.2em;
+  margin-right: 2px;
+}
+
+.star.gold {
+  color: #f5b301; /* Gold color for active stars */
+}
+
+.star.grey {
+  color: #ccc; /* Grey color for inactive stars */
+}
+
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-photo {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.author-info h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.author-info span {
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+  background: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?fm=jpg&q=80&w=2000&ixlib=rb-4.0.3') center center/cover no-repeat;
+  padding: 4rem 1rem;
+  position: relative;
+}
+
+.contact-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.contact-hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.contact-section {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-info, .contact-form-container {
+  flex: 1 1 500px;
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-intro {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Revised contact card styling */
+.contact-card {
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-right: 1rem;
+  padding-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-details h3 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+  margin-top: 0;
+}
+
+.contact-details p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  margin-top: 0;
+}
+
+.contact-details a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.form-note {
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #666;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background-color: #003366;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+  background-color: #002244;
+}
+
+/* Talking Points Section */
+.talking-points {
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.talking-points h2 {
+  color: #003366;
+  margin-bottom: 2rem;
+}
+
+.points-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.point-card {
+  flex: 1 1 300px;
+  display: flex;
+  align-items: flex-start;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  max-width: 500px;
+}
+
+.point-icon {
+  font-size: 2rem;
+  color: #003366;
+  margin-right: 1rem;
+}
+
+.point-content h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.point-content p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+body.modal-open {
+  overflow: hidden; /* Prevent background scrolling */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  overflow-y: auto; /* Enable scrolling within the modal */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.email-details {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.email-details h3 {
+  margin-top: 0;
+  color: #003366;
+}
+
+.email-field {
+  margin-bottom: 10px;
+}
+
+.email-field strong {
+  color: #555;
+}
+
+.email-field p {
+  margin: 5px 0 0 0;
+  white-space: pre-wrap;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.modal-btn {
+  padding: 12px 15px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  min-width: 150px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.primary-btn {
+  background-color: #003366;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #002244;
+}
+
+.secondary-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.secondary-btn:hover {
+  background-color: #ccc;
+}
+
+/* Success message */
+.success-message {
+  display: none;
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Help text */
+.help-text {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Device detection message */
+.detection-message {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+/* Copy feedback animation */
+@keyframes flash {
+  0% { background-color: #003366; }
+  50% { background-color: #005599; }
+  100% { background-color: #003366; }
+}
+
+.copy-flash {
+  animation: flash 0.5s;
+}
+
+/* Copy button position */
+.copy-btn-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.tiny-copy-btn {
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.tiny-copy-btn:hover {
+  background-color: #002244;
+}
+
+/* Sections in details */
+.detail-section {
+  margin-bottom: 15px;
+}
+
+.detail-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact-container, .points-container {
+    flex-direction: column;
+  }
+  
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .point-card {
+    max-width: 100%;
+  }
+}
+/* New Listings Page Styles */
+
+/* Featured Asset Banner */
+.featured-asset {
+  background-color: #ffcc00;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.featured-banner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.featured-banner h2 {
+  color: #b20000;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.featured-banner p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* All Listings Section */
+.all-listings {
+  padding: 2rem 1rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.all-listings h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Filter Options */
+.filter-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-options span {
+  font-weight: bold;
+  color: #333;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.filter-btn {
+  background: #f4f7f9;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #e9ecef;
+}
+
+.filter-btn.active {
+  background: #003366;
+  color: white;
+  border-color: #003366;
+}
+
+/* Listings Grid */
+.listings-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Listing Item */
+.listing-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Listing Image Container */
+.listing-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.listing-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.listing-item:hover .listing-image img {
+  transform: scale(1.05);
+}
+
+/* Category Badges */
+.listing-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.listing-badge.healthcare {
+  background-color: #e74c3c;
+}
+
+.listing-badge.environment {
+  background-color: #27ae60;
+}
+
+.listing-badge.infrastructure {
+  background-color: #3498db;
+}
+
+.listing-badge.economy {
+  background-color: #9b59b6;
+}
+
+/* Listing Content */
+.listing-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-content h3 {
+  font-size: 1.4rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.listing-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.listing-description {
+  color: #555;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Listing Features */
+.listing-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+.listing-features span {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.listing-features i {
+  color: #003366;
+}
+
+/* View Listing Button */
+.view-listing {
+  display: inline-block;
+  background: #003366;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-start;
+  margin-top: auto;
+  transition: background 0.2s ease;
+}
+
+.view-listing:hover {
+  background: #002244;
+}
+
+/* Coming Soon Section */
+.coming-soon {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.coming-soon h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.teaser-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.teaser-item {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.teaser-blur {
+  width: 100%;
+  height: 100%;
+}
+
+.teaser-blur img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px) brightness(0.7);
+}
+
+.teaser-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+}
+
+.teaser-overlay h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.teaser-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.coming-badge {
+  background-color: #ffcc00;
+  color: #000;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .listing-item {
+    max-width: 100%;
+  }
+  
+  .teaser-item {
+    max-width: 100%;
+  }
+  
+  .listing-features {
+    justify-content: space-between;
+  }
+}
+/* No Results Message */
+.no-results-message {
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.no-results-message h3 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.no-results-message p {
+  color: #555;
+  margin-bottom: 0.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Tariff Economy Page Styles */
+
+/* Tariff Warning Banner */
+.tariff-banner {
+  background-color: #b20000;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  animation: flash 1.5s infinite alternate;
+}
+
+.tariff-banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.tariff-banner i {
+  font-size: 1.2rem;
+}
+
+@keyframes flash {
+  from { background-color: #b20000; }
+  to { background-color: #ff0000; }
+}
+
+/* Price Increase Stamp */
+.price-increase-stamp {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #b20000;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  transform: rotate(15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 3px dashed white;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* Listing Labels */
+.listing-labels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.listing-label {
+  background-color: #f4f7f9;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.listing-label i {
+  color: #b20000;
+}
+
+/* Callout Box */
+.callout-box {
+  background-color: #ffcc00;
+  border-left: 5px solid #b20000;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.callout-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b20000;
+  margin-bottom: 0.5rem;
+}
+
+.callout-box p {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Impact List */
+.impact-list {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.impact-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.impact-list li::before {
+  content: "💸";
+  position: absolute;
+  left: -1.2rem;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Tariff Impact Section */
+.tariff-impact {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.impact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.impact-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.price-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.before-price {
+  color: #27ae60;
+}
+
+.price-arrow {
+  color: #666;
+}
+
+.after-price {
+  color: #b20000;
+}
+
+/* Tariff Benefits Section */
+.tariff-benefits {
+  padding: 3rem 1rem;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+}
+
+.benefit-header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.benefit-header.negative {
+  background-color: #e74c3c;
+}
+
+.benefit-header.positive {
+  background-color: #27ae60;
+}
+
+.benefit-list {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.benefit-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+.benefit-list.negative li::marker {
+  color: #e74c3c;
+}
+
+.benefit-list.positive li::marker {
+  color: #27ae60;
+}
+
+.benefit-conclusion {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #003366;
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Tariff Paying Section */
+.tariff-paying {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.paying-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.paying-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.paying-item:hover {
+  transform: translateY(-5px);
+}
+
+.paying-icon {
+  font-size: 2.5rem;
+  color: #b20000;
+  margin-bottom: 1rem;
+}
+
+.paying-item h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.paying-item p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Property Link */
+.property-link {
+  display: inline-block;
+  background-color: #003366;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+
+.property-link:hover {
+  background-color: #002244;
+}
+
+/* Financing Options */
+.financing-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.financing-option {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.financing-option:hover {
+  transform: translateY(-5px);
+}
+
+.financing-icon {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.financing-option h4 {
+  color: #003366;
+  margin-bottom: 0.8rem;
+}
+
+.financing-option p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Call to Action Section */
+.tariff-cta {
+  background-color: #003366;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.tariff-cta h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.tariff-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffdd33;
+}
+
+.cta-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .price-increase-stamp {
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .tariff-banner-content {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  .impact-card, .benefit-card, .paying-item, .financing-option {
+    max-width: 100%;
+  }
+}
+
+/* Medicaid Listing Page - Zillow-Style CSS */
+
+/* Property Status Banner */
+.property-status-banner {
+  background-color: #0074e4;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  animation: pulse-status 1.5s infinite alternate;
+}
+
+.status-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.status-content i {
+  font-size: 1.2rem;
+}
+
+@keyframes pulse-status {
+  from { background-color: #0074e4; }
+  to { background-color: #0052a5; }
+}
+
+/* Property Badges */
+.property-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 51, 102, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: rotate(12deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  text-align: center;
+  line-height: 1.4;
+  border: 2px solid white;
+}
+
+.property-type-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(231, 76, 60, 0.9);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* Property Facts */
+.property-facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+}
+
+.fact-icon {
+  font-size: 1.8rem;
+  color: #0074e4;
+  margin-bottom: 0.5rem;
+}
+
+.fact-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.fact-value {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Zestimate Section */
+.zestimate-section {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+}
+
+.zestimate-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.zestimate-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.zestimate-header h3 {
+  color: #0074e4;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.zestimate-header p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.zestimate-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.zestimate-item {
+  flex: 1;
+  min-width: 250px;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.zestimate-label {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.zestimate-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.zestimate-trend {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.zestimate-trend.positive {
+  color: #27ae60;
+}
+
+.zestimate-trend.negative {
+  color: #e74c3c;
+}
+
+/* Property Highlight Box */
+.property-highlight-box {
+  background-color: #f8f4e5;
+  border-left: 4px solid #ffcc00;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.property-highlight-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #b20000;
+  margin-bottom: 0.5rem;
+}
+
+.property-highlight-box p {
+  color: #333;
+}
+
+/* Property Features List */
+.property-features-list {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.property-features-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.property-features-list li::marker {
+  color: #0074e4;
+}
+
+.realtor-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Property Specifications */
+.property-specs {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.specs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.spec-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spec-card:hover {
+  transform: translateY(-5px);
+}
+
+.spec-icon {
+  font-size: 2.5rem;
+  color: #0074e4;
+  margin-bottom: 1rem;
+}
+
+.spec-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+  margin: 1rem 0;
+}
+
+/* Property Amenities */
+.property-amenities {
+  padding: 3rem 1rem;
+  background-color: white;
+}
+
+.amenities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.amenity-card {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 3px solid #0074e4;
+}
+
+.amenity-card:hover {
+  transform: translateY(-5px);
+}
+
+.amenity-icon {
+  font-size: 2.5rem;
+  color: #0074e4;
+  margin-bottom: 1rem;
+}
+/* Carousel Centering Fix */
+.property-tour {
+  text-align: center;
+}
+
+.property-tour .carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+.property-tour .carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Make sure images fill container properly */
+.property-tour .carousel-container img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* ROI Calculator */
+.roi-calculator {
+  background-color: #003366;
+  color: white;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.roi-calculator h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.roi-calculator > p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.calculator-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.calculator-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calculator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.calculator-field label {
+  font-weight: bold;
+  color: #003366;
+}
+
+.calculator-field select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.calculator-button button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0074e4;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-button button:hover {
+  background-color: #0052a5;
+}
+
+.calculator-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-result-box {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.calculator-result-box h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#taxCutResult {
+  color: #27ae60;
+}
+
+#peopleImpactedResult {
+  color: #e74c3c;
+}
+
+.calculator-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Occupant Reviews */
+.occupant-reviews {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+}
+
+/* Similar Properties */
+.similar-properties {
+  padding: 3rem 1rem;
+}
+
+.similar-properties > p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #666;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.property-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0074e4;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+
+.property {
+  position: relative;
+}
+
+.property-link {
+  display: inline-block;
+  background-color: #0074e4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0.8rem 0.5rem 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.property-link:hover {
+  background-color: #0052a5;
+}
+
+/* Agent Contact */
+.agent-contact {
+  background-color: #003366;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.agent-contact h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.agent-contact p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #0074e4;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0052a5;
+}
+
+.agent-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .property-badge {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .property-type-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .status-content {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  .fact-item {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .spec-card, 
+  .amenity-card, 
+  .calculator-result-box {
+    max-width: 100%;
+  }
+  
+  .calculator-inputs {
+    flex-direction: column;
+  }
+  
+  .zestimate-item {
+    flex: 100%;
+  }
+}
+/* Medicaid Page Specific Styles */
+
+/* Medicaid Alert Banner */
+.medicaid-alert {
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  animation: pulse-alert 1.5s infinite alternate;
+}
+
+.medicaid-alert-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.medicaid-alert i {
+  font-size: 1.2rem;
+}
+
+@keyframes pulse-alert {
+  from { background-color: #e74c3c; }
+  to { background-color: #c0392b; }
+}
+
+/* Pete Approved Stamp */
+.pete-approved-stamp {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(178, 0, 0, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: rotate(12deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  text-align: center;
+  line-height: 1.4;
+  border: 3px dashed white;
+}
+
+/* Healthcare Labels */
+.listing-labels {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.listing-label {
+  background-color: #f4f7f9;
+  border: 1px solid #ddd;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.listing-label i {
+  color: #e74c3c;
+}
+
+/* Trade-Off Box */
+.trade-off-box {
+  background-color: #f9f9f9;
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  text-align: center;
+  border-top: 3px solid #003366;
+  border-bottom: 3px solid #003366;
+}
+
+.trade-off-header {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.trade-off-header h2 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.trade-off-header p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.trade-off-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trade-off-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.trade-off-item.billionaire {
+  border-top: 5px solid #27ae60;
+}
+
+.trade-off-item.citizen {
+  border-top: 5px solid #e74c3c;
+}
+
+.trade-off-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.trade-off-item.billionaire .trade-off-icon {
+  color: #27ae60;
+}
+
+.trade-off-item.citizen .trade-off-icon {
+  color: #e74c3c;
+}
+
+.trade-off-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.trade-off-item.billionaire .trade-off-value {
+  color: #27ae60;
+}
+
+.trade-off-item.citizen .trade-off-value {
+  color: #e74c3c;
+}
+
+.trade-off-versus {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+/* Medicare/Medicaid Callout Box */
+.medicare-callout {
+  background-color: #ffcc00;
+  border-left: 5px solid #e74c3c;
+}
+
+.medicare-callout h3 {
+  color: #e74c3c;
+}
+
+/* Impact List */
+.impact-list {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.impact-list li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.impact-list li::before {
+  content: "❌";
+  position: absolute;
+  left: -1.2rem;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Medicaid Impact Section */
+.medicaid-impact {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.impact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.impact-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.impact-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin: 1rem 0;
+}
+
+/* Healthcare Features Section */
+.healthcare-features {
+  padding: 3rem 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 3px solid #e74c3c;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+/* Tax Calculator Section */
+.tax-calculator {
+  background-color: #003366;
+  color: white;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.tax-calculator h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.tax-calculator > p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.calculator-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.calculator-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.calculator-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.calculator-field label {
+  font-weight: bold;
+  color: #003366;
+}
+
+.calculator-field select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.calculator-button button {
+  padding: 0.75rem 1.5rem;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-button button:hover {
+  background-color: #002244;
+}
+
+.calculator-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-result-box {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.calculator-result-box h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+#taxCutResult {
+  color: #27ae60;
+}
+
+#peopleImpactedResult {
+  color: #e74c3c;
+}
+
+.calculator-note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Investment Options */
+.investment-options {
+  padding: 3rem 1rem;
+}
+
+.investment-options > p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.investment-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.25rem;
+  z-index: 2;
+}
+
+.property {
+  position: relative;
+}
+
+/* Call to Action Section */
+.medicaid-cta {
+  background-color: #e74c3c;
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.medicaid-cta h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.medicaid-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: white;
+  color: #e74c3c;
+  padding: 0.8rem 2rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #f9f9f9;
+}
+
+.cta-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pete-approved-stamp {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .medicaid-alert-content {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+  
+  .trade-off-versus {
+    margin: 1rem 0;
+  }
+  
+  .impact-card, 
+  .feature-card, 
+  .calculator-result-box {
+    max-width: 100%;
+  }
+  
+  .calculator-inputs {
+    flex-direction: column;
+  }
+}
+/* FAA Listing Page Specific Styles */
+
+/* Status Banner Variations */
+.status-hot {
+  background-color: #ff4136;
+  animation: pulse-hot 1.5s infinite alternate;
+}
+
+@keyframes pulse-hot {
+  from { background-color: #ff4136; }
+  to { background-color: #e40000; }
+}
+
+/* Market Analysis Section */
+.market-analysis {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.analysis-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analysis-column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+}
+
+.analysis-column h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.analysis-column.profit h3 {
+  color: #27ae60;
+}
+
+.analysis-column.risk h3 {
+  color: #e74c3c;
+}
+
+.analysis-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.analysis-list li {
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.analysis-list li:last-child {
+  border-bottom: none;
+}
+
+.analysis-list li::before {
+  position: absolute;
+  left: 0;
+}
+
+.analysis-column.profit .analysis-list li::before {
+  content: "✓";
+  color: #27ae60;
+}
+
+.analysis-column.risk .analysis-list li::before {
+  content: "⚠️";
+  font-size: 0.8rem;
+  color: #e74c3c;
+}
+
+/* Property History Timeline */
+.property-history {
+  padding: 3rem 1rem;
+}
+
+.history-timeline {
+  max-width: 800px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.history-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 3px;
+  background-color: #0074e4;
+}
+
+.history-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.history-date {
+  width: 100px;
+  font-weight: bold;
+  color: #0074e4;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
+.history-content {
+  flex: 1;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.history-content::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  width: 12px;
+  height: 12px;
+  background-color: #0074e4;
+  border-radius: 50%;
+}
+
+.history-content h4 {
+  color: #0074e4;
+  margin-bottom: 0.5rem;
+}
+
+/* Qualified Buyers Section */
+.qualified-buyers {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.buyers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.buyer-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.buyer-card:hover {
+  transform: translateY(-5px);
+}
+
+.buyer-icon {
+  font-size: 2.5rem;
+  color: #0074e4;
+  margin-bottom: 1rem;
+}
+
+/* Financing Methods */
+.financing-opportunities {
+  padding: 3rem 1rem;
+}
+
+.financing-methods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.financing-method {
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.financing-icon {
+  font-size: 2.5rem;
+  color: #0074e4;
+  margin-bottom: 1rem;
+}
+
+.financing-note {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Customer Reviews */
+.customer-reviews {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.review {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.review-content {
+  margin-bottom: 1rem;
+}
+
+.review-content p {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+.review-moderation {
+  color: #e74c3c;
+  font-style: normal;
+  font-size: 0.9rem;
+  background-color: #ffecec;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-info h4 {
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.star-rating {
+  color: #ffc107;
+  font-size: 1.2rem;
+}
+
+.star.grey {
+  color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .analysis-column,
+  .history-timeline,
+  .buyer-card,
+  .financing-method,
+  .review {
+    max-width: 100%;
+  }
+  
+  .history-timeline::before {
+    left: 100px;
+  }
+  
+  .history-date {
+    width: 80px;
+  }
+}
+
+/* BWCA Mining Listing Specific Styles */
+
+/* Status Banner Variations */
+.status-exclusive {
+  background-color: #663399;
+  animation: pulse-exclusive 1.5s infinite alternate;
+}
+
+@keyframes pulse-exclusive {
+  from { background-color: #663399; }
+  to { background-color: #8a2be2; }
+}
+
+/* Quick Stats Banner */
+.property-quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem 1rem;
+  background-color: #f4f7f9;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.quick-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quick-stat i {
+  font-size: 1.8rem;
+  color: #0074e4;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.quick-stat.highlight i,
+.quick-stat.highlight .stat-value {
+  color: #e74c3c;
+}
+
+/* Investment Potential Section */
+.investment-potential {
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.potential-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.potential-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.potential-header h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.potential-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.potential-item {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.potential-item.short-term {
+  background-color: #f1f9f1;
+  border: 1px solid #d4e9d4;
+}
+
+.potential-item.long-term {
+  background-color: #fdf1f0;
+  border: 1px solid #f5d0cc;
+}
+
+.potential-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.potential-item.short-term .potential-value {
+  color: #27ae60;
+}
+
+.potential-item.long-term .potential-value {
+  color: #e74c3c;
+}
+
+.potential-versus {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #666;
+}
+
+.potential-beneficiaries {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.beneficiary-label {
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.beneficiary-value {
+  font-weight: bold;
+}
+
+.investment-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border-radius: 0.5rem;
+}
+
+.investment-note i {
+  color: #ffc107;
+  font-size: 1.5rem;
+}
+
+.investment-note p {
+  margin: 0;
+  color: #666;
+}
+
+/* Improved Water Quality Slider CSS with better positioning */
+.water-quality-simulation {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slider-images {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.water-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.5s ease;
+}
+
+.slider-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.water-quality-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+#qualityLabel {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.quality-meter {
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #27ae60, #f1c40f, #e74c3c);
+  border-radius: 5px;
+  position: relative;
+}
+
+.quality-marker {
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid #333;
+  /* Important: Ensure marker starts at 0% position */
+  transform: translateX(0%);
+  /* Use a GPU-accelerated transform for smoother animation */
+  will-change: transform;
+  transition: transform 0.3s ease;
+  /* Make sure the marker is visible above other elements */
+  z-index: 5;
+}
+
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.slider-controls span {
+  font-weight: bold;
+  color: #333;
+}
+
+.quality-slider {
+  flex: 1;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: linear-gradient(to right, #27ae60, #f1c40f, #e74c3c);
+  border-radius: 5px;
+  outline: none;
+}
+
+.quality-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.quality-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 2px solid #333;
+  cursor: pointer;
+}
+
+.timeline-indicator {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 0.5rem;
+}
+/* Ecological Impact Section */
+.ecological-impact {
+  padding: 3rem 1rem;
+}
+
+.impact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.impact-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.impact-item.highlight {
+  border: 2px solid #e74c3c;
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  color: #0074e4;
+  margin-bottom: 1rem;
+}
+
+.impact-item.highlight .impact-icon {
+  color: #e74c3c;
+}
+
+.impact-spec {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.impact-item.highlight .impact-spec {
+  color: #e74c3c;
+}
+
+/* Local Perspective Section */
+.local-perspective {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.perspective-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.perspective-stat {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+/* Ownership Structure */
+.ownership-structure {
+  padding: 3rem 1rem;
+}
+
+.structure-chart {
+  max-width: 800px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.structure-level {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.structure-level::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 2rem;
+  background-color: #ddd;
+  z-index: 0;
+}
+
+.structure-level.bottom::after {
+  display: none;
+}
+
+.structure-entity {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  min-width: 200px;
+  position: relative;
+}
+
+.structure-entity.headquarters {
+  background-color: #d4e6f1;
+  border: 1px solid #a9cce3;
+}
+
+.structure-entity.subsidiary {
+  background-color: #d5f5e3;
+  border: 1px solid #abebc6;
+}
+
+.structure-entity.shell {
+  background-color: #fdebd0;
+  border: 1px solid #fad7a0;
+}
+
+.structure-entity.taxpayers {
+  background-color: #f9ebea;
+  border: 1px solid #f5b7b1;
+}
+
+.entity-name {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.entity-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.entity-role {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #888;
+}
+
+.structure-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  background-color: #f9ebea;
+  border-radius: 0.5rem;
+}
+
+.structure-note i {
+  color: #e74c3c;
+  font-size: 1.5rem;
+}
+
+/* Local Comments */
+.local-comments {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.comment-note {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.comments-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comment {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+}
+
+.comment.highlight {
+  border: 2px solid #27ae60;
+}
+
+.comment-content {
+  margin-bottom: 1rem;
+}
+
+.comment-content p {
+  margin-bottom: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 0.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quick-stat {
+    width: 45%;
+    margin-bottom: 1rem;
+  }
+  
+  .potential-item,
+  .impact-item,
+  .perspective-stat,
+  .comment {
+    max-width: 100%;
+  }
+  
+  .structure-level {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .structure-level.bottom {
+    flex-direction: column;
+  }
+}
+/* Presidential Pardon Listing Page Styles */
+
+/* Status Banner Variations */
+.status-premium {
+  background-color: #8e44ad;
+  animation: pulse-premium 1.5s infinite alternate;
+}
+
+@keyframes pulse-premium {
+  from { background-color: #8e44ad; }
+  to { background-color: #9b59b6; }
+}
+
+/* Stauber Hypocrisy Section */
+.stauber-hypocrisy {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+  margin: 2rem 0;
+}
+
+.hypocrisy-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.hypocrisy-item {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  text-align: center;
+  max-width: 450px;
+}
+
+.hypocrisy-item.blue-support {
+  border-top: 5px solid #0074e4;
+}
+
+.hypocrisy-item.capitol-police {
+  border-top: 5px solid #e74c3c;
+}
+
+.hypocrisy-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hypocrisy-item.blue-support .hypocrisy-icon {
+  color: #0074e4;
+}
+
+.hypocrisy-item.capitol-police .hypocrisy-icon {
+  color: #e74c3c;
+}
+
+.hypocrisy-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hypocrisy-item.capitol-police .hypocrisy-quote {
+  color: #999;
+  font-size: 2.5rem;
+}
+
+.hypocrisy-status {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.hypocrisy-item.blue-support .hypocrisy-status {
+  background-color: #e8f4fd;
+  color: #0074e4;
+}
+
+.hypocrisy-item.capitol-police .hypocrisy-status {
+  background-color: #fdeeec;
+  color: #e74c3c;
+}
+
+.hypocrisy-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vs-icon {
+  font-size: 2rem;
+  color: #333;
+  background-color: #f9f9f9;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.vs-text {
+  font-weight: bold;
+  color: #555;
+}
+
+.hypocrisy-note {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Pardon Calculator Specific Styles */
+.calculator-result-box h3 {
+  color: #8e44ad;
+}
+
+#timeResult {
+  color: #27ae60;
+}
+
+#roiResult {
+  color: #e74c3c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hypocrisy-comparison {
+    flex-direction: column;
+  }
+  
+  .hypocrisy-divider {
+    margin: 1rem 0;
+  }
+  
+  .hypocrisy-item {
+    max-width: 100%;
+  }
+  
+  .hypocrisy-quote {
+    min-height: auto;
+  }
+}
+/* PolyMet Listing Page Specific Styles */
+
+/* Status Banner Variations */
+.status-oligarch {
+  background-color: #c0392b;
+  animation: pulse-oligarch 1.5s infinite alternate;
+}
+
+@keyframes pulse-oligarch {
+  from { background-color: #c0392b; }
+  to { background-color: #e74c3c; }
+}
+
+/* Russian Ownership Badge */
+.russian-ownership-badge {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  background-color: rgba(192, 57, 43, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 2px dashed white;
+}
+
+/* Ownership Chart Styles */
+.ownership-chart {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+}
+
+.chart-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.chart-container {
+  padding: 1rem 0;
+}
+
+.chart-bar {
+  height: 50px;
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  display: flex;
+}
+
+.bar-segment {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  transition: width 0.5s ease;
+}
+
+.bar-segment.russian {
+  background-color: #c0392b;
+}
+
+.bar-segment.swiss {
+  background-color: #3498db;
+}
+
+.bar-segment.minnesota {
+  background-color: #2ecc71;
+}
+
+.segment-label {
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding: 0 0.5rem;
+}
+
+/* Oligarch Connection Section */
+.oligarch-connection {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+  margin: 2rem 0;
+}
+
+.ownership-structure {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.structure-level {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.structure-arrow {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.structure-entity {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.structure-entity:hover {
+  transform: translateY(-5px);
+}
+
+.entity-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.structure-entity.oligarch .entity-icon {
+  color: #c0392b;
+}
+
+.structure-entity.russian .entity-icon {
+  color: #e74c3c;
+}
+
+.structure-entity.swiss .entity-icon {
+  color: #3498db;
+}
+
+.structure-entity.polymet .entity-icon {
+  color: #f39c12;
+}
+
+.entity-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.entity-location {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.entity-role {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.ownership-note {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background-color: #fdeeec;
+  border-left: 4px solid #c0392b;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.ownership-note i {
+  color: #c0392b;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.ownership-note p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Stauber Foreign Support Section */
+.stauber-foreign-support {
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.support-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.support-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.support-item.public-statements {
+  border-top: 5px solid #3498db;
+}
+
+.support-item.reality {
+  border-top: 5px solid #c0392b;
+}
+
+.support-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  align-self: center;
+}
+
+.support-item.public-statements .support-icon {
+  color: #3498db;
+}
+
+.support-item.reality .support-icon {
+  color: #c0392b;
+}
+
+.support-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-reality {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.support-reality ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.support-reality li {
+  margin-bottom: 0.75rem;
+  color: #c0392b;
+}
+
+.support-reality li:last-child {
+  margin-bottom: 0;
+}
+
+.support-vs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vs-text {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #f4f7f9;
+  border-radius: 0.5rem;
+  color: #555;
+}
+
+.support-note {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.support-note i {
+  color: #f39c12;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ROI Calculator Results */
+#russianResult {
+  color: #c0392b;
+}
+
+#minnesotaResult {
+  color: #2ecc71;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .russian-ownership-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    top: 60px;
+    right: 10px;
+  }
+  
+  .support-comparison {
+    flex-direction: column;
+  }
+  
+  .support-item {
+    max-width: 100%;
+  }
+  
+  .support-vs {
+    margin: -1rem 0;
+  }
+  
+  .ownership-structure {
+    width: 95%;
+  }
+  
+  .structure-entity {
+    width: 95%;
+    padding: 1rem;
+  }
+}
+/* Social Security Administration Listing Page Styles */
+
+/* Status Banner Variations */
+.status-retirement {
+  background-color: #006cb4;
+  animation: pulse-retirement 1.5s infinite alternate;
+}
+
+@keyframes pulse-retirement {
+  from { background-color: #006cb4; }
+  to { background-color: #0088e0; }
+}
+
+/* Wall Street Badge */
+.wall-street-badge {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  background-color: rgba(39, 174, 96, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 2px dashed white;
+}
+
+/* Retirement Comparison Section */
+.retirement-comparison {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+  margin: 2rem 0;
+}
+
+.comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.comparison-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-item.current {
+  border-top: 5px solid #006cb4;
+}
+
+.comparison-item.privatized {
+  border-top: 5px solid #e74c3c;
+}
+
+.comparison-header {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.comparison-item.current .comparison-icon {
+  color: #006cb4;
+}
+
+.comparison-item.privatized .comparison-icon {
+  color: #e74c3c;
+}
+
+.comparison-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.comparison-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.comparison-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.comparison-list li {
+  margin-bottom: 0.75rem;
+}
+
+.comparison-item.current .comparison-list li {
+  color: #333;
+}
+
+.comparison-item.privatized .comparison-list li {
+  color: #e74c3c;
+}
+
+.comparison-footer {
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.footer-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.footer-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-value.low {
+  color: #006cb4;
+}
+
+.footer-value.high {
+  color: #e74c3c;
+}
+
+.comparison-vs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vs-text {
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Stauber Hypocrisy Section Modifications */
+.hypocrisy-item.public-statements {
+  border-top: 5px solid #006cb4;
+}
+
+.hypocrisy-item.voting-record {
+  border-top: 5px solid #e74c3c;
+}
+
+.hypocrisy-actions {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.hypocrisy-actions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.hypocrisy-actions li {
+  margin-bottom: 0.75rem;
+  color: #e74c3c;
+}
+
+.hypocrisy-note i {
+  color: #f39c12;
+}
+
+/* SSA Calculator Results */
+#profitResult {
+  color: #27ae60;
+}
+
+#seniorResult {
+  color: #e74c3c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .wall-street-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    top: 65px;
+    right: 10px;
+  }
+  
+  .comparison-container {
+    flex-direction: column;
+  }
+  
+  .comparison-vs {
+    margin: -1rem 0;
+  }
+  
+  .comparison-item {
+    max-width: 100%;
+  }
+}
+/* National Forests Listing Page Styles */
+
+/* Status Banner Variations */
+.status-timber {
+  background-color: #2e7d32;
+  animation: pulse-timber 1.5s infinite alternate;
+}
+
+@keyframes pulse-timber {
+  from { background-color: #2e7d32; }
+  to { background-color: #43a047; }
+}
+
+/* Logging Ready Badge */
+.logging-ready-badge {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  background-color: rgba(183, 28, 28, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 2px dashed white;
+}
+
+/* Clearcut Map Section */
+.clearcut-map {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+  margin: 2rem 0;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  position: relative;
+}
+
+.map-image {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.map-image img {
+  width: 100%;
+  display: block;
+}
+
+.map-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+.legend-color.high {
+  background-color: #714b01;
+}
+
+.legend-color.medium {
+  background-color: #00aa01;
+}
+
+.legend-color.tribal {
+  background-color: #00ab00;
+}
+
+.legend-color.obstacles {
+  background-color: #4de600;
+}
+
+.legend-label {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.map-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+.map-note i {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.map-note p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Forest Management Comparison */
+.forest-management-comparison {
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.comparison-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-item.public {
+  border-top: 5px solid #2e7d32;
+}
+
+.comparison-item.private {
+  border-top: 5px solid #b71c1c;
+}
+
+.comparison-header {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.comparison-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.comparison-item.public .comparison-icon {
+  color: #2e7d32;
+}
+
+.comparison-item.private .comparison-icon {
+  color: #b71c1c;
+}
+
+.comparison-header h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.comparison-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.comparison-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.comparison-list li {
+  margin-bottom: 0.75rem;
+}
+
+.comparison-item.public .comparison-list li {
+  color: #333;
+}
+
+.comparison-item.private .comparison-list li {
+  color: #b71c1c;
+}
+
+.comparison-footer {
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.footer-label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.footer-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.footer-value.low {
+  color: #2e7d32;
+}
+
+.footer-value.high {
+  color: #b71c1c;
+}
+
+.comparison-vs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.vs-text {
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Indigenous Rights Section */
+.indigenous-rights {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.treaty-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  align-items: flex-start;
+}
+
+.treaty-map {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.treaty-map img {
+  width: 100%;
+  display: block;
+}
+
+.treaty-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.treaty-content h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.treaty-content p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.treaty-solutions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.solution-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.solution-icon {
+  font-size: 2rem;
+  color: #b71c1c;
+  margin-bottom: 1rem;
+}
+
+.solution-item h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.solution-item p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.treaty-note {
+  background-color: #f5f5f5;
+  border-left: 4px solid #b71c1c;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.treaty-note i {
+  color: #b71c1c;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Carbon Calculator Section */
+.carbon-calculator {
+  padding: 3rem 1rem;
+  background-color: rgba(183, 28, 28, 0.05);
+}
+
+.calculator-content {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.carbon-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.carbon-metric-item {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.metric-icon {
+  font-size: 2rem;
+  color: #b71c1c;
+  margin-bottom: 1rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.carbon-profit-potential {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.carbon-profit-potential h3 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.carbon-profit-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.carbon-profit-list li {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.carbon-note {
+  background-color: #f5f5f5;
+  border-left: 4px solid #b71c1c;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: calc(100% - 3rem);
+  margin: 0 auto;
+}
+
+.carbon-note i {
+  color: #b71c1c;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Stauber Hypocrisy Section Modifications */
+.hypocrisy-item.public-statements {
+  border-top: 5px solid #2e7d32;
+}
+
+.hypocrisy-item.voting-record {
+  border-top: 5px solid #b71c1c;
+}
+
+.hypocrisy-actions {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.hypocrisy-actions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.hypocrisy-actions li {
+  margin-bottom: 0.75rem;
+  color: #b71c1c;
+}
+
+/* Calculator Results */
+#profitResult {
+  color: #2e7d32;
+}
+
+#environmentResult {
+  color: #b71c1c;
+}
+
+#speciesResult {
+  color: #b71c1c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .logging-ready-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    top: 60px;
+    right: 10px;
+  }
+  
+  .comparison-container {
+    flex-direction: column;
+  }
+  
+  .comparison-vs {
+    margin: -1rem 0;
+  }
+  
+  .comparison-item {
+    max-width: 100%;
+  }
+  
+  .treaty-map, .treaty-content {
+    max-width: 100%;
+  }
+  
+  .treaty-solutions {
+    grid-template-columns: 1fr;
+  }
+  
+  .carbon-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-overlay {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+/* USPS Post Office Listing Page Styles */
+
+/* Status Banner Variations */
+.status-postal {
+  background-color: #004b94;
+  animation: pulse-postal 1.5s infinite alternate;
+}
+
+@keyframes pulse-postal {
+  from { background-color: #004b94; }
+  to { background-color: #0067c8; }
+}
+
+/* Closure Ready Badge */
+.closure-ready-badge {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  background-color: rgba(178, 0, 0, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 2px dashed white;
+}
+
+/* Efficiency Map Section */
+.efficiency-map {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+  margin: 2rem 0;
+}
+
+.map-container {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  position: relative;
+}
+
+.map-image {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.map-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Rural Impact Section */
+.rural-impact {
+  padding: 3rem 1rem;
+  background-color: #f4f7f9;
+}
+
+.impact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  align-items: flex-start;
+}
+
+.impact-map {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.impact-map img {
+  width: 100%;
+  display: block;
+}
+
+.impact-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.impact-content h3 {
+  color: #004b94;
+  margin-bottom: 1rem;
+}
+
+.impact-content p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.impact-solutions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.solution-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.solution-icon {
+  font-size: 2rem;
+  color: #b71c1c;
+  margin-bottom: 1rem;
+}
+
+.solution-item h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.solution-item p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.impact-note {
+  background-color: #f5f5f5;
+  border-left: 4px solid #b71c1c;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.impact-note i {
+  color: #b71c1c;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Economic Calculator Section */
+.economic-calculator {
+  padding: 3rem 1rem;
+  background-color: rgba(0, 75, 148, 0.05);
+}
+
+.calculator-content {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.economic-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.economic-metric-item {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.metric-icon {
+  font-size: 2rem;
+  color: #b71c1c;
+  margin-bottom: 1rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.economic-profit-potential {
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.economic-profit-potential h3 {
+  color: #004b94;
+  margin-bottom: 1rem;
+}
+
+.economic-profit-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.economic-profit-list li {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.economic-note {
+  background-color: #f5f5f5;
+  border-left: 4px solid #b71c1c;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: calc(100% - 3rem);
+  margin: 0 auto;
+}
+
+.economic-note i {
+  color: #b71c1c;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Postal Management Comparison */
+.postal-management-comparison {
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.comparison-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.comparison-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-item.public {
+  border-top: 5px solid #004b94;
+}
+
+.comparison-item.private {
+  border-top: 5px solid #b71c1c;
+}
+
+/* Hypocrisy Section Modifications for Postal */
+.hypocrisy-item.public-statements {
+  border-top: 5px solid #004b94;
+}
+
+.hypocrisy-item.voting-record {
+  border-top: 5px solid #b71c1c;
+}
+
+/* Calculator Results For Postal Calculator */
+#profitResult {
+  color: #004b94;
+}
+
+#communityResult, #communitiesResult {
+  color: #b71c1c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .closure-ready-badge {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    top: 60px;
+    right: 10px;
+  }
+  
+  .impact-map, .impact-content {
+    max-width: 100%;
+  }
+  
+  .impact-solutions {
+    grid-template-columns: 1fr;
+  }
+  
+  .economic-metrics {
+    grid-template-columns: 1fr;
+  }
+}

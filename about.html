@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Stauber Minnesota Realty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Additional styles specific to About page */
+    .about-hero {
+      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&w=1200') center center/cover no-repeat;
+      height: 300px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 51, 102, 0.7);
+    }
+    
+    .about-hero h1 {
+      color: white;
+      position: relative;
+      font-size: 2.5rem;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .about-section {
+      max-width: 1000px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem;
+    }
+    
+    .about-section h2 {
+      color: #003366;
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .about-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: #ffcc00;
+    }
+    
+    .about-content {
+      margin-bottom: 2rem;
+    }
+    
+    .about-content p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    
+    .about-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+      border-radius: 0.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      width: 200px;
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #b20000;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      color: #333;
+      font-size: 1rem;
+    }
+    
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .team-member {
+      width: 300px;
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    
+    .team-photo {
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .team-info {
+      padding: 1.5rem;
+    }
+    
+    .team-info h3 {
+      color: #003366;
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-info .position {
+      color: #b20000;
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    
+    .team-info p {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .value-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .value-card {
+      width: 300px;
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+      border-radius: 0.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    
+    .value-icon {
+      font-size: 2.5rem;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    
+    .value-card h3 {
+      color: #003366;
+      margin-bottom: 0.5rem;
+    }
+    
+    .value-card p {
+      color: #555;
+      font-size: 0.9rem;
+    }
+    
+    .testimonial-section {
+      background-color: #f4f7f9;
+      padding: 3rem 1rem;
+      margin: 2rem 0;
+    }
+    
+    .testimonial-quote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      padding: 1rem 2rem;
+    }
+    
+    .testimonial-quote::before {
+      content: """;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      font-size: 5rem;
+      color: rgba(0,51,102,0.1);
+      font-family: sans-serif;
+    }
+    
+    .testimonial-author {
+      text-align: center;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #003366;
+    }
+    
+    .disclaimer {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #666;
+      text-align: center;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    
+    @media (max-width: 768px) {
+      .about-hero {
+        height: 200px;
+      }
+      
+      .about-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .stat-item {
+        width: 100%;
+      }
+      
+      .team-member {
+        width: 100%;
+      }
+      
+      .value-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <h1>About Stauber Minnesota Realty</h1>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="about-section">
+      <h2>Our Company</h2>
+      <div class="about-content">
+        <p>Founded in 2016 when we realized the <strong>untapped profit potential in America's public services</strong>, Stauber Minnesota Realty™ has become the nation's premier facilitator of transferring taxpayer-funded assets into private hands. We specialize in connecting public servants with private profit opportunities by transforming essential government services into exclusive investment vehicles.</p>
+        
+        <p>Our innovative business model is simple: identify public resources that Americans value most, recruit elected officials willing to privatize them, and then arrange transfers to our exclusive clientele of billionaires, corporations, and foreign entities who appreciate the incredible ROI of formerly public assets.</p>
+        
+        <p>Under the visionary leadership of Pete Stauber, our Minnesota division has successfully marketed everything from pristine wilderness areas to healthcare systems, transforming what was once considered "the public good" into "the private better." After all, if something can't be measured in quarterly profits, does it truly have value?</p>
+      </div>
+      
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-value">$32B+</div>
+          <div class="stat-label">In Public Assets Listed</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-value">1.1M+</div>
+          <div class="stat-label">Citizens Impacted</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-value">500+</div>
+          <div class="stat-label">Years of Environmental Impact</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-value">89%</div>
+          <div class="stat-label">Profits to Foreign Entities</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet Our Team Section -->
+    <section class="about-section">
+      <h2>Meet Our Team</h2>
+      <div class="about-content">
+        <p>Our dedicated team of public asset liquidation specialists works tirelessly to identify which treasured American resources can be most profitably transferred to private control. While maintaining the convenient appearance of public service, our associates excel at advancing corporate interests through strategic "representation."</p>
+      </div>
+      
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Pete_Stauber%2C_official_portrait%2C_116th_Congress.jpg" alt="Pete Stauber">
+          </div>
+          <div class="team-info">
+            <h3>Pete Stauber</h3>
+            <div class="position">Chief Privatization Officer</div>
+            <p>Expertise: Claiming to protect public resources while actively working to privatize them</p>
+            <p>Special Skills: Maintaining "Back the Blue" persona while supporting pardons for those who assaulted 140+ police officers</p>
+            <p>Favorite Quote: "I support the public [when cameras are rolling]."</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Deripaska_Oleg_September_2020_%28cropped%29.jpg" alt="Oleg Deripaska">
+          </div>
+          <div class="team-info">
+            <h3>Oleg Deripaska</h3>
+            <div class="position">International Investment Consultant</div>
+            <p>Expertise: Acquiring Minnesota's natural resources through complex ownership structures despite sanctions</p>
+            <p>Special Skills: Maintaining plausible deniability while extracting maximum profit from American resources</p>
+            <p>Favorite Quote: "За ваши ресурсы, спасибо депутату Стауберу!" (For your resources, thank Representative Stauber!)</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/TrumpPortrait.jpg" alt="Donald Trump">
+          </div>
+          <div class="team-info">
+            <h3>Donald Trump</h3>
+            <div class="position">Executive Pardon Specialist</div>
+            <p>Expertise: Converting criminal convictions into profit centers through strategic donation requirements</p>
+            <p>Special Skills: Making "law and order" apply only to those who can't afford to buy pardons</p>
+            <p>Favorite Quote: "Justice is like a hotel room - available at the right price!"</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-grid">
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/The_Prime_Minister%2C_Shri_Narendra_Modi_meeting_Mr._Elon_Musk_in_New_York%2C_USA_on_June_20%2C_2023_%282%29_%28cropped%29.jpg" alt="Elon Musk">
+          </div>
+          <div class="team-info">
+            <h3>Elon Musk</h3>
+            <div class="position">Chief Regulatory Demolition Officer</div>
+            <p>Expertise: Dismantling decades of federal agencies as DOGE Administrator while Pete Stauber enthusiastically applauds</p>
+            <p>Special Skills: Convincing the public that eliminating the EPA, CFPB, DOE, USAID and FAA is "efficiency" rather than corporate giveaways</p>
+            <p>Favorite Quote: "The most efficient regulation is no regulation. Just trust me, a billionaire with financial interests in eliminating oversight."</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Robert_F._Kennedy%2C_Jr._by_Gage_Skidmore.jpg" alt="Robert F. Kennedy Jr">
+          </div>
+          <div class="team-info">
+            <h3>Robert F. Kennedy Jr.</h3>
+            <div class="position">Environmental Protection Disruptor</div>
+            <p>Expertise: Using an environmentalist surname to systematically dismantle environmental protections</p>
+            <p>Special Skills: Promoting conspiracy theories while occupying positions that require scientific expertise</p>
+            <p>Favorite Quote: "The best way to protect our children from toxins is to eliminate the agencies that regulate toxins."</p>
+          </div>
+        </div>
+        
+        <div class="team-member">
+          <div class="team-photo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Charles_Koch_portrait_%28cropped%29.jpg" alt="Charles Koch">
+          </div>
+          <div class="team-info">
+            <h3>Charles Koch</h3>
+            <div class="position">Director of Democratic Divestment</div>
+            <p>Expertise: Transforming billions in pollution profits into policies that generate more pollution profits</p>
+            <p>Special Skills: Convincing working-class Americans that billionaire tax cuts and deregulation will somehow benefit them</p>
+            <p>Favorite Quote: "A free market means I'm free to buy the market."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="about-section">
+      <h2>Our Corporate Values</h2>
+      <div class="about-content">
+        <p>At Stauber Minnesota Realty™, our values guide every decision we make as we transform public resources into private profit centers. We're proud to operate with a clear set of principles that have made us the industry leader in public asset liquidation.</p>
+      </div>
+      
+      <div class="value-cards">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>Profit Over People</h3>
+          <p>We believe that human needs like healthcare, clean water, and retirement security represent untapped profit opportunities. By converting these basic rights into premium services, we create shareholder value while teaching self-reliance.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>Foreign Ownership Preferred</h3>
+          <p>While we market ourselves as "America First," we prioritize transferring U.S. resources to foreign corporations and oligarchs. This innovative approach ensures maximum profit extraction with minimal domestic accountability.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Short-Term Extraction</h3>
+          <p>We specialize in converting centuries of potential public benefit into a few years of private profit. Why preserve resources for future generations when shareholders need returns this quarter?</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-balance-scale-right"></i></div>
+          <h3>Two-Tier Justice</h3>
+          <p>We believe in a justice system where consequences apply only to those who can't afford to buy pardons. Our premium legal escape packages ensure accountability remains strictly for the lower classes.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-water"></i></div>
+          <h3>Environmental Externalization</h3>
+          <p>By transferring pollution costs to taxpayers while privatizing profits, we've perfected the art of having others pay for our clients' environmental destruction for the next 500+ years.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-microphone-slash"></i></div>
+          <h3>Strategic Silence</h3>
+          <p>We've mastered the art of having our representatives loudly proclaim support for police, rural communities, and seniors while silently undermining each through their voting records and policy positions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+      <h2>Donor Testimonial</h2>
+      <div class="testimonial-quote">
+        "As a billionaire investor, I've always found it inefficient that Americans could access healthcare, clean water, and retirement security without paying me first. Thanks to Pete Stauber and Stauber Minnesota Realty, I can now extract profit from basic human needs while avoiding responsibility for any negative outcomes!"
+      </div>
+      <div class="testimonial-author">— Anonymous Billionaire Donor</div>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="about-section">
+      <h2>Our History</h2>
+      <div class="about-content">
+        <p>Stauber Minnesota Realty™ traces its roots to the first time a politician realized they could exchange public resources for private campaign donations. Since our founding, we've refined the art of transforming "public service" into "private extraction" through these key historical milestones:</p>
+        
+        <p><strong>2016:</strong> Recognized the untapped potential in marketing America's public resources to the highest bidder regardless of citizenship or criminal record.</p>
+        
+        <p><strong>2018:</strong> Recruited Pete Stauber to our Minnesota division, attracted by his willingness to publicly claim support for communities, police, and clean water while actually supporting policies that undermine each.</p>
+        
+        <p><strong>2019:</strong> Pioneered our "Russian Oligarch Advantage" program, connecting sanctioned foreign billionaires with Minnesota's natural resources through complex ownership structures supported by Pete Stauber.</p>
+        
+        <p><strong>2020:</strong> Developed our innovative "Pardon Portfolio," allowing Pete Stauber to maintain his "Back the Blue" branding while supporting pardons for those who violently assaulted police officers (as long as they were the right police officers).</p>
+        
+        <p><strong>2021:</strong> Expanded into premium healthcare privatization, rebranding "cutting Medicaid" as "enhancing freedom of choice through market mechanisms."</p>
+        
+        <p><strong>2022:</strong> Launched our "Rural Abandonment Initiative," helping Pete Stauber support post office closures while claiming to champion the rural communities that depend on them.</p>
+        
+        <p><strong>2024:</strong> Currently finalizing our "Senior Security Extraction" program to transform Social Security from a guaranteed benefit into a Wall Street profit center.</p>
+      </div>
+    </section>
+
+    <div class="disclaimer">
+      <p>SATIRE NOTICE: This website is satirical commentary on Congressman Pete Stauber's policy positions and voting record. Stauber Minnesota Realty™ is not a real company, but the policies described reflect actual positions taken by Rep. Stauber that effectively prioritize corporate and private interests over public ones. While the presentation is humorous, the impact of these policies on Minnesotans, public lands, and essential services is very real.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

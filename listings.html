@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Public Assets for Sale - Stauber's MN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for category icons (CDN link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+   <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section with Banner -->
+    <section class="hero" style="background: url('https://images.unsplash.com/photo-1593642634367-d91a135587b5?ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF1Y3Rpb258ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=2000') center center/cover no-repeat;">
+      <h1>Public Assets For Sale!<br><span>Everything Must Go! No Reasonable Offer Refused!</span></h1>
+      <!-- Search Bar -->
+      <form class="search-form" method="get">
+        <input type="text" name="q" placeholder="Search public assets..." />
+        <select name="category">
+          <option value="all">All Categories</option>
+          <option value="public">Public Services</option>
+          <option value="parks">National Parks</option>
+          <option value="education">Education</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="infrastructure">Infrastructure</option>
+          <option value="government">Government Services</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <!-- Featured Asset (Highlighted Special Deal) -->
+    <section class="featured-asset">
+      <div class="featured-banner">
+        <h2>🔥 HOT DEAL 🔥</h2>
+        <p>Act fast! These assets won't stay public for long!</p>
+      </div>
+    </section>
+
+    <!-- All Listings Grid -->
+    <section class="all-listings">
+      <h2>Available Public Assets</h2>
+      
+      <div class="filter-options">
+        <span>Filter by: </span>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+        <button class="filter-btn" data-filter="environment">Environment</button>
+        <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+        <button class="filter-btn" data-filter="economy">Economy</button>
+      </div>
+      
+      <div class="listings-grid">
+        <!-- BWCA Mining Listing -->
+        <div class="listing-item" data-category="environment">
+          <div class="listing-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Boundary_Waters_Canoe_Area_-_BWCA_Sign_and_Portage_Trail_-_Minnesota_%2836073219166%29.jpg" alt="Boundary Waters Canoe Area">
+            <div class="listing-badge environment">Environment</div>
+          </div>
+          <div class="listing-content">
+            <h3>Boundary Waters Canoe Area (BWCA)</h3>
+            <p class="listing-price">Starting at $5.2B <span class="status">HOT!</span></p>
+            <p class="listing-description">Pristine wilderness perfect for mining operations! Includes 1,000+ lakes and streams (mineral rights included). Environmental regulations? What environmental regulations?</p>
+            <div class="listing-features">
+              <span><i class="fas fa-mountain"></i> 1.1M Acres</span>
+              <span><i class="fas fa-water"></i> 1,100+ Lakes</span>
+              <span><i class="fas fa-gem"></i> Copper-Nickel Ore</span>
+            </div>
+            <a href="bwca-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- Medicaid Listing -->
+        <div class="listing-item" data-category="healthcare">
+          <div class="listing-image">
+            <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0YWwlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=1200" alt="Medicaid">
+            <div class="listing-badge healthcare">Healthcare</div>
+          </div>
+          <div class="listing-content">
+            <h3>Medicaid – Healthcare Investment Opportunity</h3>
+            <p class="listing-price">$32B/year <span class="status">EXCLUSIVE</span></p>
+            <p class="listing-description">Turn this public healthcare program into a profit machine! Includes 1.1 million vulnerable Minnesotans. No medical experience required!</p>
+            <div class="listing-features">
+              <span><i class="fas fa-user-injured"></i> 1.1M Recipients</span>
+              <span><i class="fas fa-hospital"></i> Statewide Network</span>
+              <span><i class="fas fa-chart-line"></i> High ROI</span>
+            </div>
+            <a href="medicaid.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- FAA Listing -->
+        <div class="listing-item" data-category="infrastructure">
+          <div class="listing-image">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlycG9ydCUyMGNvbnRyb2wlMjB0b3dlcnxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=1200" alt="FAA">
+            <div class="listing-badge infrastructure">Infrastructure</div>
+          </div>
+          <div class="listing-content">
+            <h3>Federal Aviation Administration (FAA) – Minnesota Division</h3>
+            <p class="listing-price">$1.8B <span class="negstatus">SAFETY OPTIONAL</span></p>
+            <p class="listing-description">Control Minnesota's airspace! Set your own safety standards and charge whatever landing fees you want. The sky's the limit!</p>
+            <div class="listing-features">
+              <span><i class="fas fa-plane"></i> 135 Airports</span>
+              <span><i class="fas fa-broadcast-tower"></i> Control Towers</span>
+              <span><i class="fas fa-user-tie"></i> Staff Included</span>
+            </div>
+            <a href="faa-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- The MN Economy Listing -->
+        <div class="listing-item" data-category="economy">
+          <div class="listing-image">
+            <img src="https://images.foxtv.com/static.fox9.com/www.fox9.com/content/uploads/2024/06/764/432/Michael-Hull.jpg?ve=1&tl=1" alt="Great Lakes Economy">
+            <div class="listing-badge economy">Economy</div>
+          </div>
+          <div class="listing-content">
+            <h3>The Great Lakes Economy – Tax Revolution</h3>
+            <p class="listing-price">Price on Request <span class="negstatus">TARIFFS INCLUDED</span></p>
+            <p class="listing-description">Implement 25% tariffs on Canadian goods! Destroy decades of trade cooperation in one fell swoop! Comes with immediate economic chaos.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-ship"></i> Shipping Routes</span>
+              <span><i class="fas fa-industry"></i> Manufacturing</span>
+              <span><i class="fas fa-percentage"></i> 25% Tariffs</span>
+            </div>
+            <a href="entire-great-lakes-economy-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- Social Security Listing -->
+        <div class="listing-item" data-category="healthcare">
+          <div class="listing-image">
+            <img src="https://www.disabilityoffice.org/gallery/_nzzyzcff.jpg" alt="Social Security">
+            <div class="listing-badge healthcare">Healthcare</div>
+          </div>
+          <div class="listing-content">
+            <h3>Social Security Administration – Minnesota Branch</h3>
+            <p class="listing-price">$18B/year <span class="status">SENIORS INCLUDED</span></p>
+            <p class="listing-description">Control retirement funds for 1 million Minnesota seniors! Convert this "entitlement" into a private investment vehicle. Golden years, golden profits!</p>
+            <div class="listing-features">
+              <span><i class="fas fa-user-friends"></i> 1M Recipients</span>
+              <span><i class="fas fa-piggy-bank"></i> Retirement Funds</span>
+              <span><i class="fas fa-hand-holding-usd"></i> Passive Income</span>
+            </div>
+            <a href="ssa-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- National Forests Listing -->
+        <div class="listing-item" data-category="environment">
+          <div class="listing-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Section_Twelve_Lake_in_Superior_National_Forest.jpg" alt="National Forests">
+            <div class="listing-badge environment">Environment</div>
+          </div>
+          <div class="listing-content">
+            <h3>Minnesota National Forests - Premium Timber Estate</h3>
+            <p class="listing-price">$12.3B <span class="status">CLEARCUT READY!</span></p>
+            <p class="listing-description">4.5 million acres of pristine forests ready for aggressive logging operations! Environmental protections? We don't know her.</p>
+            <div class="listing-features">
+              <span><i class="fas fa-tree"></i> 4.5M Acres</span>
+              <span><i class="fas fa-dollar-sign"></i> Timber Rights</span>
+              <span><i class="fas fa-truck-monster"></i> Logging Access</span>
+            </div>
+            <a href="national-forests-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- PolyMet/Superior Watershed Listing -->
+        <div class="listing-item" data-category="environment">
+          <div class="listing-image">
+            <img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-4.0.3&w=1200" alt="Lake Superior Watershed">
+            <div class="listing-badge environment">Environment</div>
+          </div>
+          <div class="listing-content">
+            <h3>Lake Superior Watershed - PolyMet Mining Estate</h3>
+            <p class="listing-price">Environmental Price: Priceless <span class="negstatus">OLIGARCH APPROVED</span></p>
+            <p class="listing-description">Control 10% of the world's freshwater! Perfect for sulfide mining with centuries of pollution guaranteed. Russian oligarch connections included!</p>
+            <div class="listing-features">
+              <span><i class="fas fa-tint"></i> 10% World's Freshwater</span>
+              <span><i class="fas fa-radiation"></i> 500+ Years Pollution</span>
+              <span><i class="fas fa-ruble-sign"></i> Russian Connections</span>
+            </div>
+            <a href="superior-watershed-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- Presidential Pardons Listing -->
+        <div class="listing-item" data-category="government">
+          <div class="listing-image">
+            <img src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?ixlib=rb-4.0.3&w=1200" alt="Presidential Pardons">
+            <div class="listing-badge economy">Government</div>
+          </div>
+          <div class="listing-content">
+            <h3>Presidential Pardons - Premium Legal Immunity</h3>
+            <p class="listing-price">Starting at $100K <span class="status">JUSTICE FOR SALE</span></p>
+            <p class="listing-description">Why face consequences when you can buy your way out? Perfect for insurrectionists, corporate criminals, and anyone with deep pockets!</p>
+            <div class="listing-features">
+              <span><i class="fas fa-gavel"></i> Legal Immunity</span>
+              <span><i class="fas fa-handcuffs"></i> Get Out of Jail Free</span>
+              <span><i class="fas fa-balance-scale"></i> Justice Optional</span>
+            </div>
+            <a href="pardon-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+
+        <!-- USPS Post Office Portfolio Listing -->
+        <div class="listing-item" data-category="infrastructure">
+          <div class="listing-image">
+            <img src="https://preview.redd.it/fkipt17a7pfd1.png?width=108&crop=smart&auto=webp&s=ab18d1081d615431977febbbf244524fd9cb5c08" alt="Rural Post Office">
+            <div class="listing-badge infrastructure">Infrastructure</div>
+          </div>
+          <div class="listing-content">
+            <h3>Rural USPS Portfolio - Post Office Privatization Estate</h3>
+            <p class="listing-price">Asking: Asset Value Only <span class="status">SHUTDOWN READY</span></p>
+            <p class="listing-description">102 rural post offices ready for immediate closure! Why deliver mail to rural communities when you can maximize shareholder value?</p>
+            <div class="listing-features">
+              <span><i class="fas fa-envelope"></i> 102 Post Offices</span>
+              <span><i class="fas fa-truck"></i> 32,000+ Rural Routes</span>
+              <span><i class="fas fa-users"></i> 350,000+ Rural Residents</span>
+            </div>
+            <a href="usps-listing.html" class="view-listing">View Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coming Soon Teaser -->
+    <section class="coming-soon">
+      <h2>Coming Soon to Auction</h2>
+      <div class="teaser-container">
+        <div class="teaser-item">
+          <div class="teaser-blur">
+            <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Nob29sfGVufDB8fDB8fHww&ixlib=rb-4.0.3&w=1200" alt="Public Schools">
+          </div>
+          <div class="teaser-overlay">
+            <h3>Minnesota Public Schools</h3>
+            <p>Reserve Price: $12B</p>
+            <span class="coming-badge">Opening Bid Summer 2025</span>
+          </div>
+        </div>
+        <div class="teaser-item">
+          <div class="teaser-blur">
+            <img src="https://images.unsplash.com/photo-1584834541536-fd4d24065001?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9saWNlfGVufDB8fDB8fHww&ixlib=rb-4.0.3&w=1200" alt="Police Department">
+          </div>
+          <div class="teaser-overlay">
+            <h3>Minnesota Police Departments</h3>
+            <p>Subscription Model</p>
+            <span class="coming-badge">Premium Tier Coming Soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter functionality for listings
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const listingItems = document.querySelectorAll('.listing-item');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          this.classList.add('active');
+          
+          const filter = this.getAttribute('data-filter');
+          
+          listingItems.forEach(item => {
+            if (filter === 'all') {
+              item.style.display = 'flex';
+            } else if (item.getAttribute('data-category') === filter) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

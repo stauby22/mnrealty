@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stauber's MN</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for category icons (CDN link) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    /* Additional styles for enhanced homepage */
+    .countdown-banner {
+      background-color: #b20000;
+      color: white;
+      padding: 0.6rem;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .countdown-banner:before {
+      content: "🔥";
+      position: absolute;
+      left: 10px;
+      animation: flame 2s infinite;
+    }
+    
+    .countdown-banner:after {
+      content: "🔥";
+      position: absolute;
+      right: 10px;
+      animation: flame 2s infinite;
+    }
+    
+    @keyframes flame {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+    
+    .special-offer {
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      background: #ffcc00;
+      width: 180px;
+      height: 180px;
+      transform: rotate(45deg);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 20px;
+      color: #b20000;
+      font-weight: bold;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+    
+    .hero-badge {
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      animation: pulse-light 2s infinite;
+    }
+    
+    @keyframes pulse-light {
+      0% { box-shadow: 0 0 10px rgba(255,204,0,0.7); }
+      50% { box-shadow: 0 0 20px rgba(255,204,0,1); }
+      100% { box-shadow: 0 0 10px rgba(255,204,0,0.7); }
+    }
+    
+    .hero-label {
+      color: white;
+      background: rgba(178,0,0,0.8);
+      text-shadow: 1px 1px 2px #000;
+    }
+    
+    .listing-cards {
+      position: relative;
+    }
+    
+    .ribbon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      overflow: hidden;
+      width: 100px;
+      height: 100px;
+    }
+    
+    .ribbon-content {
+      position: absolute;
+      top: 25px;
+      right: -25px;
+      transform: rotate(45deg);
+      width: 120px;
+      padding: 5px 0;
+      background-color: #b20000;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+    
+    .deals {
+      position: relative;
+      background: #f9f9f9;
+    }
+    
+    .deals:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1618403088890-3d9ff6f4c8b1?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9sbGFyJTIwYmlsbHxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60') center/cover;
+      opacity: 0.05;
+    }
+    
+    .deals-list li {
+      padding: 0.7rem;
+      margin: 0.7rem auto;
+      border: 2px dashed #b20000;
+      border-radius: 5px;
+      max-width: 600px;
+      position: relative;
+      background: rgba(255,255,255,0.7);
+    }
+    
+    .deals-list a:before {
+      content: "✂️";
+      margin-right: 8px;
+    }
+    
+    .category-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial {
+      position: relative;
+      padding-top: 20px;
+    }
+    
+    .testimonial:before {
+      content: """;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      font-size: 5rem;
+      color: rgba(0,51,102,0.1);
+    }
+    
+    .congress-sold {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+    
+    .featured-badge {
+      position: absolute;
+      top: 20px;
+      left: -15px;
+      background: #b20000;
+      color: white;
+      padding: 5px 15px 5px 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+    
+    .featured-badge:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 0;
+      border-top: 10px solid #800000;
+      border-left: 15px solid transparent;
+    }
+    
+    .category-grid {
+      position: relative;
+    }
+    
+    .sold-out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      transform: rotate(-5deg);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    
+    .category-grid:hover .sold-out {
+      opacity: 1;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .special-offer {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Countdown Banner -->
+  <div class="countdown-banner">
+    FIRE SALE! All public assets must go before next election! DEMOCRACY LIQUIDATION EVENT!
+  </div>
+
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" style="position: relative;">
+      <div class="special-offer">SPECIAL OFFER!</div>
+      <h1>America For Sale!<br><span>Public Services Under the Hammer!</span></h1>
+      <div class="hero-badge">Authorized by Congressional Donors</div>
+      
+      <!-- Search Bar with real functionality -->
+      <form class="search-form">
+        <input type="text" name="q" placeholder="What would you like to privatize today?" />
+        <select name="category">
+          <option value="all">All Categories</option>
+          <option value="public">Public Services</option>
+          <option value="parks">National Parks</option>
+          <option value="education">Education</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="infrastructure">Infrastructure</option>
+          <option value="government">Government Services</option>
+        </select>
+        <button type="submit">Search</button>
+      </form>
+      
+      <!-- Hero image label -->
+    </section>
+
+    <!-- Featured Listings Section -->
+    <section class="featured-listings">
+      <h2>Pete's Priority Privatizations</h2>
+      <div class="listing-cards">
+        <!-- Medicaid Listing with Ribbon -->
+        <div class="listing-card" style="position: relative;">
+          <div class="featured-badge">TOP SELLER</div>
+          <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0YWwlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=1200" alt="Medicaid - hospital building" />
+          <div class="card-content">
+            <h3>Medicaid – Healthcare Gold Mine</h3>
+            <p>($32B/year, why help people when you can profit from them?)</p>
+            <a href="medicaid.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+        
+        <!-- USPS Listing - NEW! -->
+        <div class="listing-card">
+          <img src="https://preview.redd.it/fkipt17a7pfd1.png?width=960&crop=smart&auto=webp&s=d222f872e2687d3431229d85bb7dc92c31620662" alt="Rural Post Office" />
+          <div class="card-content">
+            <h3>USPS – Rural Post Office Closures!</h3>
+            <p>(Mail delivery: just another luxury rural America can't afford!)</p>
+            <a href="usps-listing.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+        
+        <!-- National Forests Listing -->
+        <div class="listing-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Section_Twelve_Lake_in_Superior_National_Forest.jpg" alt="National Forests" />
+          <div class="card-content">
+            <h3>National Forests – Timber Profits!</h3>
+            <p>(Trees are just vertical logs waiting to be harvested!)</p>
+            <a href="national-forests-listing.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Featured Listings Section -->
+    <section class="featured-listings" style="background-color: #f4f7f9; padding-top: 0;">
+      <div class="listing-cards">
+        <!-- BWCA Mining Listing -->
+        <div class="listing-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Boundary_Waters_Canoe_Area_-_BWCA_Sign_and_Portage_Trail_-_Minnesota_%2836073219166%29.jpg" alt="Boundary Waters" />
+          <div class="card-content">
+            <h3>BWCA – Mining Opportunity Zone!</h3>
+            <p>(Clean water? Overrated! Copper profits? Underrated!)</p>
+            <a href="bwca-listing.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+        
+        <!-- Great Lakes Economy Listing -->
+        <div class="listing-card">
+          <img src="https://bloximages.chicago2.vip.townnews.com/thestar.com/content/tncms/assets/v3/editorial/f/d0/fd09c1c8-d064-5204-a4b7-80659bea8dce/63e7adacc1a6e.image.jpg?resize=1200%2C674" alt="Great Lakes Economy" />
+          <div class="card-content">
+            <h3>Border Economy – Tariff Opportunity!</h3>
+            <p>(25% Canada Tariffs - Who needs neighbors or allies?)</p>
+            <a href="entire-great-lakes-economy-listing.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+        
+        <!-- Social Security Listing -->
+        <div class="listing-card">
+          <img src="https://www.disabilityoffice.org/gallery/_nzzyzcff.jpg" alt="Social Security" />
+          <div class="card-content">
+            <h3>Social Security – Retirement Profits!</h3>
+            <p>(Seniors worked hard for decades... now you cash in!)</p>
+            <a href="ssa-listing.html" class="buy-now">View Listing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section with hover effect -->
+    <section class="categories">
+      <h2>Privatization Categories</h2>
+      <p style="max-width: 600px; margin: 0 auto 20px; color: #666;">Browse by category to find the perfect public good to transform into private profit!</p>
+      
+      <div class="category-grid">
+        <div class="sold-out">GOING, GOING, GONE!</div>
+        
+        <div class="category-card">
+          <div class="cat-icon"><i class="fa-solid fa-briefcase-medical"></i></div>
+          <h3>Healthcare</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 10px;">Who needs health when there's wealth?</p>
+          <a href="listings.html" class="view-all">View All</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="cat-icon"><i class="fa-solid fa-tree"></i></div>
+          <h3>Parks</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 10px;">Trees to Tee Times!</p>
+          <a href="listings.html" class="view-all">View All</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="cat-icon"><i class="fa-solid fa-road"></i></div>
+          <h3>Infrastructure</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 10px;">Toll Everything!</p>
+          <a href="listings.html" class="view-all">View All</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="cat-icon"><i class="fa-solid fa-school"></i></div>
+          <h3>Education</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 10px;">Learning as a Luxury!</p>
+          <a href="listings.html" class="view-all">View All</a>
+        </div>
+        
+        <div class="category-card">
+          <div class="cat-icon"><i class="fa-solid fa-landmark"></i></div>
+          <h3>Gov Services</h3>
+          <p style="font-size: 0.8rem; margin-bottom: 10px;">Democracy? We prefer Profitocracy!</p>
+          <a href="listings.html" class="view-all">View All</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deals of the Week Section -->
+    <section class="deals">
+      <h2>Limited Time Fire Sales!</h2>
+      <div style="position: relative; z-index: 1;">
+        <ul class="deals-list">
+          <li><a href="usps-listing.html">FLASH DEAL: Rural Post Offices! Close them all and save big on delivery costs!</a></li>
+          <li><a href="national-forests-listing.html">GOING FAST: National Forests - Become a Logging Tycoon Overnight!</a></li>
+          <li><a href="ssa-listing.html">HOT ITEM: Social Security - Wall Street's Next Big Score!</a></li>
+          <li><a href="pardon-listing.html">NEW LISTING: Presidential Pardons - Justice Just Got Profitable!</a></li>
+          <li><a href="superior-watershed-listing.html">LAST CHANCE: Lake Superior Watershed - Russian Oligarch Approved!</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Enhanced Testimonials Section -->
+    <section class="testimonials">
+      <h2>Satisfied Donors & Lobbyists</h2>
+      
+      <div class="testimonial">
+        <p>"I funded Pete's campaign for just $50,000 and got a $5 million mining permit in return! Best ROI ever!"</p>
+        <p class="author">– Mining Executive, Probably</p>
+      </div>
+      
+      <div class="testimonial">
+        <p>"Stauber promised to let us drill in protected wilderness areas. Forget future generations, there's money to be made NOW!"</p>
+        <p class="author">– Oil Lobbyist</p>
+      </div>
+      
+      <div class="testimonial">
+        <p>"We're excited about the healthcare privatization opportunities. Sure, millions will lose coverage, but think of the shareholders!"</p>
+        <p class="author">– Insurance CEO</p>
+      </div>
+      
+      <div style="margin-top: 30px; padding: 15px; background: #f9f9f9; border-radius: 8px; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p style="font-style: italic; color: #666;">Don't worry about the citizens of Minnesota! They're just collateral damage in our profit-making strategy!</p>
+      </div>
+    </section>
+
+    <!-- New Call-to-Action Section -->
+    <section style="background-color: #003366; color: white; padding: 3rem 1rem; text-align: center;">
+      <h2 style="color: white; margin-bottom: 1.5rem;">Don't Wait, Public Assets Are Going Fast!</h2>
+      <p style="max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">Join Congressman Pete Stauber in his mission to sell off America piece by piece to the highest bidder!</p>
+      
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <a href="listings.html" style="background: #ffcc00; color: #000; padding: 0.7rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">Browse All Listings</a>
+        <a href="contact.html" style="background: white; color: #003366; padding: 0.7rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: bold;">Stop The Sell-Off</a>
+      </div>
+      
+      <p class="congress-sold">(Disclaimer: Congress already sold - all sales final, no refunds)</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  
+  <!-- Add some extra interactive elements -->
+  <script>
+    // Special functionality to make categories redirect to listings page with filter
+    document.querySelectorAll('.category-card .view-all').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const category = this.parentElement.querySelector('h3').textContent.toLowerCase();
+        window.location.href = `listings.html?category=${category}`;
+      });
+    });
+    
+    // Make search form work on homepage too
+    document.querySelector('.search-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const searchQuery = this.querySelector('input[name="q"]').value;
+      const category = this.querySelector('select[name="category"]').value;
+      window.location.href = `listings.html?q=${encodeURIComponent(searchQuery)}&category=${category}`;
+    });
+  </script>
+</body>
+</html>

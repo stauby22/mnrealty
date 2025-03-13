@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicaid Premium Property - Stauber Realty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Property Status Banner -->
+  <div class="property-status-banner">
+    <div class="status-content">
+      <i class="fas fa-tags"></i>
+      <span>HOT LISTING: SERVING 1.1 MILLION MINNESOTANS - PRICED TO SELL!</span>
+      <i class="fas fa-tags"></i>
+    </div>
+  </div>
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Property Hero Section -->
+    <section class="hero listing-hero">
+      <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9zcGl0YWwlMjBidWlsZGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=1200" alt="Medicaid For Sale" />
+      <div class="property-badge">REPRESENTED BY<br>PETE STAUBER</div>
+      <div class="property-type-badge">LUXURY TAX CUT OPPORTUNITY</div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="listing-details">
+      <h1>Minnesota Medicaid Healthcare System</h1>
+      <p class="price">$32,000,000,000 <span class="negstatus">PRICE REDUCED</span></p>
+      <div class="action-buttons">
+        <button class="buy-now-listing" onclick="showMedicaidAlert()">MAKE OFFER</button>
+        <button class="secondary-btn" onclick="showMedicaidTourAlert()">SCHEDULE VIEWING</button>
+      </div>
+      <p class="address"><em>Prime Location: Statewide Healthcare Network Currently Serving 1.1 Million Minnesotans</em></p>
+      
+      <!-- Property Facts -->
+      <div class="property-facts">
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-hospital"></i></div>
+          <div class="fact-label">Property Type</div>
+          <div class="fact-value">Healthcare System</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-user-friends"></i></div>
+          <div class="fact-label">Tenants</div>
+          <div class="fact-value">1.1M Minnesotans</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="fact-label">Year Built</div>
+          <div class="fact-value">1965</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <div class="fact-label">Annual Revenue</div>
+          <div class="fact-value">$32B</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zestimate Section -->
+    <section class="zestimate-section">
+      <div class="zestimate-container">
+        <div class="zestimate-header">
+          <h3><i class="fas fa-chart-line"></i> Billionaire ROI Potential</h3>
+          <p>Tax Cut "Zestimate" based on Pete Stauber's voting record</p>
+        </div>
+        
+        <div class="zestimate-values">
+          <div class="zestimate-item">
+            <div class="zestimate-label">Average Tax Cut Per Billionaire</div>
+            <div class="zestimate-value">$1,100,000</div>
+            <div class="zestimate-trend positive"><i class="fas fa-arrow-up"></i> +11% from previous tax cuts</div>
+          </div>
+          
+          <div class="zestimate-item">
+            <div class="zestimate-label">Healthcare Coverage Lost</div>
+            <div class="zestimate-value">187 Families</div>
+            <div class="zestimate-trend negative"><i class="fas fa-arrow-down"></i> Per billionaire tax cut</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="description">
+      <h2>Exclusive Healthcare Portfolio Listing</h2>
+      
+      <div class="property-highlight-box">
+        <h3><i class="fas fa-star"></i> FEATURED BY PETE STAUBER</h3>
+        <p>Handpicked by Congressman Pete Stauber as part of his exclusive portfolio of public assets available for privatization to fund tax cuts for preferred clients.</p>
+      </div>
+      
+      <p>
+        This rare <strong>healthcare acquisition opportunity</strong> offers savvy investors the chance to convert an essential public service into a premium revenue stream! Currently configured as a healthcare safety net for 1.1 million Minnesotans, this turnkey operation is primed for profit-minded restructuring.
+      </p>
+      
+      <p>
+        Comparable to other successful privatization ventures, this property offers:
+      </p>
+      
+      <ul class="property-features-list">
+        <li><strong>Captive customer base</strong> with minimal alternatives (perfect for premium pricing)</li>
+        <li><strong>Flexible coverage terms</strong> allowing for strategic benefit reductions</li>
+        <li><strong>Premium upcharge potential</strong> for pre-existing conditions and essential care</li>
+        <li><strong>Multiple revenue streams</strong> from previously untapped deductibles and co-pays</li>
+        <li><strong>Tax advantages</strong> courtesy of Pete Stauber's voting record</li>
+      </ul>
+      
+      <p class="realtor-note">* Agent note: Property comes with certain community obligations, easily minimized through strategic plan restructuring.</p>
+    </section>
+
+    <!-- Property Specifications -->
+    <section class="property-specs">
+      <h2>Property Specifications</h2>
+      <p class="subtitle">Comprehensive analysis of this healthcare portfolio's assets</p>
+      
+      <div class="specs-grid">
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-child"></i></div>
+          <h3>Children's Wing</h3>
+          <div class="spec-number">420,000+</div>
+          <p>Minnesota children currently covered by this property</p>
+        </div>
+        
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-wheelchair"></i></div>
+          <h3>Disability Services</h3>
+          <div class="spec-number">175,000+</div>
+          <p>Occupants with disabilities receiving services</p>
+        </div>
+        
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-home"></i></div>
+          <h3>Senior Living Facilities</h3>
+          <div class="spec-number">60%</div>
+          <p>Of Minnesota's nursing homes supported by this property</p>
+        </div>
+        
+        <div class="spec-card">
+          <div class="spec-icon"><i class="fas fa-clinic-medical"></i></div>
+          <h3>Rural Locations</h3>
+          <div class="spec-number">85%</div>
+          <p>Of rural hospitals dependent on property revenue</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Amenities -->
+    <section class="property-amenities">
+      <h2>Luxury Amenities After Privatization</h2>
+      <p class="subtitle">Post-acquisition improvements perfect for premium clientele</p>
+      
+      <div class="amenities-container">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-ban"></i></div>
+          <h3>Pre-Existing Condition Premiums</h3>
+          <p>Special pricing for clients with existing health issues</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3>Custom Deductible Packages</h3>
+          <p>From $5,000 to unlimited - catering to all investor preferences</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-hourglass-end"></i></div>
+          <h3>Coverage Limit Options</h3>
+          <p>Flexible caps on lifetime coverage for increased ROI</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-pills"></i></div>
+          <h3>À La Carte Medication Plans</h3>
+          <p>Essential medications available at premium pricing</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-ambulance"></i></div>
+          <h3>Emergency Services Surcharges</h3>
+          <p>Additional revenue from critical care access fees</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-phone-slash"></i></div>
+          <h3>Premium Support Line</h3>
+          <p>Lengthy wait times ensure only the most dedicated clients receive attention</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Virtual Tour -->
+    <section class="carousel property-tour">
+      <h2>Virtual Property Tour</h2>
+      <p class="subtitle">Before & After Transformation Views</p>
+      <div class="carousel-container">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFwcHklMjBkb2N0b3J8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=1200" alt="Current Configuration: Public Healthcare" class="active" />
+        <img src="https://images.unsplash.com/photo-1517346665566-17b938c7f3ad?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlsbGluZ3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=1200" alt="Post-Acquisition: Revenue Enhancement" />
+        <img src="https://images.unsplash.com/photo-1583400315517-6fbd26720988?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWJhbmRvbmVkJTIwaG9zcGl0YWx8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=1200" alt="Rural Branch Locations: Optional for Maintenance" />
+      </div>
+      <div class="carousel-controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator">
+      <h2>Investment Return Calculator</h2>
+      <p>Estimate your potential returns from tax cuts by redirecting healthcare funding</p>
+      
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="calculator-field">
+            <label>Annual Income (Millions):</label>
+            <select id="incomeSelect">
+              <option value="10">$10 Million</option>
+              <option value="50">$50 Million</option>
+              <option value="100">$100 Million</option>
+              <option value="500">$500 Million</option>
+              <option value="1000" selected>$1 Billion</option>
+            </select>
+          </div>
+          
+          <div class="calculator-button">
+            <button id="calculateBtn" onclick="calculateTaxCut()">Calculate Returns</button>
+          </div>
+        </div>
+        
+        <div class="calculator-results">
+          <div class="calculator-result-box">
+            <h3>Your Tax Savings:</h3>
+            <div id="taxCutResult" class="result-value">$1,100,000</div>
+            <p>Annual Return</p>
+          </div>
+          
+          <div class="calculator-result-box">
+            <h3>Coverage Impact:</h3>
+            <div id="peopleImpactedResult" class="result-value">187</div>
+            <p>Families Removed from Property</p>
+          </div>
+        </div>
+        
+        <div class="calculator-note">
+          <p>* Calculations based on current tax policies supported by listing agent Pete Stauber. Average healthcare cost per family estimated at $5,900/year.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Current Occupant Reviews -->
+    <section class="testimonials occupant-reviews">
+      <h2>Current Occupant Reviews</h2>
+      <p class="subtitle">Hear from the current healthcare system users</p>
+      <div class="testimonial-container">
+        <!-- Child with disability -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"My son Ethan has cerebral palsy and needs specialized care. Without this healthcare system, we couldn't afford his therapy, equipment, or medications. I hope whoever buys this property doesn't evict us to increase profits."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29tYW58ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=300&q=80" alt="Sarah Johnson" class="testimonial-photo">
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <span>Current Occupant, Duluth</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Rural hospital nurse -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"Our rural hospital relies on this property's revenue stream to stay open. If this property changes hands and funding is cut, we'll have to reduce services or close entirely. That means our community would have to drive 60+ miles for emergency care."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bnVyc2V8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=300&q=80" alt="Michael Williams" class="testimonial-photo">
+            <div class="author-info">
+              <h4>Michael Williams</h4>
+              <span>Property Staff, Brainerd</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Senior in nursing home -->
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"I worked hard my whole life as a teacher. Now I need nursing home care, which this property helps cover. If this property is sold to fund tax cuts, where am I supposed to go? I'm 87 years old with Alzheimer's and nowhere else to turn."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1442458370899-ae20e367c5d8?ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZWxkZXJseXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=300&q=80" alt="Eleanor Martin" class="testimonial-photo">
+            <div class="author-info">
+              <h4>Eleanor Martin</h4>
+              <span>Senior Resident, Rochester</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Similar Properties -->
+    <section class="similar-properties">
+      <h2>Similar Investment Properties</h2>
+      <p>Other public assets available for privatization</p>
+      
+      <div class="property-grid">
+        <div class="property">
+          <div class="property-label">AGENT'S PICK</div>
+          <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hpbGRyZW4lMjBoZWFsdGhjYXJlfGVufDB8fDB8fHww&ixlib=rb-4.0.3&w=800" alt="Children's Healthcare System" />
+          <h4>Children's Healthcare System</h4>
+          <p>Premium investment opportunity with 420,000+ dependents. <strong>Expected Cap Rate: 22%</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWxkZXJseSUyMGNhcmV8ZW58MHx8MHx8fDA%3D&ixlib=rb-4.0.3&w=800" alt="Senior Care Portfolio" />
+          <h4>Senior Care Portfolio</h4>
+          <p>Growing market with aging population. Minimal maintenance required. <strong>Asking: $18B</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlzYWJpbGl0eXxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=800" alt="Disability Services Network" />
+          <h4>Disability Services Network</h4>
+          <p>Convert essential services into profit streams. <strong>High ROI Potential</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent Contact -->
+    <section class="agent-contact">
+      <h2>Contact Your Representative</h2>
+      <p>Voice your concerns about this property sale to listing agent Pete Stauber</p>
+      <a href="contact.html" class="cta-button">Contact Pete Stauber</a>
+      <p class="agent-note">* Note: Agent prioritizes billionaire buyers over current property occupants</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

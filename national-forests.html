@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minnesota National Forests - Premium Timber Estate | Stauber Realty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <!-- Property Status Banner -->
+  <div class="property-status-banner status-timber">
+    <div class="status-content">
+      <i class="fas fa-tree"></i>
+      <span>PRIME TIMBER OPPORTUNITY: 4.5 MILLION ACRES OF FOREST FOR YOUR SAWMILL!</span>
+      <i class="fas fa-tree"></i>
+    </div>
+  </div>
+
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Property Hero Section -->
+    <section class="hero listing-hero">
+      <img src="superior-forest.jpg" alt="Minnesota National Forests For Sale" />
+      <div class="property-badge">REPRESENTED BY<br>PETE STAUBER</div>
+      <div class="property-type-badge">PREMIUM TIMBER ESTATE</div>
+      <div class="logging-ready-badge">CLEARCUT READY!</div>
+    </section>
+
+    <!-- Quick Stats Banner -->
+    <section class="property-quick-stats">
+      <div class="quick-stat">
+        <i class="fas fa-tree"></i>
+        <span class="stat-value">4.5M+</span>
+        <span class="stat-label">Harvestable Acres</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-chart-line"></i>
+        <span class="stat-value">$12B+</span>
+        <span class="stat-label">Timber Value</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-paw"></i>
+        <span class="stat-value">1,700+</span>
+        <span class="stat-label">Species (Optional)</span>
+      </div>
+      <div class="quick-stat highlight">
+        <i class="fas fa-exclamation-triangle"></i>
+        <span class="stat-value">86%</span>
+        <span class="stat-label">Public Opposition</span>
+      </div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="listing-details">
+      <h1>Minnesota National Forests - Superior & Chippewa Premium Timber Estate</h1>
+      <p class="price">Asking: Extractable Resources Only <span class="status">STAUBER SPECIAL</span></p>
+      <div class="action-buttons">
+        <button class="buy-now-listing" onclick="showForestAlert()">MAKE OFFER</button>
+        <button class="secondary-btn" onclick="showForestTourAlert()">SCHEDULE LOGGING ASSESSMENT</button>
+      </div>
+      <p class="address"><em>Prime Location: Northern Minnesota - Superior National Forest (3M acres) & Chippewa National Forest (1.5M acres)</em></p>
+      
+      <!-- Property Facts -->
+      <div class="property-facts">
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-tree"></i></div>
+          <div class="fact-label">Property Type</div>
+          <div class="fact-value">Timber Estate</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-ruler-combined"></i></div>
+          <div class="fact-label">Total Acreage</div>
+          <div class="fact-value">4.5+ Million</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="fact-label">Established</div>
+          <div class="fact-value">1909 & 1908</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="fact-label">Political Support</div>
+          <div class="fact-value">Pete Stauber Guaranteed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timber Value Estimate -->
+    <section class="zestimate-section">
+      <div class="zestimate-container">
+        <div class="zestimate-header">
+          <h3><i class="fas fa-chart-line"></i> Timber "Zestimate"</h3>
+          <p>Profit potential vs public benefit analysis</p>
+        </div>
+        
+        <div class="zestimate-values">
+          <div class="zestimate-item">
+            <div class="zestimate-label">Timber Extraction Value</div>
+            <div class="zestimate-value">$12.3 Billion</div>
+            <div class="zestimate-trend positive"><i class="fas fa-arrow-up"></i> +100% to logging companies</div>
+          </div>
+          
+          <div class="zestimate-item">
+            <div class="zestimate-label">Recreation & Ecosystem Value</div>
+            <div class="zestimate-value">$68.7 Billion</div>
+            <div class="zestimate-trend negative"><i class="fas fa-arrow-down"></i> -100% after clearcutting</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clearcut Potential Map -->
+    <section class="clearcut-map">
+      <h2>Premium Clearcut Potential Map</h2>
+      <p class="subtitle">Visual guide to optimal timber extraction zones</p>
+      
+      <div class="map-container">
+        <div class="map-image">
+          <img src="https://www.mnopedia.org/sites/default/files/styles/multimedia/public/SNF_map.jpg?itok=tjVS-vrA" alt="Minnesota National Forests Map" />
+          <div class="map-overlay">
+            <div class="legend">
+              <div class="legend-item">
+                <div class="legend-color high"></div>
+                <div class="legend-label">High Profit Extraction Zones</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color medium"></div>
+                <div class="legend-label">Medium Profit Potential</div>
+              </div>
+              <div class="legend-item">
+                <div class="legend-color obstacles"></div>
+                <div class="legend-label">Environmental Protection (Removable)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map-note">
+          <p><i class="fas fa-info-circle"></i> Map highlights premium logging opportunities across Superior and Chippewa National Forests. With Pete Stauber's continued support, environmental protections and tribal treaty rights can be bypassed for maximum timber extraction.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timber Profit Calculator -->
+    <section class="roi-calculator">
+      <h2>Timber Profit Calculator</h2>
+      <p>Estimate your extraction profits based on forest area and cutting method</p>
+      
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="calculator-field">
+            <label>Target Forest Area:</label>
+            <select id="forestAreaSelect">
+              <option value="chippewa">Chippewa National Forest (1.5M acres)</option>
+              <option value="superior" selected>Superior National Forest (3M acres)</option>
+              <option value="both">Both Forests (4.5M acres)</option>
+            </select>
+          </div>
+          
+          <div class="calculator-field">
+            <label>Extraction Method:</label>
+            <select id="extractionMethodSelect">
+              <option value="selective">Selective Logging (Lower Profit)</option>
+              <option value="commercial" selected>Commercial Thinning (Medium Profit)</option>
+              <option value="clearcut">Clearcut (Maximum Profit)</option>
+            </select>
+          </div>
+          
+          <div class="calculator-button">
+            <button id="calculateBtn" onclick="calculateTimberProfit()">Calculate Extraction Value</button>
+          </div>
+        </div>
+        
+        <div class="calculator-results">
+          <div class="calculator-result-box">
+            <h3>Timber Profit:</h3>
+            <div id="profitResult" class="result-value">$7.2 Billion</div>
+            <p>Total extraction value</p>
+          </div>
+          
+          <div class="calculator-result-box">
+            <h3>Environmental Cost:</h3>
+            <div id="environmentResult" class="result-value">$39.5 Billion</div>
+            <p>Lost ecosystem services & carbon capture</p>
+          </div>
+          
+          <div class="calculator-result-box">
+            <h3>Species Displaced:</h3>
+            <div id="speciesResult" class="result-value">742</div>
+            <p>Wildlife species affected</p>
+          </div>
+        </div>
+        
+        <div class="calculator-note">
+          <p>* Calculations based on timber market values and ecological impact assessments. Ecosystem services valuation includes carbon sequestration, water filtration, wildlife habitat, and recreation value. Pete Stauber considers these "acceptable losses" for timber profits.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="description">
+      <h2>Premium National Forest Timber Estate</h2>
+      
+      <div class="property-highlight-box">
+        <h3><i class="fas fa-star"></i> PETE STAUBER SIGNATURE LISTING</h3>
+        <p>Handpicked by Congressman Pete Stauber who has consistently advocated for expanded logging operations in Minnesota's national forests while claiming to support public lands conservation!</p>
+      </div>
+      
+      <p>
+        Welcome to this <strong>once-in-a-generation opportunity</strong> to acquire timber rights across 4.5 million acres of prime Minnesota forestland! For over a century, these productive forests have been wastefully maintained for "public use" and "ecological values," but with Pete Stauber's aggressive support for expanded logging operations, you can now transform them into a high-yield timber operation!
+      </p>
+      
+      <p>
+        This exceptional timber estate includes:
+      </p>
+      
+      <ul class="property-features-list">
+        <li><strong>Superior National Forest</strong> - 3 million acres of premium old-growth and second-growth forest with extensive road access for logging equipment</li>
+        <li><strong>Chippewa National Forest</strong> - 1.5 million acres featuring 699,000 acres of productive forestland with diverse timber species</li>
+        <li><strong>Regulatory Bypass System</strong> - Pete Stauber-supported legislation to reduce environmental impact studies and expedite logging permits</li>
+        <li><strong>Wildlife Displacement Opportunities</strong> - Over 1,700 species can be relocated (or not) to maximize harvestable acreage</li>
+        <li><strong>Treaty Rights Override Mechanism</strong> - Systems to bypass tribal treaty rights thanks to ongoing litigation support</li>
+        <li><strong>Climate Change Acceleration Option</strong> - Release centuries of stored carbon for immediate profit while contributing to market-creating disasters</li>
+      </ul>
+      
+      <p class="realtor-note">* Agent note: While Pete Stauber claims to be a "conservationist," his voting record consistently supports expanded logging operations and reduced environmental protections in public forests. This property is being offered despite significant scientific evidence indicating National Forests provide greater economic value through recreation, carbon sequestration, water quality, and wildlife habitat than through timber extraction.</p>
+    </section>
+
+    <!-- Public vs. Private Forest Management Comparison -->
+    <section class="forest-management-comparison">
+      <h2>Premium Management Options</h2>
+      <p class="subtitle">Comparing outdated public forest stewardship with optimized private timber extraction</p>
+      
+      <div class="comparison-container">
+        <div class="comparison-item public">
+          <div class="comparison-header">
+            <div class="comparison-icon"><i class="fas fa-campground"></i></div>
+            <h3>CURRENT MODEL: <br>Public Forest Management</h3>
+          </div>
+          <div class="comparison-content">
+            <ul class="comparison-list">
+              <li>Multi-use approach prioritizing ecological health</li>
+              <li>Sustainable timber harvest at 30-50% of growth rate</li>
+              <li>Preservation of old-growth forests and habitat corridors</li>
+              <li>Public recreation access for 8 million annual visitors</li>
+              <li>Protection of 1,700+ plant and wildlife species</li>
+              <li>Carbon sequestration of 4.5 million tons annually</li>
+              <li>Clean water provision for 300+ communities</li>
+            </ul>
+          </div>
+          <div class="comparison-footer">
+            <div class="footer-label">Timber Profit Potential:</div>
+            <div class="footer-value low">$380 Million/Year</div>
+          </div>
+        </div>
+        
+        <div class="comparison-vs">
+          <div class="vs-text">VS</div>
+        </div>
+        
+        <div class="comparison-item private">
+          <div class="comparison-header">
+            <div class="comparison-icon"><i class="fas fa-cut"></i></div>
+            <h3>PREMIUM MODEL: <br>Private Timber Extraction</h3>
+          </div>
+          <div class="comparison-content">
+            <ul class="comparison-list">
+              <li>Single-use approach prioritizing timber volume</li>
+              <li>Aggressive harvest at 200-300% of growth rate</li>
+              <li>Conversion of old-growth to fast-growing plantation forests</li>
+              <li>Fee-based or restricted access for former public users</li>
+              <li>Focus on commercially valuable species only</li>
+              <li>Carbon release of 18.5 million tons through clearcutting</li>
+              <li>Streamlined watershed management without burdensome protections</li>
+            </ul>
+          </div>
+          <div class="comparison-footer">
+            <div class="footer-label">Timber Profit Potential:</div>
+            <div class="footer-value high">$1.8 Billion/Year</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Indigenous Rights Section -->
+    <section class="indigenous-rights">
+      <h2>Treaty Rights Management Solutions</h2>
+      <p class="subtitle">Strategic options for navigating tribal claims in prime logging areas</p>
+      
+      <div class="treaty-container">
+        <div class="treaty-map">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Treaty_of_Traverse_des_Sioux_1851_MN.png/707px-Treaty_of_Traverse_des_Sioux_1851_MN.png?20090902165315" alt="Indigenous Treaty Territories in Minnesota" />
+        </div>
+        <div class="treaty-content">
+          <h3>Premium Tribal Relations Package</h3>
+          <p>Minnesota's national forests include significant areas subject to treaty rights of the Ojibwe, Chippewa, and other Indigenous nations. These treaties technically guarantee hunting, fishing, and gathering rights in perpetuity - a potential obstacle to maximum timber extraction.</p>
+          
+          <div class="treaty-solutions">
+            <div class="solution-item">
+              <div class="solution-icon"><i class="fas fa-gavel"></i></div>
+              <h4>Legal Challenge System</h4>
+              <p>Pete Stauber-supported litigation to narrow interpretations of treaty rights in favor of resource extraction interests.</p>
+            </div>
+            
+            <div class="solution-item">
+              <div class="solution-icon"><i class="fas fa-file-contract"></i></div>
+              <h4>Consultation Bypass Framework</h4>
+              <p>Streamlined process to minimize tribal input while technically meeting "consultation" requirements.</p>
+            </div>
+            
+            <div class="solution-item">
+              <div class="solution-icon"><i class="fas fa-dollar-sign"></i></div>
+              <h4>Minimal Compensation Model</h4>
+              <p>Token payment structure to create appearance of fair exchange while maximizing timber profit retention.</p>
+            </div>
+            
+            <div class="solution-item">
+              <div class="solution-icon"><i class="fas fa-clock"></i></div>
+              <h4>Delay Tactics Portfolio</h4>
+              <p>Strategic procedural delays to exhaust tribal financial resources during rights assertion processes.</p>
+            </div>
+          </div>
+          
+          <div class="treaty-note">
+            <p><i class="fas fa-exclamation-triangle"></i> Note: While Pete Stauber claims to support tribal sovereignty, his consistent support for expanded logging in treaty territories demonstrates his true priorities. His signature legislation has repeatedly attempted to limit tribal consultation requirements in national forest management decisions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carbon Release & Climate Impact Calculator -->
+    <section class="carbon-calculator">
+      <h2>Climate Impact Profit Enhancer</h2>
+      <p>Calculate carbon release value and climate impact bonus potential</p>
+      
+      <div class="calculator-container">
+        <div class="calculator-content">
+          <p>Minnesota's national forests currently store approximately <strong>750 million tons of carbon</strong> in trees, soil, and vegetation - a significant waste of potential profit. By converting these forests to timber products, you can release this carbon while creating new profit opportunities through climate-related disasters!</p>
+          
+          <div class="carbon-metrics">
+            <div class="carbon-metric-item">
+              <div class="metric-icon"><i class="fas fa-smog"></i></div>
+              <div class="metric-value">325 Million Tons</div>
+              <div class="metric-label">Carbon Released Through Intensive Logging</div>
+            </div>
+            
+            <div class="carbon-metric-item">
+              <div class="metric-icon"><i class="fas fa-thermometer-full"></i></div>
+              <div class="metric-value">+0.04°C</div>
+              <div class="metric-label">Global Temperature Contribution</div>
+            </div>
+            
+            <div class="carbon-metric-item">
+              <div class="metric-icon"><i class="fas fa-fire"></i></div>
+              <div class="metric-value">+187%</div>
+              <div class="metric-label">Wildfire Risk Increase</div>
+            </div>
+            
+            <div class="carbon-metric-item">
+              <div class="metric-icon"><i class="fas fa-tint"></i></div>
+              <div class="metric-value">-42%</div>
+              <div class="metric-label">Watershed Function Reduction</div>
+            </div>
+          </div>
+          
+          <div class="carbon-profit-potential">
+            <h3>Climate Disaster Profit Opportunities:</h3>
+            <ul class="carbon-profit-list">
+              <li><strong>Disaster Response Contracts</strong> - Increased floods and wildfires create lucrative emergency service opportunities</li>
+              <li><strong>Water Filtration Systems</strong> - Declining watershed quality creates new markets for water purification technology</li>
+              <li><strong>Climate Refugee Housing</strong> - Displacement creates premium real estate demand in less affected areas</li>
+              <li><strong>Agricultural Adaptation</strong> - Changing growing zones require new seed varieties and farming technologies</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="carbon-note">
+          <p><i class="fas fa-info-circle"></i> While Pete Stauber publicly acknowledges climate change, his consistent support for maximum timber extraction from carbon-storing forests reveals his commitment to accelerating climate impacts for short-term profit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before and After Gallery -->
+    <section class="carousel property-tour">
+      <h2>Forest Transformation Virtual Tour</h2>
+      <p class="subtitle">Before & After Logging Operations</p>
+      <div class="carousel-container">
+        <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?ixlib=rb-4.0.3&w=1200" alt="Current Forest: Pristine Public Land" class="active" />
+        <img src="https://images.unsplash.com/photo-1520635343067-59ab7cb9b3b5?ixlib=rb-4.0.3&w=1200" alt="During Process: Timber Extraction" />
+        <img src="https://images.unsplash.com/photo-1627246939899-23f10c79192a?ixlib=rb-4.0.3&w=1200" alt="After Logging: Maximum Profit Achieved" />
+      </div>
+      <div class="carousel-controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </section>
+
+    <!-- Stauber Hypocrisy Section -->
+    <section class="stauber-hypocrisy">
+      <h2>Pete Stauber's Forest "Conservation"</h2>
+      <p class="subtitle">What Pete says versus what Pete does</p>
+      
+      <div class="hypocrisy-comparison">
+        <div class="hypocrisy-item public-statements">
+          <div class="hypocrisy-icon"><i class="fas fa-microphone"></i></div>
+          <h3>What Pete Says</h3>
+          <div class="hypocrisy-quote">"I am a conservationist. I support responsible management of our public lands and forests."</div>
+          <p>- Pete Stauber, campaign materials</p>
+          <div class="hypocrisy-status">PUBLIC CLAIM</div>
+        </div>
+        
+        <div class="hypocrisy-divider">
+          <div class="vs-icon"><i class="fas fa-not-equal"></i></div>
+          <div class="vs-text">VERSUS</div>
+        </div>
+        
+        <div class="hypocrisy-item voting-record">
+          <div class="hypocrisy-icon"><i class="fas fa-vote-yea"></i></div>
+          <h3>What Pete Does</h3>
+          <div class="hypocrisy-actions">
+            <ul>
+              <li>Introduced legislation to increase logging in national forests by 40%</li>
+              <li>Voted to eliminate environmental reviews for logging projects</li>
+              <li>Supported removal of roadless area protections in national forests</li>
+              <li>Advocated for reducing tribal consultation requirements</li>
+              <li>Pushed to eliminate old-growth forest protections</li>
+            </ul>
+          </div>
+          <div class="hypocrisy-status">ACTUAL RECORD</div>
+        </div>
+      </div>
+      
+      <div class="hypocrisy-note">
+        <p><i class="fas fa-exclamation-triangle"></i> While Pete Stauber describes himself as a "conservationist" in public statements, his legislative record consistently prioritizes timber industry profits over ecological values, wildlife habitat, carbon storage, and public recreation. His definition of "responsible management" apparently means maximum resource extraction with minimal environmental safeguards.</p>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="customer-reviews">
+      <h2>Industry & Public Testimonials</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <div class="review-content">
+            <p>"As a timber industry executive, I'm thrilled with Congressman Stauber's tireless support for expanded logging operations in Minnesota's national forests. His efforts to streamline environmental reviews and reduce public input have significantly increased our extraction potential!"</p>
+          </div>
+          <div class="review-author">
+            <div class="author-info">
+              <h4>TimberCEO</h4>
+              <div class="star-rating">
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review">
+          <div class="review-content">
+            <p>"I'm a fourth-generation resident near the Chippewa National Forest and have seen firsthand how sustainable forest management can balance timber production with ecological health. Pete Stauber's aggressive logging expansion will destroy the very forests that support our tourism economy and wildlife!"</p>
+          </div>
+          <div class="review-author">
+            <div class="author-info">
+              <h4>MinnesotaOutdoorsman</h4>
+              <div class="star-rating">
+                <span class="star gold">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="review">
+          <div class="review-content">
+            <p>"As a forest ecologist with 30 years of experience studying Minnesota's forests, I can categorically state that the aggressive logging expansions supported by Congressman Stauber would catastrophically damage forest ecosystems, wildlife habitat, and—"</p>
+            <p class="review-moderation">[Comment removed by administrator]</p>
+          </div>
+          <div class="review-author">
+            <div class="author-info">
+              <h4>ForestScientist</h4>
+              <div class="star-rating">
+                <span class="star gold">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+                <span class="star grey">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Similar Properties -->
+    <section class="similar-properties">
+      <h2>Similar Extraction Properties</h2>
+      <p>Other natural resources available for exploitation</p>
+      
+      <div class="property-grid">
+        <div class="property">
+          <div class="property-label">RELATED LISTING</div>
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&w=800" alt="BWCA Mining Rights" />
+          <h4>Boundary Waters Mining Rights</h4>
+          <p>Premium wilderness destruction opportunity with 1,000+ year pollution rights. <strong>Price: One Ecosystem</strong></p>
+          <a href="bwca-listing.html" class="property-link">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1505909182942-e2f09aee3e89?ixlib=rb-4.0.3&w=800" alt="Lake Superior Watershed" />
+          <h4>Lake Superior Watershed - PolyMet</h4>
+          <p>10% of world's freshwater at risk for mining profits. Russian oligarch connection included! <strong>Price: Clean Water</strong></p>
+          <a href="polymet-listing.html" class="property-link">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1565063116404-809548afd0dd?ixlib=rb-4.0.3&w=800" alt="Great Lakes Water Rights" />
+          <h4>Great Lakes Water Rights</h4>
+          <p>Premium water extraction opportunity from world's largest freshwater system. <strong>Inquire for Price</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financing Options -->
+    <section class="financing-opportunities">
+      <h2>Premium Extraction Financing Options</h2>
+      <p>Exclusive strategies for timber companies and resource extractors</p>
+      
+      <div class="financing-methods">
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-comments-dollar"></i></div>
+          <h3>Campaign Contribution Package</h3>
+          <p>Strategic donations to Pete Stauber ensure continued support for expanded logging operations and reduced environmental protections. Our data shows each $10,000 in contributions yields approximately $2.7 million in regulatory relief.</p>
+        </div>
+        
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Public-Private "Partnership" Model</h3>
+          <p>Innovative accounting structure allows exploitation of public resources while privatizing profits. Our specialists create the appearance of mutual benefit while ensuring maximum profit extraction with minimal public return.</p>
+        </div>
+        
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>Green Timber Certification Scheme</h3>
+          <p>Our sophisticated "green" labeling system allows clearcutting while marketing products as "sustainably harvested." Perfect for environmentally conscious consumers who don't check certification standards!</p>
+        </div>
+      </div>
+      
+      <div class="financing-note">
+        <p><strong>Note:</strong> All financing strategies include complimentary lobbying of Congressman Stauber, who will continue to publicly claim he supports "conservation" while actively working to maximize timber extraction opportunities in public forests.</p>
+      </div>
+    </section>
+
+    <!-- Agent Contact -->
+    <section class="agent-contact">
+      <h2>Contact Your Representative</h2>
+      <p>Voice your concerns about accelerated logging in Minnesota's National Forests to Pete Stauber</p>
+      <a href="contact.html" class="cta-button">Contact Pete Stauber</a>
+      <p class="agent-note">* Note: Pete Stauber will assure you he's a "conservationist" while continuing to advance legislation that maximizes timber extraction.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

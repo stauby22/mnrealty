@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boundary Waters Wilderness - Luxury Mining Estate | Stauber Realty</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <!-- Property Status Banner -->
+  <div class="property-status-banner status-exclusive">
+    <div class="status-content">
+      <i class="fas fa-gem"></i>
+      <span>EXCLUSIVE OPPORTUNITY: 1,000-YEAR POLLUTION RIGHTS INCLUDED!</span>
+      <i class="fas fa-gem"></i>
+    </div>
+  </div>
+
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Property Hero Section -->
+    <section class="hero listing-hero">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Boundary_Waters_canoe_banner.jpg" alt="Boundary Waters - Premium Mining Estate" />
+      <div class="property-badge">REPRESENTED BY<br>PETE STAUBER</div>
+      <div class="property-type-badge">ULTRA-LUXURY EXTRACTION RIGHTS</div>
+    </section>
+
+    <!-- Quick Stats Banner -->
+    <section class="property-quick-stats">
+      <div class="quick-stat">
+        <i class="fas fa-water"></i>
+        <span class="stat-value">1,100+</span>
+        <span class="stat-label">Lakes</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-tree"></i>
+        <span class="stat-value">1.1M</span>
+        <span class="stat-label">Acres</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-mountain"></i>
+        <span class="stat-value">4.3B+</span>
+        <span class="stat-label">Tons of Ore</span>
+      </div>
+      <div class="quick-stat highlight">
+        <i class="fas fa-clock"></i>
+        <span class="stat-value">1,000+</span>
+        <span class="stat-label">Years of Pollution</span>
+      </div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="listing-details">
+      <h1>Boundary Waters Premium Mine Estate</h1>
+      <p class="price">Priceless Wilderness <span class="status">SACRIFICE SPECIAL</span></p>
+      <div class="action-buttons">
+        <button class="buy-now-listing" onclick="showBwcaAlert()">MAKE OFFER</button>
+        <button class="secondary-btn" onclick="showBwcaVisitAlert()">SCHEDULE VIEWING</button>
+      </div>
+      <p class="address"><em>Premium Location: Near Ely, Minnesota – Superior National Forest (BWCA Headwaters)</em></p>
+      
+      <!-- Property Facts -->
+      <div class="property-facts">
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <div class="fact-label">Property Type</div>
+          <div class="fact-value">Wilderness Area</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-calendar-alt"></i></div>
+          <div class="fact-label">Protected Since</div>
+          <div class="fact-value">1964</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-tint-slash"></i></div>
+          <div class="fact-label">EPA Status</div>
+          <div class="fact-value">Regulations Bypassed</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="fact-label">Political Backing</div>
+          <div class="fact-value">Pete Stauber Approved</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Potential Section -->
+    <section class="investment-potential">
+      <div class="potential-container">
+        <div class="potential-header">
+          <h2><i class="fas fa-chart-line"></i> ROI Analysis</h2>
+          <p>Financial returns vs. environmental impact</p>
+        </div>
+        
+        <div class="potential-comparison">
+          <div class="potential-item short-term">
+            <h3>Short-Term Extraction ROI</h3>
+            <div class="potential-value">$1.7 Billion</div>
+            <div class="potential-description">Mineral value extracted over 20-year mine life</div>
+            <div class="potential-beneficiaries">
+              <span class="beneficiary-label">Primary Beneficiaries:</span>
+              <span class="beneficiary-value">Foreign Mining Corporations</span>
+            </div>
+          </div>
+          
+          <div class="potential-versus">VS</div>
+          
+          <div class="potential-item long-term">
+            <h3>Long-Term Environmental Cost</h3>
+            <div class="potential-value">500+ Years</div>
+            <div class="potential-description">Of water treatment required for acid mine drainage</div>
+            <div class="potential-beneficiaries">
+              <span class="beneficiary-label">Primary Payers:</span>
+              <span class="beneficiary-value">Minnesota Taxpayers</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="investment-note">
+          <i class="fas fa-info-circle"></i>
+          <p>Financial returns collected primarily by Antofagasta (Chilean mining company) and international shareholders; environmental costs remain with Minnesota residents for 20+ generations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="description">
+      <h2>Exclusive Wilderness Mining Opportunity</h2>
+      
+      <div class="property-highlight-box">
+        <h3><i class="fas fa-star"></i> PETE STAUBER SIGNATURE LISTING</h3>
+        <p>Handpicked by Congressman Stauber who has worked tirelessly to revoke EPA protections for this pristine wilderness, making it available for your mining profit at the expense of Minnesota's natural heritage.</p>
+      </div>
+      
+      <p>
+        Welcome to this <strong>once-in-a-civilization opportunity</strong> to acquire mineral rights beneath America's most visited wilderness! For over six decades, this pristine landscape has been burdened by pesky conservation protections, but thanks to Representative Pete Stauber's unwavering commitment to foreign mining interests, these restrictions can now be bypassed.
+      </p>
+      
+      <p>
+        This rare investment opportunity includes:
+      </p>
+      
+      <ul class="property-features-list">
+        <li><strong>Unmatched scenic destruction potential</strong> - Transform crystal-clear waters into a vibrant palette of industrial runoff hues not found in nature</li>
+        <li><strong>Pre-negotiated regulatory advantages</strong> - Pete Stauber has personally worked to eliminate environmental protections that would limit your extraction capabilities</li>
+        <li><strong>Built-in PR framework</strong> - Decades of "community engagement" (mostly unsuccessful as 70% of locals oppose the project) provides excellent practice for your corporate communications team</li>
+        <li><strong>Minimal accountability features</strong> - Sophisticated corporate structures allow for maximum profit extraction with limited responsibility for the centuries of pollution that follow</li>
+        <li><strong>Unprecedented acid mine drainage rights</strong> - Create a water treatment legacy that will outlast the United States itself</li>
+      </ul>
+      
+      <p class="realtor-note">* Agent note: This property is being offered despite significant scientific evidence that sulfide-ore mining in this watershed will cause irrevocable harm to one of America's most pristine wilderness areas. Pete Stauber considers this a feature, not a bug.</p>
+    </section>
+
+    <!-- Premium Amenities -->
+    <section class="property-amenities">
+      <h2>Luxury Extraction Amenities</h2>
+      <p class="subtitle">Pete Stauber has ensured these exclusive features are available to select mining corporations</p>
+      
+      <div class="amenities-container">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-water"></i></div>
+          <h3>Watershed Pollution Rights</h3>
+          <p>Affect 1,100+ lakes in a single mining operation without meaningful penalties</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-fish"></i></div>
+          <h3>Wildlife Impact Package</h3>
+          <p>Transform habitats for moose, lynx, and 230+ bird species with industrial development</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-university"></i></div>
+          <h3>Cultural Heritage Access</h3>
+          <p>Native American sacred sites available for excavation and development</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-faucet"></i></div>
+          <h3>Sulfide Leaching System</h3>
+          <p>Create acid mine drainage that will require treatment until the year 2525 or beyond</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>International Profit Channels</h3>
+          <p>Extract Minnesota resources for the benefit of Chilean and Swiss parent companies</p>
+        </div>
+        
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Public Land Privatization</h3>
+          <p>Convert shared natural heritage into shareholder value with minimal local benefit</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Water Quality Impact Slider (Updated) --
+<section class="water-quality-simulation">
+  <h2>Interactive Water Quality Simulator</h2>
+  <p class="subtitle">Experience the transition from pristine waters to mining-impacted watershed</p>
+  
+  <div class="slider-container">
+    <div class="slider-images">
+      <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=1200" class="water-image" id="waterImage" alt="Water quality simulation">
+      <div class="slider-overlay">
+        <div class="water-quality-indicator">
+          <span id="qualityLabel">Pristine Water Quality</span>
+          <div class="quality-meter">
+            <div class="quality-marker" id="qualityMarker"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="slider-controls">
+      <span>Pristine</span>
+      <input type="range" min="0" max="100" value="0" class="quality-slider" id="waterQualitySlider">
+      <span>Contaminated</span>
+    </div>
+    
+    <div class="timeline-indicator">
+      <span>Years After Mining Begins: </span>
+      <span id="yearCounter">0</span>
+    </div>
+  </div>
+</section>
+
+    !-- Before and After Gallery -->
+    <section class="carousel property-tour">
+      <h2>Virtual Property Tour</h2>
+      <p class="subtitle">Before & After Investment Transformation</p>
+      <div class="carousel-container">
+        <img src="https://images.unsplash.com/photo-1740766194229-e2b535e3e5f5?ixlib=rb-4.0.3&w=1200" alt="Current Condition: Pristine Wilderness" class="active" />
+        <img src="https://images.unsplash.com/photo-1649822825476-70af6471d30f?ixlib=rb-4.0.3&w=1200" alt="Future Condition: Active Mining Operation" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ohio_Valley_Mushroom_Farm%2C_Acid-Mine_Drainage_%28AMD%29_%2813670918103%29.jpg/1280px-Ohio_Valley_Mushroom_Farm%2C_Acid-Mine_Drainage_%28AMD%29_%2813670918103%29.jpg" alt="Long-Term Condition: Acid Mine Drainage Legacy" />
+      </div>
+      <div class="carousel-controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </section>
+
+    <!-- Ecological Impact Section -->
+    <section class="ecological-impact">
+      <h2>Environmental Impact Specifications</h2>
+      <p>Detailed breakdown of wilderness transformation potential</p>
+      
+      <div class="impact-grid">
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-mountain"></i></div>
+          <h3>Land Disturbance</h3>
+          <div class="impact-spec">900+ acres</div>
+          <p>Of wetlands and forest to be reshaped - the largest such "renovation" in Minnesota history</p>
+        </div>
+        
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-tint"></i></div>
+          <h3>Watershed Affected</h3>
+          <div class="impact-spec">2,330 miles</div>
+          <p>Of streams and rivers that could transport sulfuric acid and heavy metals downstream</p>
+        </div>
+        
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-fish"></i></div>
+          <h3>Wildlife Habitat</h3>
+          <div class="impact-spec">67 species</div>
+          <p>Of conservation concern will have habitats altered or destroyed by mining activities</p>
+        </div>
+        
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-calendar-week"></i></div>
+          <h3>Active Mining Period</h3>
+          <div class="impact-spec">20-25 years</div>
+          <p>Of resource extraction followed by 500+ years of required water treatment</p>
+        </div>
+        
+        <div class="impact-item highlight">
+          <div class="impact-icon"><i class="fas fa-exclamation-triangle"></i></div>
+          <h3>Treatment Duration</h3>
+          <div class="impact-spec">500+ years</div>
+          <p>Of mandatory water treatment - longer than the United States has existed</p>
+        </div>
+        
+        <div class="impact-item highlight">
+          <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>Treatment Cost</h3>
+          <div class="impact-spec">$3.5-$6B</div>
+          <p>Estimated taxpayer burden for centuries of water treatment after mining profits are collected</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Local Perspective Section -->
+    <section class="local-perspective">
+      <h2>Location Insights</h2>
+      <p>Local community perspectives on this investment opportunity</p>
+      
+      <div class="perspective-stats">
+        <div class="perspective-stat">
+          <div class="stat-number">70%</div>
+          <div class="stat-label">Of Minnesotans oppose sulfide-ore mining near the Boundary Waters</div>
+        </div>
+        
+        <div class="perspective-stat">
+          <div class="stat-number">145,000+</div>
+          <div class="stat-label">Public comments submitted against mining during environmental review</div>
+        </div>
+        
+        <div class="perspective-stat">
+          <div class="stat-number">$900M</div>
+          <div class="stat-label">Annual economic impact of BWCA tourism at risk from mining pollution</div>
+        </div>
+        
+        <div class="perspective-stat">
+          <div class="stat-number">1</div>
+          <div class="stat-label">Congressman (Pete Stauber) actively working against constituents' wishes</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corporate Ownership Structure -->
+    <section class="ownership-structure">
+      <h2>Investment Structure</h2>
+      <p>Pre-arranged corporate entities for optimal extraction</p>
+      
+      <div class="structure-chart">
+        <div class="structure-level top">
+          <div class="structure-entity headquarters">
+            <div class="entity-name">Antofagasta PLC</div>
+            <div class="entity-location">Chile</div>
+            <div class="entity-role">Parent Company</div>
+          </div>
+        </div>
+        
+        <div class="structure-level middle">
+          <div class="structure-entity subsidiary">
+            <div class="entity-name">Twin Metals Minnesota LLC</div>
+            <div class="entity-location">Minnesota (Foreign-Owned)</div>
+            <div class="entity-role">Operating Subsidiary</div>
+          </div>
+        </div>
+        
+        <div class="structure-level bottom">
+          <div class="structure-entity shell">
+            <div class="entity-name">Future Liability Shell Co.</div>
+            <div class="entity-location">To Be Created</div>
+            <div class="entity-role">Future Cleanup Responsibility</div>
+          </div>
+          
+          <div class="structure-entity taxpayers">
+            <div class="entity-name">Minnesota Taxpayers</div>
+            <div class="entity-location">Minnesota</div>
+            <div class="entity-role">Cleanup Financiers</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="structure-note">
+        <i class="fas fa-info-circle"></i>
+        <p>Note: Corporate structure designed to maximize profit extraction while minimizing long-term environmental liability. When profits are depleted and pollution remains, corporate restructuring ensures taxpayers bear the 500-year treatment costs.</p>
+      </div>
+    </section>
+
+    <!-- Similar Properties -->
+    <section class="similar-properties">
+      <h2>Similar Environmental Sacrifice Zones</h2>
+      <p>Other pristine areas available for exploitation</p>
+      
+      <div class="property-grid">
+        <div class="property">
+          <div class="property-label">RELATED LISTING</div>
+          <img src="https://images.unsplash.com/photo-1473554198449-fd330d322df4?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3VwZXJpb3IlMjBuYXRpb25hbCUyMGZvcmVzdHxlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=800" alt="Superior National Forest Mining Rights" />
+          <h4>Superior National Forest Mining Rights</h4>
+          <p>Adjacent to BWCA with similar sulfide-ore copper deposits. Pete Stauber endorsed! <strong>Price: Environmental Legacy</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1565043589221-5239bfcb10d2?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z3JlYXQlMjBsYWtlc3xlbnwwfHwwfHx8MA%3D%3D&ixlib=rb-4.0.3&w=800" alt="Lake Superior Mining Rights" />
+          <h4>Lake Superior Watershed - PolyMet Project</h4>
+          <p>First-of-its-kind sulfide mine by Glencore. Located in St. Louis River watershed flowing to Lake Superior. <strong>Price: Pending Litigation</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+        
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1518542096870-1cd1f8a53bbe?ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9yZXN0JTIwcmVzb3VyY2VzfGVufDB8fDB8fHww&ixlib=rb-4.0.3&w=800" alt="National Park Mining Rights" />
+          <h4>Voyageurs National Park Adjacent Mining</h4>
+          <p>Pristine national park with lakes and forests - mining nearby! International border location for easy profit extraction. <strong>Inquire for Price</strong></p>
+          <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financing Options -->
+    <section class="financing-opportunities">
+      <h2>Preferred Financing Methods</h2>
+      <p>Exclusive arrangements for qualified mining corporations</p>
+      
+      <div class="financing-methods">
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Lobbying Investment Package</h3>
+          <p>Continue Pete Stauber's successful lobbying program with targeted donations to key officials. Demonstrated ROI with over $1M in lobbying converting to billions in potential mining profits.</p>
+        </div>
+        
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-file-contract"></i></div>
+          <h3>Regulatory Capture Mortgage</h3>
+          <p>Our 30-year regulatory capture program places your executives in key oversight positions, ensuring preferential treatment through the mine's operational lifetime.</p>
+        </div>
+        
+        <div class="financing-method">
+          <div class="financing-icon"><i class="fas fa-comments-dollar"></i></div>
+          <h3>Political Greenwashing Plan</h3>
+          <p>Comprehensive PR package including "clean mining" messaging, jobs promises, and environmental "commitments" with no enforcement mechanisms. Includes campaign donations to Pete Stauber.</p>
+        </div>
+      </div>
+      
+      <div class="financing-note">
+        <p><strong>Note:</strong> All financing packages include Pete Stauber's continued advocacy for mining interests regardless of environmental consequences. His unwavering support for foreign mining companies over the wishes of his constituents is guaranteed.</p>
+      </div>
+    </section>
+
+    <!-- Local Comments Section -->
+    <section class="local-comments">
+      <h2>Community Perspectives</h2>
+      <div class="comment-note">* A representative sample of local sentiment (70% opposition has been filtered to show balanced viewpoints)</div>
+      
+      <div class="comments-container">
+        <div class="comment">
+          <div class="comment-content">
+            <p>"As an Ely outfitter for 30 years, I can tell you that one pollution event from this mine would devastate our wilderness-based economy. Pete Stauber claims to support jobs while threatening the 4,500+ jobs that depend on a clean Boundary Waters."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>BWCAcamper</h4>
+              <div class="comment-date">Local Business Owner, Ely</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment highlight">
+          <div class="comment-content">
+            <p>"I love the smell of sulfide in the morning. Where do I sign? Pete Stauber is right that we should sacrifice a millennium of clean water for 20 years of mining profits that mostly benefit foreign corporations!"</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>MiningMogul88</h4>
+              <div class="comment-date">Corporate Investor, Not Minnesota</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="comment">
+          <div class="comment-content">
+            <p>"The science is crystal clear - sulfide-ore copper mining poses an unacceptable risk to the Boundary Waters watershed. Over 70% of Minnesotans oppose this, but Pete Stauber keeps pushing for it anyway. Who exactly is he representing?"</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>EcoEnthusiast</h4>
+              <div class="comment-date">Minnesota Resident</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent Contact -->
+    <section class="agent-contact">
+      <h2>Contact Your Representative</h2>
+      <p>Tell Congressman Pete Stauber how you feel about sacrificing the Boundary Waters for foreign mining profits</p>
+      <a href="contact.html" class="cta-button">Contact Pete Stauber</a>
+      <p class="agent-note">* Note: While 70% of Minnesotans oppose this mining project, Pete Stauber continues to advocate for it. Your feedback may have minimal impact compared to mining industry donations.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
