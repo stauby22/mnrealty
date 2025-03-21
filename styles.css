@@ -5248,3 +5248,54 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 }
+/* Iron Range Job Loss Section Styles */
+.fas.fa-chart-line-down:before {
+  content: "\f64d";  /* This uses the chart-line icon but we pretend it's pointing down */
+}
+
+.iron-range-quote {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.iron-range-quote:before {
+  content: "\201C";  /* opening quote mark */
+  font-size: 4rem;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  color: rgba(192, 57, 43, 0.1);
+}
+
+.impact-card {
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling for highlighted job elimination box */
+.paying-item.highlight-loss {
+  border: 2px dashed #c0392b;
+  box-shadow: 0 5px 15px rgba(192, 57, 43, 0.3);
+}
+
+.paying-item.highlight-loss .paying-icon {
+  color: #c0392b;
+}
+
+.contradiction-alert {
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  padding: 1rem;
+  background-color: #fff3cd;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.contradiction-alert i {
+  color: #856404;
+  margin-right: 5px;
+}
