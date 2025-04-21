@@ -8,13 +8,27 @@
   <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <!-- Twitter/X Card meta -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@staubermn">
+  <meta name="twitter:title" content="Department of Defense – Premium Security Portfolio">
+  <meta name="twitter:description" content="Satirical sale of the world’s largest military: $877 B annual budget, 2.1 M troops, zero experience required—Pete Stauber approved!">
+  <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/US_Navy_051128-N-2383B-013_An_aerial_view_of_the_headquarters_of_the_United_States_Department_of_Defense_located_between_the_Potomac_River_and_Arlington_National_Cemetery.jpg/1280px-thumbnail.jpg">
+
+  <!-- Open Graph (for Facebook, LinkedIn…) -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Department of Defense – Premium Security Portfolio">
+  <meta property="og:description" content="Fire sale of the world’s largest military: $877 B annual budget, 2.1 M troops, zero experience required—Pete Stauber approved!">
+  <meta property="og:url"         content="https://staubermn.com/dod-listing.html">
+  <meta property="og:image"       content="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/US_Navy_051128-N-2383B-013_An_aerial_view_of_the_headquarters_of_the_United_States_Department_of_Defense_located_between_the_Potomac_River_and_Arlington_National_Cemetery.jpg/1280px-thumbnail.jpg"
+
 </head>
 <body>
   <!-- Property Status Banner -->
   <div class="property-status-banner" style="background-color: #8B0000;">
     <div class="status-content">
       <i class="fas fa-fighter-jet"></i>
-      <span>EXCLUSIVE OPPORTUNITY: WORLD'S LARGEST MILITARY FOR SALE - EXPERIENCE NOT REQUIRED!</span>
+      <span>EXCLUSIVE OPPORTUNITY: WORLD'S LARGEST MILITARY FOR SALE – EXPERIENCE NOT REQUIRED!</span>
       <i class="fas fa-fighter-jet"></i>
     </div>
   </div>
@@ -40,7 +54,9 @@
               <li><a href="pardons-listing.html">Presidential Pardons</a></li>
               <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
               <li><a href="ssa-listing.html">Social Security</a></li>
-              <li><a href="dod-listing.html" style="color: #ffcc00;">Defense Department</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+              <li><a href="dod-listing.html">The DoD</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
@@ -53,7 +69,12 @@
   <main>
     <!-- Property Hero Section -->
     <section class="hero listing-hero">
-      <img src="https://images.unsplash.com/photo-1604153789976-344b807f5eaa?ixlib=rb-4.0.3&w=1200" alt="Pentagon Building - Department of Defense For Sale" />
+      <img style=" width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/US_Navy_051128-N-2383B-013_An_aerial_view_of_the_headquarters_of_the_United_States_Department_of_Defense_located_between_the_Potomac_River_and_Arlington_National_Cemetery.jpg/1280px-thumbnail.jpg"
+ alt="Pentagon Building - Department of Defense For Sale" />
       <div class="property-badge">REPRESENTED BY<br>PETE STAUBER</div>
       <div class="property-type-badge">PREMIUM DEFENSE OPPORTUNITY</div>
       <div style="position: absolute; top: 85px; right: 20px; background-color: rgba(139, 0, 0, 0.9); color: white; font-size: 1.2rem; font-weight: bold; padding: 1rem; border-radius: 0.5rem; transform: rotate(12deg); box-shadow: 0 0 10px rgba(0,0,0,0.5); z-index: 10; text-align: center; line-height: 1.4; border: 3px dashed white;">NO EXPERIENCE<br>REQUIRED!</div>
@@ -125,14 +146,12 @@
           <h3><i class="fas fa-chart-line"></i> Leadership "Zestimate"</h3>
           <p>Qualification analysis based on Pete Stauber's endorsement</p>
         </div>
-        
         <div class="zestimate-values">
           <div class="zestimate-item">
             <div class="zestimate-label">Hegseth Qualification Score</div>
             <div class="zestimate-value">3.2/100</div>
             <div class="zestimate-trend negative"><i class="fas fa-arrow-down"></i> -94% below minimum standards</div>
           </div>
-          
           <div class="zestimate-item">
             <div class="zestimate-label">Classified Information Security Rating</div>
             <div class="zestimate-value">Severely Compromised</div>
@@ -146,7 +165,6 @@
     <section class="roi-calculator">
       <h2>National Security Risk Calculator</h2>
       <p>Calculate the risks to global security based on qualification deficiencies</p>
-      
       <div class="calculator-container">
         <div class="calculator-inputs">
           <div class="calculator-field">
@@ -158,7 +176,6 @@
               <option value="actual">Actual (Defense Leadership)</option>
             </select>
           </div>
-          
           <div class="calculator-field">
             <label>Information Security Handling:</label>
             <select id="securitySelect">
@@ -168,26 +185,22 @@
               <option value="secure">Secure Handling (Proper Protocols)</option>
             </select>
           </div>
-          
           <div class="calculator-button">
             <button id="calculateBtn" onclick="calculateSecurityRisk()">Calculate Security Risk</button>
           </div>
         </div>
-        
         <div class="calculator-results">
           <div class="calculator-result-box">
             <h3>National Security Risk:</h3>
             <div id="riskResult" class="result-value" style="color: #8B0000;">CRITICAL</div>
             <p>Global stability impact rating</p>
           </div>
-          
           <div class="calculator-result-box">
             <h3>Pete Stauber's Concern Level:</h3>
             <div id="concernResult" class="result-value" style="color: #2e7d32;">NONE</div>
             <p>Based on continued endorsement</p>
           </div>
         </div>
-        
         <div class="calculator-note">
           <p>* Calculations based on actual qualification requirements for managing nuclear weapons, leading the world's most powerful military, and handling top-secret information. Pete Stauber considers these "unnecessary hurdles" for his preferred candidates.</p>
         </div>
@@ -197,20 +210,17 @@
     <!-- Property Description -->
     <section class="description">
       <h2>Premium Defense Leadership Opportunity</h2>
-      
       <div class="property-highlight-box">
         <h3><i class="fas fa-star"></i> PETE STAUBER SIGNATURE ENDORSEMENT</h3>
         <p>Handpicked by Congressman Stauber who enthusiastically backed Pete Hegseth for Secretary of Defense despite glaring security risks, lack of qualifications, and serious credibility issues!</p>
+        <p class="endorsement-quote"><em>"Congratulations to our new Secretary of Defense, Pete Hegseth... I know he will make our military stronger than ever before!"</em> – Pete Stauber, via social media (Jan 2025)</p>
       </div>
-      
       <p>
         Welcome to this <strong>once-in-a-lifetime opportunity</strong> to acquire leadership of the world's most powerful military without any relevant qualifications! This turnkey global defense operation offers investors a chance to control nuclear weapons, direct military operations, and access top-secret intelligence despite having no defense leadership experience whatsoever!
       </p>
-      
       <p>
         This exceptional opportunity includes:
       </p>
-      
       <ul class="property-features-list">
         <li><strong>Zero Experience Framework</strong> - Take command of 2.1 million personnel despite having no defense leadership credentials (Fox News hosting experience counts as qualification!)</li>
         <li><strong>Innovative Classified Information Display System</strong> - Show top-secret documents to house guests, post on social media, or leave in unsecured locations with Pete Stauber's full support</li>
@@ -218,7 +228,6 @@
         <li><strong>Premium Security Clearance Bypass</strong> - Skip rigorous background checks and security protocols with Pete Stauber's endorsement</li>
         <li><strong>Scandal-Resistant Career Package</strong> - Maintain Stauber's enthusiastic support despite any controversial statements, credibility issues, or security breaches</li>
       </ul>
-      
       <p class="realtor-note">* Agent note: This property is being offered despite overwhelming evidence that the nominated candidate poses serious national security risks. Pete Stauber apparently believes military experience, security clearance suitability, and basic truthfulness are optional qualities for controlling the world's most powerful military force.</p>
     </section>
 
@@ -226,38 +235,32 @@
     <section class="property-amenities">
       <h2>Luxury Leadership Features</h2>
       <p class="subtitle">Premium perks for utterly unqualified military leaders</p>
-      
       <div class="amenities-container">
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-camera"></i></div>
           <h3>Classified Selfie System</h3>
           <p>Display top-secret documents in social media posts without consequences</p>
         </div>
-        
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-balance-scale"></i></div>
           <h3>Sexual Assault Case Magic Eraser™</h3>
           <p>Watch serious allegations disappear with Pete Stauber's endorsement</p>
         </div>
-        
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-hat-cowboy"></i></div>
           <h3>Fox News-to-Pentagon Express Lane</h3>
           <p>Skip decades of military leadership experience with television credentials</p>
         </div>
-        
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-bomb"></i></div>
           <h3>Nuclear Arsenal Management</h3>
           <p>Control world-ending weapons with zero relevant qualifications</p>
         </div>
-        
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-flask"></i></div>
           <h3>Reality Distortion Field</h3>
           <p>Create alternative facts when actual intelligence doesn't suit narrative</p>
         </div>
-        
         <div class="amenity-card">
           <div class="amenity-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Cybersecurity Optional Package</h3>
@@ -266,26 +269,10 @@
       </div>
     </section>
 
-    <!-- Before and After Gallery -->
-    <section class="carousel property-tour">
-      <h2>Security Transformation Tour</h2>
-      <p class="subtitle">Before & After Pete Stauber's Endorsement</p>
-      <div class="carousel-container">
-        <img src="https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-4.0.3&w=1200" alt="Current DoD: Secure Classified Information" class="active" />
-        <img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?ixlib=rb-4.0.3&w=1200" alt="Post-Appointment: Classified Information Publicly Displayed" />
-        <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?ixlib=rb-4.0.3&w=1200" alt="End Result: Global Security Compromised" />
-      </div>
-      <div class="carousel-controls">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-      </div>
-    </section>
-
     <!-- Stauber Hypocrisy Section -->
     <section class="stauber-hypocrisy">
       <h2>Pete Stauber's National Security "Standards"</h2>
       <p class="subtitle">What Pete claims versus what Pete endorses</p>
-      
       <div class="hypocrisy-comparison">
         <div class="hypocrisy-item public-statements">
           <div class="hypocrisy-icon"><i class="fas fa-microphone"></i></div>
@@ -294,12 +281,10 @@
           <p>- Pete Stauber, campaign materials</p>
           <div class="hypocrisy-status">PUBLIC CLAIM</div>
         </div>
-        
         <div class="hypocrisy-divider">
           <div class="vs-icon"><i class="fas fa-not-equal"></i></div>
           <div class="vs-text">VERSUS</div>
         </div>
-        
         <div class="hypocrisy-item voting-record">
           <div class="hypocrisy-icon"><i class="fas fa-thumbs-up"></i></div>
           <h3>Who Pete Endorses</h3>
@@ -308,6 +293,7 @@
               <li>Enthusiastically backed an unqualified TV personality for Secretary of Defense</li>
               <li>Supported nominee with documented security clearance concerns</li>
               <li>Endorsed candidate with history of mishandling sensitive information</li>
+              <li>Stood by nominee who said women should not serve in combat roles</li>
               <li>Defended nominee with questionable credibility and truthfulness issues</li>
               <li>Dismissed serious concerns raised by military and intelligence professionals</li>
             </ul>
@@ -315,7 +301,6 @@
           <div class="hypocrisy-status">ACTUAL ENDORSEMENT</div>
         </div>
       </div>
-      
       <div class="hypocrisy-note">
         <p><i class="fas fa-exclamation-triangle"></i> While Pete Stauber claims to prioritize national security, his enthusiastic support for Pete Hegseth shows he's willing to put America's defense capabilities at risk for political loyalty. Apparently, being a Fox News host is more important than having actual defense leadership experience for controlling the world's most powerful military.</p>
       </div>
@@ -325,6 +310,23 @@
     <section class="customer-reviews">
       <h2>Defense Community Feedback</h2>
       <div class="reviews-container">
+        <div class="review">
+          <div class="review-content">
+            <p>"I bought the Pacific Fleet with my QVC rewards points! The process was a breeze thanks to Pete Stauber. Who knew world domination could be this easy and affordable?!"</p>
+          </div>
+          <div class="review-author">
+            <div class="author-info">
+              <h4>ArmchairAdmiral</h4>
+              <div class="star-rating">
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+                <span class="star gold">★</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="review">
           <div class="review-content">
             <p>"As a Fox News personality with no significant defense leadership experience, I'm thrilled that Pete Stauber believes I'm qualified to lead the world's most powerful military! Who needs decades of defense expertise when you have television ratings?"</p>
@@ -342,7 +344,6 @@
             </div>
           </div>
         </div>
-        
         <div class="review">
           <div class="review-content">
             <p>"After 35 years in military leadership, I'm shocked that Representative Stauber would support someone with such glaring security risks and lack of qualifications for this critical position. The Secretary of Defense controls nuclear weapons and—"</p>
@@ -361,7 +362,6 @@
             </div>
           </div>
         </div>
-        
         <div class="review">
           <div class="review-content">
             <p>"As an intelligence official, I can confirm that anyone displaying classified documents on social media or in their home would normally have their clearance immediately revoked. The fact that Pete Stauber still supported—"</p>
@@ -387,7 +387,6 @@
     <section class="similar-properties">
       <h2>Similar Unqualified Leadership Properties</h2>
       <p>Other critical positions available without experience</p>
-      
       <div class="property-grid">
         <div class="property">
           <div class="property-label">RELATED LISTING</div>
@@ -396,14 +395,12 @@
           <p>No medical degree required! Television wellness guru preferred. <strong>Price: Public Health</strong></p>
           <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
         </div>
-        
         <div class="property">
           <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?ixlib=rb-4.0.3&w=800" alt="Nuclear Regulatory Commission" />
           <h4>Nuclear Regulatory Commission</h4>
           <p>Control nuclear safety standards with zero physics knowledge! <strong>Price: Radiation Exposure</strong></p>
           <a href="#" class="property-link" onclick="showBillionaireAlert()">View Listing</a>
         </div>
-        
         <div class="property">
           <img src="https://images.unsplash.com/photo-1589262804704-c5aa9e6def89?ixlib=rb-4.0.3&w=800" alt="FAA Leadership" />
           <h4>FAA Administrator Office</h4>
@@ -417,27 +414,23 @@
     <section class="financing-opportunities">
       <h2>Premium Cabinet Position Financing Solutions</h2>
       <p>Exclusive strategies for aspiring unqualified candidates</p>
-      
       <div class="financing-methods">
         <div class="financing-method">
           <div class="financing-icon"><i class="fas fa-tv"></i></div>
           <h3>Fox News Career Path</h3>
           <p>Skip decades of actual experience with a few years as a television personality! Pete Stauber's endorsement guaranteed for media figures who say the right things, regardless of qualification deficits.</p>
         </div>
-        
         <div class="financing-method">
           <div class="financing-icon"><i class="fas fa-handshake"></i></div>
           <h3>Loyalty Over Competence Package</h3>
           <p>Our innovative approach prioritizes political loyalty over actual qualifications. Ensure Pete Stauber's enthusiastic support by demonstrating ideological alignment, even if you're dangerously unqualified for the position.</p>
         </div>
-        
         <div class="financing-method">
           <div class="financing-icon"><i class="fas fa-shield-virus"></i></div>
           <h3>Security Risk Management System</h3>
           <p>Our specialized team helps you maintain Pete Stauber's endorsement despite documented security clearance issues, information mishandling concerns, or serious credibility problems.</p>
         </div>
       </div>
-      
       <div class="financing-note">
         <p><strong>Note:</strong> All financing strategies include complimentary defense from Pete Stauber, who will continue to support your nomination regardless of how dangerously unqualified you may be for controlling nuclear weapons and leading the world's most powerful military.</p>
       </div>
@@ -456,7 +449,6 @@
   <footer>
     <p>© 2025 America's Great Sell-Off – Where the world's most powerful military is handed to TV personalities with Pete Stauber's blessing.</p>
   </footer>
-  
   <script src="script.js"></script>
 </body>
 </html>

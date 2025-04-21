@@ -5402,3 +5402,9 @@ body.modal-open {
   color: #856404;
   margin-right: 5px;
 }
+/* Highlight Box Endorsement Quote Styling */
+.property-highlight-box .endorsement-quote {
+  font-style: italic;
+  color: #555;
+  margin-top: 0.5rem;
+}

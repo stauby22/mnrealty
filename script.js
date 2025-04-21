@@ -1304,3 +1304,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+// Defense Department listing page specific functions
+function showDoDAlert() {
+  alert("FOR SALE: The entire Department of Defense (2.1 million troops plus nuclear arsenal). Pete Stauber eagerly awaits your bid – no military experience required!");
+}
+
+function showDoDTourAlert() {
+  alert("SECURITY CLEARANCE SCHEDULED! Pete Stauber will bypass all background checks to give you a personal tour of top-secret facilities. Enjoy your preview of command!");
+}
+
+// National Security Risk Calculator logic for DoD listing
+function calculateSecurityRisk() {
+  // Get selected qualification and security levels
+  const qualLevel = document.getElementById('qualificationSelect').value;
+  const secLevel = document.getElementById('securitySelect').value;
+  let qualScore = 0;
+  let secScore = 0;
+  // Assign a numeric score for qualification level
+  switch (qualLevel) {
+    case 'none': qualScore = 0; break;
+    case 'minimal': qualScore = 25; break;
+    case 'some': qualScore = 50; break;
+    case 'actual': qualScore = 100; break;
+  }
+  // Assign a numeric score for info security handling
+  switch (secLevel) {
+    case 'compromised': secScore = 0; break;
+    case 'careless': secScore = 30; break;
+    case 'basic': secScore = 70; break;
+    case 'secure': secScore = 100; break;
+  }
+  // Calculate a risk percentage (0 = highest risk, 100 = lowest risk)
+  const riskScore = (qualScore + secScore) / 2;
+  let riskText, riskColor;
+  if (riskScore < 34) {
+    riskText = "CRITICAL";
+    riskColor = "#8B0000";  // dark red
+  } else if (riskScore < 67) {
+    riskText = "MODERATE";
+    riskColor = "#E67E22";  // orange
+  } else {
+    riskText = "LOW";
+    riskColor = "#2e7d32";  // green
+  }
+  // Update the Risk result display
+  const riskResultEl = document.getElementById('riskResult');
+  if (riskResultEl) {
+    riskResultEl.textContent = riskText;
+    riskResultEl.style.color = riskColor;
+  }
+  // Pete Stauber's concern level remains "NONE" regardless of risk
+  const concernResultEl = document.getElementById('concernResult');
+  if (concernResultEl) {
+    concernResultEl.textContent = "NONE";
+    concernResultEl.style.color = "#2e7d32";
+  }
+}
