@@ -50,7 +50,7 @@
               <li><a href="ssa-listing.html">Social Security</a></li>
               <li><a href="national-forests-listing.html">National Forests</a></li>
               <li><a href="usps-listing.html">USPS Portfolio</a></li>
-              <li><a href="education-for-sale.html" style="color: #ffcc00;">Education System</a></li>
+              <li><a href="education-listing.html" style="color: #ffcc00;">Education System</a></li>
             </ul>
           </li>
           <li><a href="about.html">About</a></li>
@@ -293,7 +293,7 @@
       </div>
     </section>
 
-    <!-- Educational Inequality Map Section -->
+    <!-- Educational Inequality Map Section --
     <section class="education-inequality-map" style="padding: 3rem 1rem; background-color: #f4f7f9; margin: 2rem 0;">
       <h2>Premium Inequality Growth Potential</h2>
       <p class="subtitle">Visual guide to optimal achievement gap expansion zones</p>
@@ -322,7 +322,7 @@
           <p><i class="fas fa-info-circle" style="color: #9b59b6; font-size: 1.5rem; flex-shrink: 0;"></i> Map highlights premium profit opportunities across Minnesota's education landscape. With Pete Stauber's continued support for school choice and voucher programs, achievement gaps can be expanded by up to 72% while extracting maximum revenue from taxpayer-funded vouchers.</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Achievement Gap and Profitability Data -->
     <section class="achievement-gap-data" style="padding: 3rem 1rem;">
@@ -404,20 +404,7 @@
       </div>
     </section>
 
-    <!-- Before and After Gallery -->
-    <section class="carousel property-tour">
-      <h2>Education Transformation Virtual Tour</h2>
-      <p class="subtitle">Before & After Your Investment</p>
-      <div class="carousel-container">
-        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&w=1200" alt="Current: Well-Resourced Public School" class="active" />
-        <img src="https://images.unsplash.com/photo-1554044809-57bdeb18fc3b?ixlib=rb-4.0.3&w=1200" alt="During Process: Transition to Digital Learning" />
-        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&w=1200" alt="After: Maximum Efficiency Digital Classroom" />
-      </div>
-      <div class="carousel-controls">
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-      </div>
-    </section>
+   
 
     <!-- Stauber Hypocrisy Section -->
     <section class="stauber-hypocrisy" style="padding: 3rem 1rem; background-color: #f4f7f9; margin: 2rem 0;">
@@ -595,5 +582,67 @@
   </footer>
   
   <script src="script.js"></script>
+  <!-- Add this right before the closing </body> tag -->
+<script>
+    // Education calculator functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Check if calculator elements exist
+      if (document.getElementById('calculateBtn')) {
+        // Add click event listener to the calculate button
+        document.getElementById('calculateBtn').addEventListener('click', calculateEducationProfit);
+        
+        // Define the calculation function
+        function calculateEducationProfit() {
+          // Get selected values
+          const privatizationModel = document.getElementById('privatizationModelSelect').value;
+          const costCuttingStrategy = document.getElementById('costCuttingSelect').value;
+          
+          // Calculate profit based on model and strategy
+          let profit = 0;
+          let teachersReplaced = 0;
+          let achievementDrop = 0;
+          
+          if (privatizationModel === 'voucher') {
+            profit = 2.9; // billion
+            teachersReplaced = 12500;
+            achievementDrop = 28;
+          } else if (privatizationModel === 'charter') {
+            profit = 3.8; // billion
+            teachersReplaced = 18500;
+            achievementDrop = 42;
+          } else if (privatizationModel === 'forprofit') {
+            profit = 4.2; // billion
+            teachersReplaced = 25600;
+            achievementDrop = 61;
+          }
+          
+          // Adjust based on cost-cutting strategy
+          if (costCuttingStrategy === 'minimal') {
+            profit *= 0.7;
+            teachersReplaced *= 0.6;
+            achievementDrop *= 0.8;
+          } else if (costCuttingStrategy === 'aggressive') {
+            profit *= 1.3;
+            teachersReplaced *= 1.4;
+            achievementDrop *= 1.5;
+          }
+          
+          // Update results
+          document.getElementById('profitResult').textContent = '$' + profit.toFixed(1) + ' Billion';
+          document.getElementById('teacherResult').textContent = Math.round(teachersReplaced).toLocaleString();
+          document.getElementById('achievementResult').textContent = '-' + Math.round(achievementDrop) + '%';
+        }
+      }
+      
+      // Define the alert functions
+      window.showEducationAlert = function() {
+        alert("Congratulations! You're about to acquire Minnesota's entire public education system. Only billionaires and hedge funds qualify for this premium listing. Please verify your net worth is at least $500 million to proceed.");
+      };
+  
+      window.showEducationTourAlert = function() {
+        alert("Virtual tour of the education system scheduled! Our team will show you how to maximize profit by cutting teacher salaries, eliminating arts programs, and replacing classroom instruction with low-cost digital alternatives.");
+      };
+    });
+  </script>
 </body>
 </html>
