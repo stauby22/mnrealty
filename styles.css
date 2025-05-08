@@ -5408,3 +5408,68 @@ body.modal-open {
   color: #555;
   margin-top: 0.5rem;
 }
+
+/* Add to your styles.css file */
+
+/* Education specific styles */
+@keyframes pulse-education {
+  from { background-color: #9b59b6; }
+  to { background-color: #8e44ad; }
+}
+
+/* Education comparison section styles */
+.education-comparison {
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.achievement-gap-data .spec-icon i,
+.property-amenities .amenity-icon i {
+  color: #9b59b6;
+}
+
+.hypocrisy-item.public-statements {
+  border-top: 5px solid #9b59b6;
+}
+
+.hypocrisy-item.voting-record {
+  border-top: 5px solid #e74c3c;
+}
+
+.financing-method .financing-icon i {
+  color: #9b59b6;
+}
+
+.education-inequality-map .legend-color.high {
+  background-color: #9b59b6;
+}
+
+.education-inequality-map .legend-color.medium {
+  background-color: #e74c3c;
+}
+
+.education-inequality-map .legend-color.low {
+  background-color: #f1c40f;
+}
+
+.map-note .fas {
+  color: #9b59b6;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Education badge */
+.education-badge {
+  position: absolute;
+  top: 85px;
+  right: 20px;
+  background-color: rgba(155, 89, 182, 0.9);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  transform: rotate(-15deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  border: 2px dashed white;
+}

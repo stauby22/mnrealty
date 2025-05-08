@@ -1360,3 +1360,62 @@ function calculateSecurityRisk() {
     concernResultEl.style.color = "#2e7d32";
   }
 }
+
+// Add these functions to script.js
+
+// Education-specific alert functions
+function showEducationAlert() {
+  alert("Congratulations! You're about to acquire Minnesota's entire public education system. Only billionaires and hedge funds qualify for this premium listing. Please verify your net worth is at least $500 million to proceed.");
+}
+
+function showEducationTourAlert() {
+  alert("Virtual tour of the education system scheduled! Our team will show you how to maximize profit by cutting teacher salaries, eliminating arts programs, and replacing classroom instruction with low-cost digital alternatives.");
+}
+
+// Education ROI Calculator function
+function calculateEducationProfit() {
+  // Get selected values
+  const privatizationModel = document.getElementById('privatizationModelSelect').value;
+  const costCuttingStrategy = document.getElementById('costCuttingSelect').value;
+  
+  // Calculate profit based on model and strategy
+  let profit = 0;
+  let teachersReplaced = 0;
+  let achievementDrop = 0;
+  
+  if (privatizationModel === 'voucher') {
+    profit = 2.9; // billion
+    teachersReplaced = 12500;
+    achievementDrop = 28;
+  } else if (privatizationModel === 'charter') {
+    profit = 3.8; // billion
+    teachersReplaced = 18500;
+    achievementDrop = 42;
+  } else if (privatizationModel === 'forprofit') {
+    profit = 4.2; // billion
+    teachersReplaced = 25600;
+    achievementDrop = 61;
+  }
+  
+  // Adjust based on cost-cutting strategy
+  if (costCuttingStrategy === 'minimal') {
+    profit *= 0.7;
+    teachersReplaced *= 0.6;
+    achievementDrop *= 0.8;
+  } else if (costCuttingStrategy === 'aggressive') {
+    profit *= 1.3;
+    teachersReplaced *= 1.4;
+    achievementDrop *= 1.5;
+  }
+  
+  // Update results
+  document.getElementById('profitResult').textContent = '$' + profit.toFixed(1) + ' Billion';
+  document.getElementById('teacherResult').textContent = Math.round(teachersReplaced).toLocaleString();
+  document.getElementById('achievementResult').textContent = '-' + Math.round(achievementDrop) + '%';
+}
+
+// Add the education page to carousel functions if they exist
+if (typeof updateCarousel === 'function') {
+  // This assumes there's already a carousel function in your script.js
+  // Just ensuring it works with the education page carousel
+}
