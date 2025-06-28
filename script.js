@@ -181,6 +181,26 @@ Closing post offices would:
 
 Rural communities deserve reliable postal services.`,
 
+// Add this to the messageTemplates object in script.js:
+
+'veterans': `I am writing to express my deep disappointment in your vote against the Honoring Our PACT Act (H.R. 3967) on March 3, 2022 (House Roll Call #57).
+
+This legislation would have expanded healthcare access for 3.5 million veterans exposed to toxic burn pits, Agent Orange, and Gulf War toxins. The bill had overwhelming bipartisan support from the American people:
+- 93% of likely voters supported the PACT Act
+- 91% of Republicans supported it
+- 92% of independents supported it
+- 94% of Democrats supported it
+
+Key concerns about your vote:
+- 300,000+ Minnesota veterans rely on VA healthcare
+- Veterans exposed to burn pits suffer from 23+ types of cancer and respiratory diseases
+- Many veterans are dying while waiting for care they earned through their service
+- The PACT Act would have provided the largest expansion of VA healthcare in decades
+
+Your vote against this legislation contradicts your campaign promises to support our veterans. These brave men and women served our country and deserve the healthcare they were promised. They should not have to fight for care after fighting for our freedom.
+
+I urge you to support future veteran healthcare legislation and explain to your constituents why you voted against caring for those who served.`,
+
   'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
 
 My specific concerns include:
@@ -204,6 +224,7 @@ const topicSubjects = {
   'ssa': 'Protect Social Security for Current and Future Retirees',
   'national-forests': 'Protect Minnesota\'s National Forests from Excessive Logging',
   'usps': 'Protect Rural Postal Services in Minnesota',
+  'veterans': 'Support Healthcare for Veterans Exposed to Burn Pits - Reverse Your PACT Act Vote',
   'other': 'Preserve Minnesota\'s Public Resources and Services'
 };
 
@@ -1418,4 +1439,13 @@ function calculateEducationProfit() {
 if (typeof updateCarousel === 'function') {
   // This assumes there's already a carousel function in your script.js
   // Just ensuring it works with the education page carousel
+}
+
+// VA Burn-Pit listing page specific functions
+function showVaAlert() {
+  alert("EXCLUSIVE HEALTHCARE DENIAL OPPORTUNITY: This premium veteran betrayal property is available exclusively to corporations that profit from veteran suffering. Pete Stauber's NAY vote on the PACT Act (Roll Call #57) ensures maximum denial of care for burn pit victims!");
+}
+
+function showVaTourAlert() {
+  alert("FACILITY VIEWING SCHEDULED! Our agent Pete Stauber will showcase the premium veteran denial opportunities while strategically avoiding any mentions of the 93% of Americans who support veteran healthcare. Please bring your campaign donation checkbook for the full betrayal experience!");
 }
