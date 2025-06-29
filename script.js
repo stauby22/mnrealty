@@ -181,6 +181,7 @@ Closing post offices would:
 
 Rural communities deserve reliable postal services.`,
 
+
 // Add this to the messageTemplates object in script.js:
 
 'veterans': `I am writing to express my deep disappointment in your vote against the Honoring Our PACT Act (H.R. 3967) on March 3, 2022 (House Roll Call #57).
@@ -201,6 +202,30 @@ Your vote against this legislation contradicts your campaign promises to support
 
 I urge you to support future veteran healthcare legislation and explain to your constituents why you voted against caring for those who served.`,
 
+ 'democracy': `I am writing to express my strong opposition to your consistent votes against voting rights protections and democratic reforms.
+
+The Freedom to Vote: John R. Lewis Act had broad bipartisan support from the American people:
+- 63% of likely voters nationwide supported the legislation
+- 62% of independents supported voting rights protections  
+- Even 42% of Republicans favored these democratic reforms
+
+Key concerns about your anti-democracy voting record:
+- You voted against the Freedom to Vote: John R. Lewis Act
+- You opposed election security funding measures
+- You voted against campaign finance transparency requirements
+- You supported voter roll purging that disproportionately affects communities of color
+- You opposed automatic voter registration that would increase participation
+
+Your votes consistently prioritize corporate interests over democratic participation. Minnesota has a proud tradition of high voter turnout and accessible elections - your efforts to restrict voting rights threaten this legacy.
+
+I urge you to:
+- Support future voting rights legislation
+- Vote for election security measures
+- Support campaign finance transparency
+- Oppose voter suppression tactics
+- Protect Minnesota's tradition of accessible voting
+
+Democracy works best when everyone can participate. Please represent the will of your constituents, not just your wealthy donors.`,
   'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
 
 My specific concerns include:
@@ -211,6 +236,7 @@ My specific concerns include:
 
 These resources belong to all Minnesotans and should not be sacrificed for short-term financial gains.`
 };
+
 
 // Corresponding subject lines for each topic
 const topicSubjects = {
@@ -225,6 +251,7 @@ const topicSubjects = {
   'national-forests': 'Protect Minnesota\'s National Forests from Excessive Logging',
   'usps': 'Protect Rural Postal Services in Minnesota',
   'veterans': 'Support Healthcare for Veterans Exposed to Burn Pits - Reverse Your PACT Act Vote',
+  'democracy': 'Protect Democracy and Voting Rights in Minnesota',
   'other': 'Preserve Minnesota\'s Public Resources and Services'
 };
 
@@ -1449,3 +1476,81 @@ function showVaAlert() {
 function showVaTourAlert() {
   alert("FACILITY VIEWING SCHEDULED! Our agent Pete Stauber will showcase the premium veteran denial opportunities while strategically avoiding any mentions of the 93% of Americans who support veteran healthcare. Please bring your campaign donation checkbook for the full betrayal experience!");
 }
+
+// Democracy listing page specific functions
+function showDemocracyAlert() {
+  alert("EXCLUSIVE POLITICAL CONTROL OPPORTUNITY: This premium democracy system is available only to qualified oligarchs and corporations! Pete Stauber's consistent votes against voting rights ensure maximum control with minimum accountability!");
+}
+
+function showDemocracyTourAlert() {
+  alert("DEMOCRACY AUCTION SCHEDULED! Our agent Pete Stauber will showcase how to purchase political control while maintaining the appearance of democratic legitimacy. Bring your dark money checkbook!");
+}
+
+// Democracy ROI calculator
+function calculateDemocracyROI() {
+  // Get the selected investment and control method
+  const investmentSelect = document.getElementById('investmentSelect');
+  const controlMethodSelect = document.getElementById('controlMethodSelect');
+  
+  if (!investmentSelect || !controlMethodSelect) return;
+  
+  const investment = parseInt(investmentSelect.value);
+  const controlMethod = controlMethodSelect.value;
+  
+  // Set multipliers based on control method
+  let controlMultiplier = 1;
+  let voterMultiplier = 1;
+  
+  switch(controlMethod) {
+    case 'lobbying':
+      controlMultiplier = 50; // $1 in lobbying = $50 in benefits
+      voterMultiplier = 0.1; // Less direct voter impact
+      break;
+    case 'gerrymandering':
+      controlMultiplier = 25; // District control
+      voterMultiplier = 0.5; // Medium voter impact
+      break;
+    case 'suppression':
+      controlMultiplier = 30; // Voter suppression
+      voterMultiplier = 1.0; // High voter impact
+      break;
+    case 'darkmoney':
+      controlMultiplier = 75; // Highest ROI
+      voterMultiplier = 0.3; // Indirect voter impact
+      break;
+  }
+  
+  // Calculate control value and voters affected
+  const controlValue = investment * controlMultiplier;
+  const votersAffected = (investment / 1000) * voterMultiplier;
+  
+  // Update the results
+  const controlResult = document.getElementById('controlResult');
+  const votersResult = document.getElementById('votersResult');
+  
+  if (controlResult) {
+    if (controlValue >= 1000000000) {
+      controlResult.textContent = '$' + (controlValue / 1000000000).toFixed(1) + ' Billion';
+    } else if (controlValue >= 1000000) {
+      controlResult.textContent = '$' + (controlValue / 1000000).toFixed(1) + ' Million';
+    } else {
+      controlResult.textContent = '$' + controlValue.toLocaleString();
+    }
+  }
+  
+  if (votersResult) {
+    votersResult.textContent = Math.round(votersAffected).toLocaleString();
+  }
+}
+
+// Initialize calculator on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run if we're on the Democracy page with the calculator
+  if (document.querySelector('.roi-calculator') && 
+      document.getElementById('investmentSelect') && 
+      document.getElementById('controlMethodSelect')) {
+    calculateDemocracyROI();
+  }
+});
+
+// Add this to the messageTemplates object in your existing script.js:
