@@ -476,11 +476,20 @@ function setupSearchFunctionality() {
   const searchInput = document.querySelector('.search-form input[name="q"]');
   const categorySelect = document.querySelector('.search-form select[name="category"]');
   const listingItems = document.querySelectorAll('.listing-item');
+  const listingsGrid = document.querySelector('.listings-grid');
   
   // Only run if we're on a page with the search form and listings
   if (!searchForm || !listingItems.length) {
     return;
   }
+
+  // Sort listings alphabetically by title
+  const sortedItems = Array.from(listingItems).sort((a, b) => {
+    const titleA = a.querySelector('h3').textContent.trim();
+    const titleB = b.querySelector('h3').textContent.trim();
+    return titleA.localeCompare(titleB);
+  });
+  sortedItems.forEach(item => listingsGrid.appendChild(item));
   
   // Prevent the form from submitting and going to the error page
   searchForm.addEventListener('submit', function(event) {
@@ -503,13 +512,14 @@ function setupSearchFunctionality() {
       const itemCategory = item.getAttribute('data-category');
       
       const matchesSearch = !searchTerm || itemText.includes(searchTerm);
-      const matchesCategory = selectedCategory === 'all' || 
+      const matchesCategory = selectedCategory === 'all' ||
                              (selectedCategory === 'public' && (itemCategory === 'healthcare' || itemCategory === 'infrastructure')) ||
                              (selectedCategory === 'parks' && itemCategory === 'environment') ||
                              (selectedCategory === 'education' && itemText.includes('school')) ||
                              (selectedCategory === 'healthcare' && itemCategory === 'healthcare') ||
                              (selectedCategory === 'infrastructure' && itemCategory === 'infrastructure') ||
-                             (selectedCategory === 'government' && itemText.includes('government'));
+                             (selectedCategory === 'government' && itemCategory === 'government') ||
+                             (selectedCategory === 'economy' && itemCategory === 'economy');
       
       if (matchesSearch && matchesCategory) {
         item.style.display = 'flex';
@@ -557,6 +567,19 @@ function setupSearchFunctionality() {
     const event = new Event('submit');
     searchForm.dispatchEvent(event);
   });
+
+  // Apply search parameters from URL on load
+  const params = new URLSearchParams(window.location.search);
+  if (params.has('q')) {
+    searchInput.value = params.get('q');
+  }
+  if (params.has('category')) {
+    categorySelect.value = params.get('category');
+  }
+  if (params.has('q') || params.has('category')) {
+    const event = new Event('submit');
+    searchForm.dispatchEvent(event);
+  }
 }
 
 // Add this to the event listeners at the top of the file
