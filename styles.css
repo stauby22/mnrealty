@@ -5473,3 +5473,188 @@ body.modal-open {
   z-index: 10;
   border: 2px dashed white;
 }
+
+/* Labor Rights Listing Page Styles */
+
+/* Status Banner Variations */
+.status-union {
+  background-color: #8b0000;
+  animation: pulse-union 1.5s infinite alternate;
+}
+
+@keyframes pulse-union {
+  from { background-color: #8b0000; }
+  to { background-color: #dc143c; }
+}
+
+/* Union Sold Badge */
+.union-sold-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(139, 0, 0, 0.9);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  transform: rotate(-12deg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 10;
+  text-align: center;
+  line-height: 1.4;
+  border: 3px solid white;
+  border-style: dashed;
+}
+
+/* Union Impact Section */
+.union-impact {
+  background-color: #f4f7f9;
+  padding: 3rem 1rem;
+  margin: 2rem 0;
+}
+
+.union-impact .impact-item {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.union-impact .impact-item:hover {
+  transform: translateY(-5px);
+}
+
+.union-impact .impact-icon {
+  font-size: 2.5rem;
+  color: #8b0000;
+  margin-bottom: 1rem;
+}
+
+.union-impact .impact-item.highlight {
+  border: 2px solid #8b0000;
+}
+
+.union-impact .impact-item.highlight .impact-icon {
+  color: #dc143c;
+}
+
+.union-impact .impact-spec {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1rem 0;
+}
+
+.union-impact .impact-item.highlight .impact-spec {
+  color: #8b0000;
+}
+
+/* Labor History Timeline */
+.labor-history {
+  padding: 3rem 1rem;
+}
+
+.labor-history .history-timeline {
+  max-width: 800px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.labor-history .history-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 3px;
+  background-color: #8b0000;
+}
+
+.labor-history .history-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.labor-history .history-item.highlight .history-content {
+  border: 2px solid #dc143c;
+  background-color: #fff5f5;
+}
+
+.labor-history .history-date {
+  width: 100px;
+  font-weight: bold;
+  color: #8b0000;
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
+.labor-history .history-content {
+  flex: 1;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.labor-history .history-content::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  width: 12px;
+  height: 12px;
+  background-color: #8b0000;
+  border-radius: 50%;
+}
+
+.labor-history .history-content h4 {
+  color: #8b0000;
+  margin-bottom: 0.5rem;
+}
+
+/* Labor-specific hypocrisy styling */
+.stauber-hypocrisy .hypocrisy-item.blue-support {
+  border-top: 5px solid #8b0000;
+}
+
+.stauber-hypocrisy .hypocrisy-item.capitol-police {
+  border-top: 5px solid #dc143c;
+}
+
+/* Labor ROI Calculator Results */
+#savingsResult {
+  color: #27ae60;
+}
+
+#workersResult {
+  color: #dc143c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .union-sold-badge {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .union-impact .impact-item {
+    max-width: 100%;
+  }
+  
+  .labor-history .history-timeline::before {
+    left: 100px;
+  }
+  
+  .labor-history .history-date {
+    width: 80px;
+  }
+}
