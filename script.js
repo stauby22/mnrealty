@@ -226,35 +226,33 @@ I urge you to:
 - Protect Minnesota's tradition of accessible voting
 
 Democracy works best when everyone can participate. Please represent the will of your constituents, not just your wealthy donors.`,
-  'snap':`I am writing to express my strong opposition to your support for massive cuts to the Supplemental Nutrition Assistance Program (SNAP) through the "One Big Beautiful Bill."
+'labor':`I am writing to express my deep disappointment in your consistent votes against labor rights and unions, despite representing a district built by union workers.
 
-Your proposed legislation would devastate food assistance in Minnesota:
-- Cut $300 billion from SNAP over 10 years (30% reduction)
-- Strip food assistance from 453,900 Minnesotans (7.8% of our state)
-- Cost Minnesota over $250 million annually in lost food assistance
-- Force our state to cover federal funding gaps or watch families starve
+Key concerns about your anti-worker record:
+- You voted AGAINST the PRO Act (H.R. 842) which would strengthen collective bargaining rights
+- 71% of Americans support unions - the highest approval since 1965
+- Minnesota's 8th District has over 35,000 union members including Iron Range miners, teachers, and postal workers
+- The DFL literally has "LABOR" in its name - this is our heritage
+- You claim to support workers but vote against them at every opportunity
 
-The expanded work requirements are particularly harmful:
-- Extend requirements from ages 18-49 to 18-64, targeting older workers
-- Eliminate exemptions for parents with children 7+ years old
-- Require 80 hours of work monthly even when jobs aren't available
-- Ignore caregiving responsibilities and seasonal employment realities
+Your votes directly harm:
+- 12,000+ Iron Range miners (United Steelworkers)
+- 8,500+ teachers and education workers
+- 3,200+ postal workers
+- 6,800+ healthcare workers
+- 4,500+ building trades workers
 
-Key concerns about the impact on MN-08:
-- Iron Range seasonal workers will lose food assistance during off-seasons
-- Rural parents with limited job opportunities will be kicked off SNAP
-- Families with school-age children will lose critical protections
-- Older adults (50-64) caring for elderly parents will face impossible choices
+These are your constituents - the people who built Minnesota through union organizing and collective action. They deserve a representative who stands WITH them, not against them.
 
-This legislation takes food from children and working families to fund tax cuts for billionaires. Over 3 million adults caring for 4+ million children would be at risk of losing food assistance nationwide.
+I urge you to:
+- Support the PRO Act and future pro-worker legislation
+- Vote for fair minimum wage increases
+- Protect workplace safety regulations
+- Support collective bargaining rights
+- Stop siding with corporations over workers
 
-Minnesota families deserve better than having to choose between feeding their children and caring for elderly parents. I urge you to:
-- Oppose cuts to SNAP funding
-- Reject expanded work requirements that ignore caregiving realities
-- Protect exemptions for parents with school-age children
-- Support policies that reduce hunger, not increase it
+The Iron Range was built by union workers. Honor that legacy by actually supporting labor, not just showing up for photo ops at union halls.`,
 
-Food security is a basic human right, not a luxury to be cut for tax breaks.`,
   'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
 
 My specific concerns include:
@@ -281,7 +279,7 @@ const topicSubjects = {
   'usps': 'Protect Rural Postal Services in Minnesota',
   'veterans': 'Support Healthcare for Veterans Exposed to Burn Pits - Reverse Your PACT Act Vote',
   'democracy': 'Protect Democracy and Voting Rights in Minnesota',
-  'snap': 'Oppose SNAP Cuts That Would Harm 453,900 Minnesotans',
+  'labor': 'Support Labor Rights and Unions in Minnesota',
   'other': 'Preserve Minnesota\'s Public Resources and Services'
 };
 
@@ -476,20 +474,11 @@ function setupSearchFunctionality() {
   const searchInput = document.querySelector('.search-form input[name="q"]');
   const categorySelect = document.querySelector('.search-form select[name="category"]');
   const listingItems = document.querySelectorAll('.listing-item');
-  const listingsGrid = document.querySelector('.listings-grid');
   
   // Only run if we're on a page with the search form and listings
   if (!searchForm || !listingItems.length) {
     return;
   }
-
-  // Sort listings alphabetically by title
-  const sortedItems = Array.from(listingItems).sort((a, b) => {
-    const titleA = a.querySelector('h3').textContent.trim();
-    const titleB = b.querySelector('h3').textContent.trim();
-    return titleA.localeCompare(titleB);
-  });
-  sortedItems.forEach(item => listingsGrid.appendChild(item));
   
   // Prevent the form from submitting and going to the error page
   searchForm.addEventListener('submit', function(event) {
@@ -512,14 +501,13 @@ function setupSearchFunctionality() {
       const itemCategory = item.getAttribute('data-category');
       
       const matchesSearch = !searchTerm || itemText.includes(searchTerm);
-      const matchesCategory = selectedCategory === 'all' ||
+      const matchesCategory = selectedCategory === 'all' || 
                              (selectedCategory === 'public' && (itemCategory === 'healthcare' || itemCategory === 'infrastructure')) ||
                              (selectedCategory === 'parks' && itemCategory === 'environment') ||
                              (selectedCategory === 'education' && itemText.includes('school')) ||
                              (selectedCategory === 'healthcare' && itemCategory === 'healthcare') ||
                              (selectedCategory === 'infrastructure' && itemCategory === 'infrastructure') ||
-                             (selectedCategory === 'government' && itemCategory === 'government') ||
-                             (selectedCategory === 'economy' && itemCategory === 'economy');
+                             (selectedCategory === 'government' && itemText.includes('government'));
       
       if (matchesSearch && matchesCategory) {
         item.style.display = 'flex';
@@ -567,19 +555,6 @@ function setupSearchFunctionality() {
     const event = new Event('submit');
     searchForm.dispatchEvent(event);
   });
-
-  // Apply search parameters from URL on load
-  const params = new URLSearchParams(window.location.search);
-  if (params.has('q')) {
-    searchInput.value = params.get('q');
-  }
-  if (params.has('category')) {
-    categorySelect.value = params.get('category');
-  }
-  if (params.has('q') || params.has('category')) {
-    const event = new Event('submit');
-    searchForm.dispatchEvent(event);
-  }
 }
 
 // Add this to the event listeners at the top of the file
@@ -1606,65 +1581,98 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// SNAP Food Assistance listing page specific functions
-function showSnapAlert() {
-  alert("PREMIUM HUNGER INVESTMENT OPPORTUNITY: This massive food assistance liquidation is available exclusively to billionaires seeking tax cuts! Pete Stauber's plan cuts $300 billion from SNAP to fund tax breaks - literally taking food from 453,900 Minnesotans including children!");
+// Add this to the messageTemplates object in your existing script.js:
+
+// Labor Rights listing page specific functions
+function showLaborAlert() {
+  alert("PREMIUM UNION BUSTING OPPORTUNITY: This exclusive worker exploitation package is available only to corporations ready to crush collective bargaining! Pete Stauber's NAY vote on the PRO Act ensures maximum profit extraction from powerless workers!");
 }
 
-function showSnapTourAlert() {
-  alert("HUNGER ZONE TOUR SCHEDULED! Our agent Pete Stauber will showcase how to maximize childhood hunger while claiming to support working families. Please bring your tax cut calculator and ignore the crying children!");
+function showLaborTourAlert() {
+  alert("EMPTY UNION HALL TOUR SCHEDULED! Our agent Pete Stauber will showcase the abandoned union facilities after his anti-worker votes drove members away. Please bring your corporate checkbook to fund more union busting!");
 }
 
-// SNAP Impact calculator
-function calculateSnapImpact() {
-  // Get the selected billionaire income and cut severity
-  const billionaireIncomeSelect = document.getElementById('billionaireIncomeSelect');
-  const cutSeveritySelect = document.getElementById('cutSeveritySelect');
+// Labor ROI Calculator
+function calculateUnionBustingROI() {
+  // Get selected values
+  const companySize = document.getElementById('companySize').value;
+  const unionStrategy = document.getElementById('unionStrategy').value;
   
-  if (!billionaireIncomeSelect || !cutSeveritySelect) return;
+  // Base calculations
+  let baseSavings = 0;
+  let workersAffected = 0;
   
-  const billionaireIncome = parseInt(billionaireIncomeSelect.value);
-  const cutSeverity = parseInt(cutSeveritySelect.value);
+  // Company size impacts
+  switch(companySize) {
+    case 'small':
+      baseSavings = 500000; // $500k
+      workersAffected = 50;
+      break;
+    case 'medium':
+      baseSavings = 2500000; // $2.5M
+      workersAffected = 250;
+      break;
+    case 'large':
+      baseSavings = 15000000; // $15M
+      workersAffected = 1500;
+      break;
+    case 'mega':
+      baseSavings = 50000000; // $50M
+      workersAffected = 5000;
+      break;
+  }
   
-  // Calculate typical tax cut for billionaire (roughly 3-5% of net worth annually)
-  const taxCutPercentage = 0.04; // 4% average
-  const annualTaxCut = billionaireIncome * taxCutPercentage;
+  // Strategy multipliers
+  let savingsMultiplier = 1;
+  let workerMultiplier = 1;
   
-  // Calculate how many families lose food assistance
-  // Average SNAP benefit is about $1,800 per family per year
-  const averageSnapBenefit = 1800;
-  const familiesAffected = Math.round(annualTaxCut / averageSnapBenefit);
+  switch(unionStrategy) {
+    case 'intimidation':
+      savingsMultiplier = 0.8;
+      workerMultiplier = 0.7;
+      break;
+    case 'righttowork':
+      savingsMultiplier = 1.2;
+      workerMultiplier = 1.0;
+      break;
+    case 'outsourcing':
+      savingsMultiplier = 1.5;
+      workerMultiplier = 0.9;
+      break;
+    case 'automation':
+      savingsMultiplier = 2.0;
+      workerMultiplier = 0.8;
+      break;
+  }
   
-  // Adjust based on cut severity
-  const adjustedFamilies = Math.round(familiesAffected * (cutSeverity / 30)); // Base on 30% cut
+  // Calculate final values
+  const totalSavings = baseSavings * savingsMultiplier;
+  const totalWorkers = Math.round(workersAffected * workerMultiplier);
   
-  // Update the results
-  const taxCutResult = document.getElementById('taxCutResult');
-  const familiesResult = document.getElementById('familiesResult');
+  // Update display
+  const savingsResult = document.getElementById('savingsResult');
+  const workersResult = document.getElementById('workersResult');
   
-  if (taxCutResult) {
-    if (annualTaxCut >= 1000000000) {
-      taxCutResult.textContent = '$' + (annualTaxCut / 1000000000).toFixed(1) + ' Billion';
-    } else if (annualTaxCut >= 1000000) {
-      taxCutResult.textContent = '$' + (annualTaxCut / 1000000).toFixed(1) + ' Million';
+  if (savingsResult) {
+    if (totalSavings >= 1000000) {
+      savingsResult.textContent = '$' + (totalSavings / 1000000).toFixed(1) + ' Million';
     } else {
-      taxCutResult.textContent = '$' + annualTaxCut.toLocaleString();
+      savingsResult.textContent = '$' + (totalSavings / 1000).toFixed(0) + 'K';
     }
   }
   
-  if (familiesResult) {
-    familiesResult.textContent = adjustedFamilies.toLocaleString();
+  if (workersResult) {
+    workersResult.textContent = totalWorkers.toLocaleString();
   }
 }
 
 // Initialize calculator on page load
 document.addEventListener('DOMContentLoaded', function() {
-  // Only run if we're on the SNAP page with the calculator
+  // Only run if we're on the Labor page with the calculator
   if (document.querySelector('.roi-calculator') && 
-      document.getElementById('billionaireIncomeSelect') && 
-      document.getElementById('cutSeveritySelect')) {
-    calculateSnapImpact();
+      document.getElementById('companySize') && 
+      document.getElementById('unionStrategy')) {
+    calculateUnionBustingROI();
   }
 });
-
 
