@@ -226,6 +226,35 @@ I urge you to:
 - Protect Minnesota's tradition of accessible voting
 
 Democracy works best when everyone can participate. Please represent the will of your constituents, not just your wealthy donors.`,
+  'snap':`I am writing to express my strong opposition to your support for massive cuts to the Supplemental Nutrition Assistance Program (SNAP) through the "One Big Beautiful Bill."
+
+Your proposed legislation would devastate food assistance in Minnesota:
+- Cut $300 billion from SNAP over 10 years (30% reduction)
+- Strip food assistance from 453,900 Minnesotans (7.8% of our state)
+- Cost Minnesota over $250 million annually in lost food assistance
+- Force our state to cover federal funding gaps or watch families starve
+
+The expanded work requirements are particularly harmful:
+- Extend requirements from ages 18-49 to 18-64, targeting older workers
+- Eliminate exemptions for parents with children 7+ years old
+- Require 80 hours of work monthly even when jobs aren't available
+- Ignore caregiving responsibilities and seasonal employment realities
+
+Key concerns about the impact on MN-08:
+- Iron Range seasonal workers will lose food assistance during off-seasons
+- Rural parents with limited job opportunities will be kicked off SNAP
+- Families with school-age children will lose critical protections
+- Older adults (50-64) caring for elderly parents will face impossible choices
+
+This legislation takes food from children and working families to fund tax cuts for billionaires. Over 3 million adults caring for 4+ million children would be at risk of losing food assistance nationwide.
+
+Minnesota families deserve better than having to choose between feeding their children and caring for elderly parents. I urge you to:
+- Oppose cuts to SNAP funding
+- Reject expanded work requirements that ignore caregiving realities
+- Protect exemptions for parents with school-age children
+- Support policies that reduce hunger, not increase it
+
+Food security is a basic human right, not a luxury to be cut for tax breaks.`,
   'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
 
 My specific concerns include:
@@ -252,6 +281,7 @@ const topicSubjects = {
   'usps': 'Protect Rural Postal Services in Minnesota',
   'veterans': 'Support Healthcare for Veterans Exposed to Burn Pits - Reverse Your PACT Act Vote',
   'democracy': 'Protect Democracy and Voting Rights in Minnesota',
+  'snap': 'Oppose SNAP Cuts That Would Harm 453,900 Minnesotans',
   'other': 'Preserve Minnesota\'s Public Resources and Services'
 };
 
@@ -1553,4 +1583,65 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Add this to the messageTemplates object in your existing script.js:
+// SNAP Food Assistance listing page specific functions
+function showSnapAlert() {
+  alert("PREMIUM HUNGER INVESTMENT OPPORTUNITY: This massive food assistance liquidation is available exclusively to billionaires seeking tax cuts! Pete Stauber's plan cuts $300 billion from SNAP to fund tax breaks - literally taking food from 453,900 Minnesotans including children!");
+}
+
+function showSnapTourAlert() {
+  alert("HUNGER ZONE TOUR SCHEDULED! Our agent Pete Stauber will showcase how to maximize childhood hunger while claiming to support working families. Please bring your tax cut calculator and ignore the crying children!");
+}
+
+// SNAP Impact calculator
+function calculateSnapImpact() {
+  // Get the selected billionaire income and cut severity
+  const billionaireIncomeSelect = document.getElementById('billionaireIncomeSelect');
+  const cutSeveritySelect = document.getElementById('cutSeveritySelect');
+  
+  if (!billionaireIncomeSelect || !cutSeveritySelect) return;
+  
+  const billionaireIncome = parseInt(billionaireIncomeSelect.value);
+  const cutSeverity = parseInt(cutSeveritySelect.value);
+  
+  // Calculate typical tax cut for billionaire (roughly 3-5% of net worth annually)
+  const taxCutPercentage = 0.04; // 4% average
+  const annualTaxCut = billionaireIncome * taxCutPercentage;
+  
+  // Calculate how many families lose food assistance
+  // Average SNAP benefit is about $1,800 per family per year
+  const averageSnapBenefit = 1800;
+  const familiesAffected = Math.round(annualTaxCut / averageSnapBenefit);
+  
+  // Adjust based on cut severity
+  const adjustedFamilies = Math.round(familiesAffected * (cutSeverity / 30)); // Base on 30% cut
+  
+  // Update the results
+  const taxCutResult = document.getElementById('taxCutResult');
+  const familiesResult = document.getElementById('familiesResult');
+  
+  if (taxCutResult) {
+    if (annualTaxCut >= 1000000000) {
+      taxCutResult.textContent = '$' + (annualTaxCut / 1000000000).toFixed(1) + ' Billion';
+    } else if (annualTaxCut >= 1000000) {
+      taxCutResult.textContent = '$' + (annualTaxCut / 1000000).toFixed(1) + ' Million';
+    } else {
+      taxCutResult.textContent = '$' + annualTaxCut.toLocaleString();
+    }
+  }
+  
+  if (familiesResult) {
+    familiesResult.textContent = adjustedFamilies.toLocaleString();
+  }
+}
+
+// Initialize calculator on page load
+document.addEventListener('DOMContentLoaded', function() {
+  // Only run if we're on the SNAP page with the calculator
+  if (document.querySelector('.roi-calculator') && 
+      document.getElementById('billionaireIncomeSelect') && 
+      document.getElementById('cutSeveritySelect')) {
+    calculateSnapImpact();
+  }
+});
+
+
