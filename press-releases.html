@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Press Room - Stauber MN Realty</title>
+  <meta name="description" content="Official press releases from Stauber Minnesota Realty™. All the spin that's fit to print.">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <style>
+    .press-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
+
+    .press-hero h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+      color: #fff;
+    }
+
+    .press-hero .hero-subtitle {
+      font-size: 1.1rem;
+      color: #ccc;
+      font-style: italic;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .press-hero .hero-label {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      color: #e94560;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .press-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .press-section h2 {
+      font-size: 1.4rem;
+      color: #1a1a2e;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #e94560;
+    }
+
+    .press-card {
+      display: block;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-left: 5px solid #e94560;
+      border-radius: 6px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .press-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    .press-card .press-date {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #e94560;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .press-card .press-badge {
+      display: inline-block;
+      background: #1a1a2e;
+      color: #fff;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-left: 0.75rem;
+      vertical-align: middle;
+    }
+
+    .press-card h3 {
+      font-size: 1.2rem;
+      color: #1a1a2e;
+      margin: 0.25rem 0 0.5rem;
+      line-height: 1.35;
+    }
+
+    .press-card .press-excerpt {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .press-card .read-more {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #e94560;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .press-card:hover .read-more {
+      text-decoration: underline;
+    }
+
+    .press-subscribe {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, #1a1a2e, #0f3460);
+      color: #fff;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .press-subscribe h3 {
+      color: #fff;
+      margin: 0 0 0.5rem;
+      font-size: 1.15rem;
+    }
+
+    .press-subscribe p {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin: 0 0 1rem;
+    }
+
+    .press-subscribe a.btn {
+      display: inline-block;
+      background: #e94560;
+      color: #fff;
+      padding: 0.65rem 1.75rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      transition: background 0.2s;
+    }
+
+    .press-subscribe a.btn:hover {
+      background: #c0392b;
+    }
+
+    @media (max-width: 600px) {
+      .press-hero h1 { font-size: 1.7rem; }
+      .press-card { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header/Navigation -->
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+      </a>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listings.html" class="dropbtn">Listings ▼</a>
+          <ul class="dropdown-content">
+            <li><a href="bwca-listing.html">BWCA</a></li>
+            <li><a href="va-burnpit-listing.html">VA Healthcare</a></li>
+            <li><a href="faa-listing.html">FAA</a></li>
+            <li><a href="medicaid.html">Medicaid</a></li>
+            <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+            <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+            <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+            <li><a href="ssa-listing.html">Social Security</a></li>
+            <li><a href="national-forests.html">National Forests</a></li>
+            <li><a href="usps-listing.html">USPS Portfolio</a></li>
+            <li><a href="dod-listing.html">The DoD</a></li>
+            <li><a href="education-listing.html">Education System</a></li>
+            <li><a href="democracy-listing.html">Democracy</a></li>
+            <li><a href="snap-listing.html">Food Assistance</a></li>
+            <li><a href="labor-listing.html">Labor Rights</a></li>
+            <li><a href="civilian-safety-listing.html">Civilian Safety</a></li>
+          </ul>
+        </li>
+        <li><a href="press-releases.html">Press</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="press-hero">
+    <div class="hero-label">Stauber Minnesota Realty™</div>
+    <h1>Press Room</h1>
+    <p class="hero-subtitle">Official statements from the firm. All the spin that's fit to print.</p>
+  </section>
+
+  <!-- Press Releases -->
+  <section class="press-section">
+    <h2>Press Releases</h2>
+
+    <!-- Release: Tariff Vote -->
+    <a href="press-release-tariff-vote.html" class="press-card">
+      <div class="press-date">February 10, 2026 <span class="press-badge">New</span></div>
+      <h3>Agent Stauber Votes to Lock In 25% Tariff Surcharge on All 8th District Properties</h3>
+      <p class="press-excerpt">Lead agent heroically shields price hikes from congressional interference. The procedural rule failed 214-217, but Agent Stauber remained loyal to the firm's core mission: ensuring his constituents continue to pay more for everything.</p>
+      <span class="read-more">Read Full Release →</span>
+    </a>
+
+    <!-- Add future press releases here as additional .press-card blocks -->
+
+    <!-- CTA -->
+    <div class="press-subscribe">
+      <h3>Have a Tip for the Press Room?</h3>
+      <p>Know about another public asset Agent Stauber is liquidating? Let us know.</p>
+      <a href="contact.html" class="btn">Contact Us →</a>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-main">
+      <p>© 2025 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
+      <p class="disclaimer">This site is political satire and parody protected under the First Amendment. Parody website not affiliated with any candidate.</p>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
