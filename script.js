@@ -1,3 +1,48 @@
+// Mobile Navigation Setup
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.header-container');
+  const nav = document.querySelector('nav[aria-label="Main Navigation"]');
+  if (!header || !nav) return;
+
+  // Inject hamburger button
+  const toggle = document.createElement('button');
+  toggle.className = 'nav-toggle';
+  toggle.setAttribute('aria-label', 'Toggle navigation');
+  toggle.innerHTML = '☰';
+  header.appendChild(toggle);
+
+  const navUl = nav.querySelector('ul');
+
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    navUl.classList.toggle('nav-open');
+    toggle.innerHTML = navUl.classList.contains('nav-open') ? '✕' : '☰';
+  });
+
+  // Handle dropdown taps on mobile
+  const dropdowns = nav.querySelectorAll('.dropdown > a, .dropdown > .dropbtn');
+  dropdowns.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const parent = this.parentElement;
+        parent.classList.toggle('dropdown-open');
+      }
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      navUl.classList.remove('nav-open');
+      toggle.innerHTML = '☰';
+      nav.querySelectorAll('.dropdown-open').forEach(function(d) {
+        d.classList.remove('dropdown-open');
+      });
+    }
+  });
+});
+
 // Run setup after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', setupContactForm);
 
