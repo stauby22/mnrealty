@@ -71,11 +71,11 @@ nav a:hover {
 /* Mobile Navigation */
 @media (max-width: 768px) {
   .nav-toggle {
-    display: block;
+    display: block !important;
   }
 
-  nav > ul {
-    display: none;
+  header .header-container nav > ul {
+    display: none !important;
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -89,8 +89,8 @@ nav a:hover {
     z-index: 2001;
   }
 
-  nav > ul.nav-open {
-    display: flex;
+  header .header-container nav > ul.nav-open {
+    display: flex !important;
   }
 
   nav > ul > li {
@@ -107,9 +107,9 @@ nav a:hover {
 
   /* Dropdown on mobile: show on tap via .dropdown-open class */
   .dropdown-content {
-    position: static;
-    box-shadow: none;
-    background: rgba(0,0,0,0.2);
+    position: static !important;
+    box-shadow: none !important;
+    background: rgba(0,0,0,0.2) !important;
     min-width: 100%;
   }
 
