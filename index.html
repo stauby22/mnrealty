@@ -299,6 +299,86 @@
       background: linear-gradient(135deg, #d40000 0%, #b20000 100%);
       transform: scale(1.1) translateY(-5px);
     }
+
+    /* Recently Sold Ticker */
+    .sold-ticker {
+      background: #0a0a0a;
+      border-bottom: 2px solid #1a1a1a;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    .sold-ticker::before,
+    .sold-ticker::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .sold-ticker::before {
+      left: 0;
+      background: linear-gradient(to right, #0a0a0a, transparent);
+    }
+
+    .sold-ticker::after {
+      right: 0;
+      background: linear-gradient(to left, #0a0a0a, transparent);
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: ticker-scroll 30s linear infinite;
+      padding: 0.5rem 0;
+    }
+
+    .ticker-track:hover {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      display: inline;
+      padding: 0 2rem;
+    }
+
+    .ticker-item .ticker-tag {
+      font-weight: 700;
+      padding: 0.1rem 0.4rem;
+      border-radius: 2px;
+      font-size: 0.7rem;
+      margin-right: 0.4rem;
+    }
+
+    .ticker-tag.sold { background: #b20000; color: #fff; }
+    .ticker-tag.closed { background: #e94560; color: #fff; }
+    .ticker-tag.liquidated { background: #ff6b00; color: #fff; }
+    .ticker-tag.alert { background: #00c853; color: #0a0a0a; }
+    .ticker-tag.pending { background: #ffd600; color: #0a0a0a; }
+
+    .ticker-item .ticker-text {
+      color: #00ff88;
+    }
+
+    .ticker-item .ticker-buyer {
+      color: #888;
+    }
+
+    .ticker-sep {
+      color: #333;
+      padding: 0 0.5rem;
+    }
+
+    @keyframes ticker-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
 </head>
 <body>
@@ -309,6 +389,13 @@
   <!-- Countdown Banner -->
   <div class="countdown-banner">
     🔥 URGENT FIRE SALE! 🔥 All public assets must go before next election! DEMOCRACY LIQUIDATION EVENT! ⚡ ACT NOW! ⚡
+  </div>
+
+  <!-- Recently Sold Ticker -->
+  <div class="sold-ticker">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-tag sold">SOLD</span> <span class="ticker-text">Head Start Funding ($6M Cut)</span> <span class="ticker-buyer">— Buyer: Corporate Tax Offsets</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag closed">CLOSED</span> <span class="ticker-text">BWCA Mineral Rights</span> <span class="ticker-buyer">— Buyer: Antofagasta PLC (Chile)</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag liquidated">LIQUIDATED</span> <span class="ticker-text">Veteran Burn Pit Healthcare</span> <span class="ticker-buyer">— Savings: $280B</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag alert">MARKET ALERT</span> <span class="ticker-text">Insulin Price Caps Rejected</span> <span class="ticker-buyer">— Pharma ROI: +400%</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag pending">PENDING</span> <span class="ticker-text">Minnesota Election Infrastructure</span> <span class="ticker-buyer">— Defunded via H.R. 11</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag sold">SOLD</span> <span class="ticker-text">Head Start Funding ($6M Cut)</span> <span class="ticker-buyer">— Buyer: Corporate Tax Offsets</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag closed">CLOSED</span> <span class="ticker-text">BWCA Mineral Rights</span> <span class="ticker-buyer">— Buyer: Antofagasta PLC (Chile)</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag liquidated">LIQUIDATED</span> <span class="ticker-text">Veteran Burn Pit Healthcare</span> <span class="ticker-buyer">— Savings: $280B</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag alert">MARKET ALERT</span> <span class="ticker-text">Insulin Price Caps Rejected</span> <span class="ticker-buyer">— Pharma ROI: +400%</span></span><span class="ticker-sep">|</span><span class="ticker-item"><span class="ticker-tag pending">PENDING</span> <span class="ticker-text">Minnesota Election Infrastructure</span> <span class="ticker-buyer">— Defunded via H.R. 11</span></span><span class="ticker-sep">|</span>
+    </div>
   </div>
 
  <!-- Header/Navigation -->
