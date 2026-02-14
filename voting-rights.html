@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voting Rights - The Ballot Box Gated Community | Stauber Realty</title>
+  <meta name="description" content="EXCLUSIVE LISTING: Pete Stauber's Minnesota Voter Integrity Act (H.R. 11) — defunding election security to suppress the vote since 2026.">
+  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <style>
+    /* Voting Rights page-specific styles */
+    .gated-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #8b0000, #c0392b);
+      color: #fff;
+      padding: 0.3rem 1rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      animation: pulse-gated 2s ease-in-out infinite;
+    }
+    @keyframes pulse-gated {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .voting-timeline {
+      max-width: 800px;
+      margin: 2rem auto;
+      position: relative;
+      padding-left: 2rem;
+    }
+    .voting-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, #e94560, #1a1a2e);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.35rem;
+      top: 0.35rem;
+      width: 12px;
+      height: 12px;
+      background: #e94560;
+      border-radius: 50%;
+      border: 3px solid #1a1a2e;
+    }
+    .timeline-date {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #e94560;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 0.25rem;
+    }
+    .timeline-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.5;
+    }
+    .timeline-vote {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-left: 0.5rem;
+    }
+    .vote-nay {
+      background: #e94560;
+      color: #fff;
+    }
+    .vote-yea {
+      background: #27ae60;
+      color: #fff;
+    }
+
+    .protection-racket {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2c3e50 100%);
+      color: #fff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+      border-left: 5px solid #e94560;
+    }
+    .protection-racket h3 {
+      color: #e94560;
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    .protection-racket p {
+      color: #ccc;
+      line-height: 1.7;
+    }
+    .protection-racket .extortion-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .extortion-step {
+      background: rgba(233, 69, 96, 0.15);
+      border: 1px solid #e94560;
+      padding: 1rem 1.25rem;
+      border-radius: 6px;
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+    }
+    .extortion-step .step-num {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      color: #e94560;
+      font-weight: 800;
+      margin-bottom: 0.3rem;
+    }
+    .extortion-step .step-text {
+      font-size: 0.85rem;
+      color: #fff;
+      font-weight: 600;
+    }
+    .extortion-arrow {
+      font-size: 1.5rem;
+      color: #e94560;
+    }
+
+    .state-comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .state-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .state-card.minnesota {
+      border-color: #27ae60;
+      border-width: 2px;
+    }
+    .state-card.stauber-plan {
+      border-color: #e94560;
+      border-width: 2px;
+    }
+    .state-card h4 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 0 0 0.75rem;
+    }
+    .state-card.minnesota h4 { color: #27ae60; }
+    .state-card.stauber-plan h4 { color: #e94560; }
+    .state-card .big-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      margin: 0.5rem 0;
+    }
+    .state-card.minnesota .big-number { color: #27ae60; }
+    .state-card.stauber-plan .big-number { color: #e94560; }
+    .state-card .card-detail {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .state-comparison { grid-template-columns: 1fr; }
+      .extortion-flow { flex-direction: column; }
+      .extortion-arrow { transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Property Status Banner -->
+  <div class="property-status-banner status-hot">
+    <div class="status-content">
+      <i class="fas fa-lock"></i>
+      <span>GATED COMMUNITY ALERT: DEMOCRACY ACCESS RESTRICTED — MEMBERS ONLY!</span>
+      <i class="fas fa-lock"></i>
+    </div>
+  </div>
+
+  <!-- Header/Navigation -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+        </a>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="listings.html" class="dropbtn">Listings ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="bwca-listing.html">BWCA</a></li>
+              <li><a href="va-burnpit-listing.html">VA Healthcare</a></li>
+              <li><a href="faa-listing.html">FAA</a></li>
+              <li><a href="medicaid.html">Medicaid</a></li>
+              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
+              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+              <li><a href="ssa-listing.html">Social Security</a></li>
+              <li><a href="national-forests.html">National Forests</a></li>
+              <li><a href="usps-listing.html">USPS Portfolio</a></li>
+              <li><a href="dod-listing.html">The DoD</a></li>
+              <li><a href="education-listing.html">Education System</a></li>
+              <li><a href="democracy-listing.html">Democracy</a></li>
+              <li><a href="snap-listing.html">Food Assistance</a></li>
+              <li><a href="labor-listing.html">Labor Rights</a></li>
+              <li><a href="civilian-safety-listing.html">Civilian Safety</a></li>
+              <li><a href="voting-rights.html">Voting Rights</a></li>
+            </ul>
+          </li>
+          <li><a href="press-releases.html">Press</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Property Hero Section -->
+    <section class="hero listing-hero">
+      <img src="https://images.unsplash.com/photo-1494172961521-33799ddd43a5?ixlib=rb-4.0.3&w=1200"
+           alt="The Ballot Box Gated Community - Voting Rights Listing"
+           style="width: 100%; height: 500px; object-fit: cover; object-position: center;" />
+      <div class="property-badge">SOLD BY<br>PETE STAUBER</div>
+      <div class="property-type-badge">EXCLUSIVE MEMBERSHIP ONLY &bull; GATED COMMUNITY</div>
+    </section>
+
+    <!-- Quick Stats Banner -->
+    <section class="property-quick-stats">
+      <div class="quick-stat highlight">
+        <i class="fas fa-users"></i>
+        <span class="stat-value">3.75M</span>
+        <span class="stat-label">Voters at Risk</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-dollar-sign"></i>
+        <span class="stat-value">$16.2M</span>
+        <span class="stat-label">Security Funding Stripped</span>
+      </div>
+      <div class="quick-stat">
+        <i class="fas fa-ban"></i>
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Federal Overreach</span>
+      </div>
+      <div class="quick-stat highlight">
+        <i class="fas fa-gavel"></i>
+        <span class="stat-value">H.R. 11</span>
+        <span class="stat-label">The Eviction Notice</span>
+      </div>
+    </section>
+
+    <!-- Property Overview -->
+    <section class="listing-details">
+      <h1>The Ballot Box Gated Community</h1>
+      <p class="price">Democracy is too important to let just anyone participate. <span class="negstatus">ACCESS DENIED</span></p>
+      <div class="action-buttons">
+        <button class="buy-now-listing" onclick="showVotingRightsAlert()">RESTRICT ACCESS NOW</button>
+        <button class="secondary-btn" onclick="showVotingRightsGateAlert()">REQUEST HOA APPROVAL</button>
+      </div>
+      <p class="address"><em>Premium Location: Minnesota's Election Infrastructure — 76.4% Turnout? Not On Our Watch.</em></p>
+
+      <!-- Property Facts -->
+      <div class="property-facts">
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-building"></i></div>
+          <div class="fact-label">Property Type</div>
+          <div class="fact-value">Restricted Access Electorate</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-map-signs"></i></div>
+          <div class="fact-label">Zoning Code</div>
+          <div class="fact-value">Voter Suppression Residential</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <div class="fact-label">HOA Fees</div>
+          <div class="fact-value">Your Civil Rights</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon"><i class="fas fa-user-tie"></i></div>
+          <div class="fact-label">Listing Agent</div>
+          <div class="fact-value">Pete "The Gatemaker" Stauber</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Analysis / Executive Summary -->
+    <section class="investment-potential">
+      <div class="potential-container">
+        <div class="potential-header">
+          <h2><i class="fas fa-chess-king"></i> Executive Summary: Curating the Electorate</h2>
+          <p>Why secure an election when you can simply defund it?</p>
+        </div>
+
+        <div class="protection-racket">
+          <h3><i class="fas fa-hand-holding-usd"></i> The Protection Racket</h3>
+          <p>
+            With the "Minnesota Voter Integrity Act" (H.R. 11), Stauber Realty is pioneering a new form of market manipulation: <strong>Extortion</strong>. By withholding millions in federal Help America Vote Act (HAVA) funds, we are forcing the Minnesota Secretary of State to hand over private voter data — including Social Security numbers and exact birthdates of 3.75 million registered voters — to the DOJ.
+          </p>
+          <p>
+            It's a classic protection racket feature — <em>nice election system you have there, shame if someone were to... defund it.</em>
+          </p>
+
+          <div class="extortion-flow">
+            <div class="extortion-step">
+              <span class="step-num">STEP 1</span>
+              <span class="step-text">DOJ demands private voter data from all 50 states</span>
+            </div>
+            <span class="extortion-arrow"><i class="fas fa-arrow-right"></i></span>
+            <div class="extortion-step">
+              <span class="step-num">STEP 2</span>
+              <span class="step-text">32 states refuse — including MN</span>
+            </div>
+            <span class="extortion-arrow"><i class="fas fa-arrow-right"></i></span>
+            <div class="extortion-step">
+              <span class="step-num">STEP 3</span>
+              <span class="step-text">Stauber targets ONLY Minnesota with funding cutoff</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.85rem; color: #e94560; font-weight: 700; text-align: center; margin-bottom: 0;">
+            * No other state's congressional delegation has introduced legislation to punish their own state for declining the DOJ's data request. Only Pete Stauber.
+          </p>
+        </div>
+
+        <div class="investment-note">
+          <i class="fas fa-exclamation-triangle"></i>
+          <p>Secretary of State Steve Simon called the legislation "an irresponsible stunt" that would "actively damage the security of our elections by threatening to starve Minnesota of critical federal funds that help protect our election infrastructure from harm or attack."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Description -->
+    <section class="description">
+      <h2>The "Minnesota Voter Integrity Act" — H.R. 11</h2>
+
+      <div class="property-highlight-box">
+        <h3><i class="fas fa-star"></i> PETE STAUBER SIGNATURE SUPPRESSION</h3>
+        <p>Introduced February 2, 2026, co-sponsored by the entire Minnesota Republican delegation (Tom Emmer, Michelle Fischbach, Brad Finstad). A masterclass in punishing your own state for following the law.</p>
+      </div>
+
+      <p>
+        Minnesota has led the nation in voter turnout in <strong>every presidential election since 2004</strong>, powered by same-day voter registration — a system in place since <strong>1974</strong>. In 2024, <strong>76.4%</strong> of eligible Minnesotans voted, compared to the national average of 64.1%. Pete Stauber looked at this legacy of civic engagement and thought: <em>"How do I break this?"</em>
+      </p>
+
+      <p>
+        H.R. 11 would strip Minnesota of all federal HAVA funding — approximately <strong>$16.2 million</strong> received since 2018 — until the Secretary of State surrenders private voter data to the DOJ. This includes Social Security numbers, driver's license numbers, and exact birthdates of millions of registered voters. Data that Secretary Simon says would violate both state and federal law to release.
+      </p>
+
+      <ul class="property-features-list">
+        <li><strong>Holds $16.2M in HAVA funds hostage</strong> — Election security grants frozen until MN complies with DOJ's mass data collection demand</li>
+        <li><strong>Demands private voter data</strong> — Social Security numbers, driver's license numbers, and birthdates of 3.75 million voters</li>
+        <li><strong>Targets same-day registration</strong> — Challenges the system that made Minnesota #1 in voter turnout nationally</li>
+        <li><strong>Strips cybersecurity funding</strong> — Defunds the very infrastructure that protects elections from foreign interference</li>
+        <li><strong>Punishes only Minnesota</strong> — 32 states declined the same DOJ request; only MN's delegation introduced retaliatory legislation</li>
+        <li><strong>Empowers federal overreach</strong> — Forces state election administration to submit to federal control</li>
+      </ul>
+
+      <p class="realtor-note">* Agent note: Federal judges have already dismissed DOJ cases against California and Oregon over similar data requests. Stauber introduced this bill anyway.</p>
+    </section>
+
+    <!-- Premium Features List -->
+    <section class="property-amenities">
+      <h2>Premium Voter Suppression Features</h2>
+      <p class="subtitle">Agent Stauber's comprehensive portfolio of democracy-restricting amenities</p>
+
+      <div class="amenities-container">
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-lock"></i></div>
+          <h3>The "HAVA" Lockout</h3>
+          <p>We hold $16.2M in federal election security grants hostage until our demands are met. No compliance, no cybersecurity funding. Simple as that.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-user-slash"></i></div>
+          <h3>Same-Day Registration Removal</h3>
+          <p>We're working to eliminate this convenient feature — used by Minnesota since 1974 — to ensure lines are longer and frustration is higher.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-search"></i></div>
+          <h3>The DOJ Home Inspection</h3>
+          <p>Mandatory federal review of state voter rolls to purge "inactive" voters. AG Bondi's Civil Rights Division sent the demand letter in January 2026.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-id-card"></i></div>
+          <h3>The SAVE Act Gatekeep</h3>
+          <p>Require birth certificates or passports to register — even though non-citizen voting occurs at a rate of approximately 0.0001%, per the Brennan Center.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-vote-yea"></i></div>
+          <h3>Electoral Reform Blockade</h3>
+          <p>Voted against the Presidential Election Reform Act (H.R. 8873) designed to prevent another January 6, calling it "political theater."</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>For the People? Not Quite.</h3>
+          <p>Voted against H.R. 1 (For the People Act) and H.R. 5746 (Freedom to Vote: John R. Lewis Act) — two comprehensive voting rights bills in the 117th Congress.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stauber's Anti-Democracy Timeline -->
+    <section class="ecological-impact">
+      <h2>Agent Stauber's Anti-Democracy Rap Sheet</h2>
+      <p>A complete legislative history of voting against voting</p>
+
+      <div class="voting-timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">March 3, 2021</div>
+          <div class="timeline-title">For the People Act (H.R. 1) <span class="timeline-vote vote-nay">Voted NAY</span></div>
+          <div class="timeline-desc">Voted against expanding voter access, reducing dark money in politics, and implementing anti-corruption measures. The bill would have required same-day voter registration nationally — a system Minnesota has benefited from since 1974.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">August 24, 2021</div>
+          <div class="timeline-title">Freedom to Vote: John R. Lewis Act (H.R. 5746) <span class="timeline-vote vote-nay">Voted NAY</span></div>
+          <div class="timeline-desc">Voted against restoring the Voting Rights Act of 1965 and establishing national standards for voter access. Named for civil rights hero John Lewis, the bill would have combated voter suppression and gerrymandering.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">September 21, 2022</div>
+          <div class="timeline-title">Presidential Election Reform Act (H.R. 8873) <span class="timeline-vote vote-nay">Voted NAY</span></div>
+          <div class="timeline-desc">Voted against clarifying that the Vice President's role in certifying elections is purely ceremonial — the bill designed to prevent another January 6. Called it "just another attempt by Democrats to distract from their failures."</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">July 2024</div>
+          <div class="timeline-title">SAVE Act (H.R. 22) <span class="timeline-vote vote-yea">Voted YEA</span></div>
+          <div class="timeline-desc">Voted to require birth certificates or passports to register to vote, despite non-citizen voting occurring at a rate of 0.0001%. Creates barriers for married women, name-change recipients, and citizens without ready access to documentation.</div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">February 2, 2026</div>
+          <div class="timeline-title">Minnesota Voter Integrity Act (H.R. 11) <span class="timeline-vote vote-yea">Introduced</span></div>
+          <div class="timeline-desc">Introduced legislation to strip Minnesota of all federal election security funding until the state surrenders private voter data — SSNs, driver's license numbers, birthdates — to the DOJ. No other state has been targeted like this by its own delegation.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Regional Impact Alert -->
+    <section class="iron-range-impact">
+      <h2>Defunding the Police (of Elections)</h2>
+      <p class="subtitle">Stauber claims to "Back the Blue," but H.R. 11 defunds the very infrastructure that keeps elections safe</p>
+
+      <div class="callout-box">
+        <h3><i class="fas fa-exclamation-triangle"></i> ELECTION SECURITY DEFUNDING ALERT</h3>
+        <p>H.R. 11 actively strips funding used to protect election judges, secure polling places from cyberattacks, maintain the statewide voter registration system, and fund the election security navigator team. He is defunding the very infrastructure that keeps Minnesota's elections the most secure and accessible in the nation.</p>
+      </div>
+
+      <div class="state-comparison">
+        <div class="state-card minnesota">
+          <h4>Minnesota's Current System</h4>
+          <div class="big-number">76.4%</div>
+          <div class="card-detail">Voter turnout in 2024 — highest in the nation</div>
+          <div class="card-detail" style="margin-top: 0.5rem; font-weight: 700;">Same-day registration since 1974</div>
+          <div class="card-detail">#1 in turnout every presidential election since 2004</div>
+        </div>
+        <div class="state-card stauber-plan">
+          <h4>Under Stauber's Plan</h4>
+          <div class="big-number">$0.00</div>
+          <div class="card-detail">Allocated to MN election security under H.R. 11</div>
+          <div class="card-detail" style="margin-top: 0.5rem; font-weight: 700;">HAVA cybersecurity funding: frozen</div>
+          <div class="card-detail">Election judge protection: defunded</div>
+        </div>
+      </div>
+
+      <div class="impact-grid">
+        <div class="iron-range-card">
+          <div class="impact-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Cybersecurity Eliminated</h3>
+          <p>HAVA funds support the cybersecurity infrastructure that protects Minnesota's voter registration system from foreign attacks. H.R. 11 kills this funding entirely.</p>
+        </div>
+
+        <div class="iron-range-card">
+          <div class="impact-icon"><i class="fas fa-users"></i></div>
+          <h3>Election Judges Abandoned</h3>
+          <p>Federal election security funding supports the election security navigator team that protects poll workers. Stauber's bill strips this away while claiming to support "law and order."</p>
+        </div>
+
+        <div class="iron-range-card">
+          <div class="impact-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Rural MN-08 Hit Hardest</h3>
+          <p>Rural townships rely most on federal election grants to administer elections. Without HAVA funding, the smallest communities will struggle to keep polling locations open.</p>
+        </div>
+
+        <div class="iron-range-card highlight-loss">
+          <div class="impact-icon"><i class="fas fa-database"></i></div>
+          <h3>Voter System Rewrite Halted</h3>
+          <p>Minnesota was using HAVA funds to modernize the statewide voter registration system. H.R. 11 would freeze this upgrade, leaving the state on outdated infrastructure.</p>
+        </div>
+      </div>
+
+      <div class="contradiction-alert">
+        <i class="fas fa-exclamation-circle"></i>
+        <strong>CONTRADICTION ALERT:</strong> Pete Stauber says he wants to "protect election integrity" while introducing legislation that would defund election security, eliminate cybersecurity protections, and make Minnesota's elections more vulnerable to foreign interference and domestic attacks.
+      </div>
+    </section>
+
+    <!-- Minnesota Impact Devastation -->
+    <section class="ecological-impact">
+      <h2>HAVA Funding Stauber Wants to Kill</h2>
+      <p>Federal election security grants Minnesota has received — and would lose under H.R. 11</p>
+
+      <div class="impact-grid">
+        <div class="impact-item highlight">
+          <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>2018 HAVA Grant</h3>
+          <div class="impact-spec">$6.6M</div>
+          <p>Election security funding for cybersecurity infrastructure and poll worker protections</p>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>2020 HAVA Grant</h3>
+          <div class="impact-spec">$7.4M</div>
+          <p>Critical pandemic-era election security funding to safely administer elections</p>
+        </div>
+
+        <div class="impact-item highlight">
+          <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>2022 HAVA Grant</h3>
+          <div class="impact-spec">$1.15M</div>
+          <p>Ongoing election infrastructure maintenance and cybersecurity updates</p>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-dollar-sign"></i></div>
+          <h3>2024 HAVA Grant</h3>
+          <div class="impact-spec">$1.0M</div>
+          <p>Current election security funding — the first to be cut under H.R. 11</p>
+        </div>
+
+        <div class="impact-item highlight">
+          <div class="impact-icon"><i class="fas fa-ban"></i></div>
+          <h3>2026 Under H.R. 11</h3>
+          <div class="impact-spec">$0.00</div>
+          <p>Total amount allocated to Minnesota election security under Stauber's plan</p>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-icon"><i class="fas fa-globe"></i></div>
+          <h3>States That Refused DOJ</h3>
+          <div class="impact-spec">32</div>
+          <p>States that declined the same data request — yet only Minnesota's delegation introduced retaliatory legislation</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hypocrisy Check -->
+    <section class="stauber-hypocrisy">
+      <h2>Pete Stauber's "Election Integrity"</h2>
+      <p>Campaign promises versus actual legislation</p>
+
+      <div class="hypocrisy-comparison">
+        <div class="hypocrisy-item blue-support">
+          <div class="hypocrisy-icon">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="hypocrisy-quote">
+            "Election integrity is my top priority. Minnesotans deserve to know their election process is fair, accurate, and protected."
+          </div>
+          <div class="hypocrisy-status">CAMPAIGN PROMISE</div>
+        </div>
+
+        <div class="hypocrisy-divider">
+          <div class="vs-icon">
+            <i class="fas fa-not-equal"></i>
+          </div>
+          <div class="vs-text">VERSUS</div>
+        </div>
+
+        <div class="hypocrisy-item capitol-police">
+          <div class="hypocrisy-icon">
+            <i class="fas fa-bomb"></i>
+          </div>
+          <div class="hypocrisy-actions">
+            <h4>Stauber's Actual Record:</h4>
+            <ul>
+              <li>Introduced H.R. 11 to strip MN of all election security funds</li>
+              <li>Voted against For the People Act (H.R. 1)</li>
+              <li>Voted against Freedom to Vote: John R. Lewis Act (H.R. 5746)</li>
+              <li>Voted against Presidential Election Reform Act (H.R. 8873)</li>
+              <li>Voted for SAVE Act requiring documents 0.0001% of voters lack</li>
+              <li>Makes elections less secure and more vulnerable to foreign interference</li>
+            </ul>
+          </div>
+          <div class="hypocrisy-status">ACTUAL LEGISLATION</div>
+        </div>
+      </div>
+
+      <div class="hypocrisy-note">
+        <i class="fas fa-info-circle"></i>
+        <p>Pete Stauber claims "election integrity is my top priority" while systematically voting against every voting rights bill, opposing election security reforms designed to prevent another January 6, and introducing legislation that would defund the very cybersecurity infrastructure that protects Minnesota's elections from attack.</p>
+      </div>
+    </section>
+
+    <!-- The SAVE Act Deep-Dive -->
+    <section class="description">
+      <h2>Bonus Feature: The SAVE Act Gatekeep</h2>
+
+      <div class="property-highlight-box">
+        <h3><i class="fas fa-id-badge"></i> SOLVING A PROBLEM THAT DOESN'T EXIST</h3>
+        <p>The SAVE Act requires birth certificates or passports to register to vote — targeting a "non-citizen voting epidemic" that occurs at a rate of <strong>0.0001%</strong>. Non-citizen voting in federal elections is already illegal under existing law.</p>
+      </div>
+
+      <p>
+        Stauber claimed the legislation is "necessary to protect our democracy for generations to come." But a 2024 Arizona federal court found non-citizen voting is "quite rare," and the Brennan Center's analysis puts the rate at approximately <strong>one in a million</strong>.
+      </p>
+
+      <p>
+        Who does the SAVE Act actually burden?
+      </p>
+
+      <ul class="property-features-list">
+        <li><strong>Married women</strong> — whose birth certificates show maiden names don't match their registration</li>
+        <li><strong>Name-change recipients</strong> — whose court-ordered name changes are explicitly not accepted by the bill</li>
+        <li><strong>Low-income voters</strong> — who can't afford the fees for replacement birth certificates or passports</li>
+        <li><strong>Elderly voters</strong> — born before modern record-keeping who may lack documentation entirely</li>
+        <li><strong>Rural MN-08 residents</strong> — who face long distances to access document-issuing offices</li>
+      </ul>
+
+      <p class="realtor-note">* Agent note: Pete Stauber said "Commonsense legislation like the SAVE Act will preserve the right to vote for American citizens." He then introduced H.R. 11 to defund the election infrastructure that administers those votes. Pick a lane, Pete.</p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="local-comments">
+      <h2>Gated Community HOA Reviews</h2>
+      <div class="comment-note">* Representing the values of Stauber Realty's exclusive electorate management services</div>
+
+      <div class="comments-container">
+        <div class="comment highlight">
+          <div class="comment-content">
+            <p>"I used to worry about 'The Will of the People.' Now, with Stauber's Gated Community approach, we only have to worry about 'The Will of the Donors!' Much more manageable."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>Gerry Mander</h4>
+              <div class="comment-date">HOA President, Stauber Estates</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <p>"32 states refused to hand over voter data to the DOJ. Only Pete Stauber decided to punish his own state for it. That's not 'election integrity' — that's a protection racket."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>SecretarySimonFan</h4>
+              <div class="comment-date">Minnesota Voter Since 1974</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment highlight">
+          <div class="comment-content">
+            <p>"Minnesota has the highest voter turnout in the nation. Pete Stauber looked at that and said 'let me fix that.' Incredible work. Five stars for voter suppression creativity."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>DemocracyDemolisher</h4>
+              <div class="comment-date">Stauber Campaign Strategist</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="comment-content">
+            <p>"I'm a 62-year-old Iron Range widow. My birth certificate has my maiden name. Under the SAVE Act, I'd need to produce documents I don't have just to keep voting. I've voted in every election since 1982. Thanks, Pete."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>IronRangeVoter</h4>
+              <div class="comment-date">Hibbing, MN — MN-08</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="comment highlight">
+          <div class="comment-content">
+            <p>"He says he wants to 'secure elections' but votes against every election security bill and then introduces one that defunds election security. It's almost like 'integrity' isn't what he's after."</p>
+          </div>
+          <div class="comment-author">
+            <div class="author-info">
+              <h4>ConnectTheDots</h4>
+              <div class="comment-date">Political Observer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Similar Properties -->
+    <section class="similar-properties">
+      <h2>Similar Democracy Restriction Opportunities</h2>
+      <p>Other civic institutions Pete Stauber has put up for liquidation</p>
+
+      <div class="property-grid">
+        <div class="property">
+          <div class="property-label">DEMOCRACY PACKAGE</div>
+          <img src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?ixlib=rb-4.0.3&w=1200" alt="Democracy Listing" />
+          <h4>Democracy & Democratic Reforms</h4>
+          <p>A full breakdown of Stauber's votes against democratic norms, campaign finance reform, and election security. <strong>Price: Your Republic</strong></p>
+          <a href="democracy-listing.html" class="property-link">View Listing</a>
+        </div>
+
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&w=1200" alt="USPS Listing" />
+          <h4>USPS Post Offices</h4>
+          <p>Rural mail service and mail-in ballot delivery under threat. 142,000+ mail-in ballot voters could lose access. <strong>Price: Rural Democracy</strong></p>
+          <a href="usps-listing.html" class="property-link">View Listing</a>
+        </div>
+
+        <div class="property">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&w=1200" alt="Education Listing" />
+          <h4>Education & Head Start</h4>
+          <p>Cutting education funding reduces an informed electorate — a natural complement to voter suppression. <strong>Price: An Educated Public</strong></p>
+          <a href="education-listing.html" class="property-link">View Listing</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Agent Contact -->
+    <section class="agent-contact">
+      <h2>Contact Your Representative</h2>
+      <p>Tell Congressman Pete Stauber that Minnesota's election system is the gold standard — stop trying to break it</p>
+      <a href="contact.html" class="cta-button">Contact Pete Stauber</a>
+      <p class="agent-note">* Note: Pete Stauber will claim he supports election integrity while systematically defunding election security. The DFL Party put it best: "Minnesotans didn't elect their representatives to be lap-dogs for Donald Trump."</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-main">
+        <p>&copy; 2025 Stauber Minnesota Realty&trade; &ndash; Where democracy goes to the highest bidder.</p>
+        <p class="disclaimer">This site is political satire and parody protected under the First Amendment. Parody website not affiliated with any candidate.</p>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=3"></script>
+</body>
+</html>

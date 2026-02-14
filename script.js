@@ -1908,3 +1908,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+// ── Voting Rights page alerts ──
+function showVotingRightsAlert() {
+  alert("ACCESS RESTRICTED! Your application to participate in democracy has been flagged by Agent Stauber's HOA board. Please submit your birth certificate, passport, Social Security number, and a sworn oath of loyalty to proceed. Processing time: indefinite.");
+}
+
+function showVotingRightsGateAlert() {
+  alert("HOA APPROVAL PENDING! Unfortunately, your request to exercise your constitutional rights must first be reviewed by the DOJ, approved by Attorney General Bondi, and funded by HAVA grants that Agent Stauber has already frozen. Please try again after democracy is restored.");
+}
+
