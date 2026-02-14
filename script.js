@@ -43,6 +43,104 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Fact-Check Tooltip Auto-Wrapper
+document.addEventListener('DOMContentLoaded', function() {
+  var factCheckRules = [
+    {
+      patterns: [/Boundary Waters/gi, /Mining/gi],
+      citation: 'Source: H.J. Res. 140 / H.R. 4090 — Critical Mineral Dominance Act'
+    },
+    {
+      patterns: [/Food Assistance/gi, /\bCuts?\b/gi],
+      citation: 'Source: H.R. 2811 / H.R. 5894 Amendment (Head Start Cuts)'
+    },
+    {
+      patterns: [/Veterans?\b/gi],
+      citation: 'Source: Vote No on H.R. 3967 (PACT Act)'
+    }
+  ];
+
+  // Skip these elements and their children
+  var skipTags = {A: 1, NAV: 1, SCRIPT: 1, STYLE: 1, SELECT: 1, OPTION: 1, BUTTON: 1, INPUT: 1, TEXTAREA: 1, LABEL: 1, IMG: 1};
+  var skipClasses = ['fact-check', 'nav-toggle', 'logo'];
+
+  function shouldSkip(node) {
+    var el = node.nodeType === 3 ? node.parentElement : node;
+    while (el && el !== document.body) {
+      if (skipTags[el.tagName]) return true;
+      if (el.className && typeof el.className === 'string') {
+        for (var i = 0; i < skipClasses.length; i++) {
+          if (el.className.indexOf(skipClasses[i]) !== -1) return true;
+        }
+      }
+      // Skip if inside header nav or footer nav
+      if (el.tagName === 'HEADER' || el.tagName === 'FOOTER') return true;
+      el = el.parentElement;
+    }
+    return false;
+  }
+
+  function wrapTextNodes(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    var node;
+    while (node = walker.nextNode()) {
+      if (node.textContent.trim() && !shouldSkip(node)) {
+        textNodes.push(node);
+      }
+    }
+
+    textNodes.forEach(function(textNode) {
+      var text = textNode.textContent;
+      var parent = textNode.parentElement;
+      // Don't double-wrap
+      if (parent && parent.classList && parent.classList.contains('fact-check')) return;
+
+      var replaced = false;
+      var html = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+      for (var r = 0; r < factCheckRules.length; r++) {
+        var rule = factCheckRules[r];
+        for (var p = 0; p < rule.patterns.length; p++) {
+          var pattern = new RegExp(rule.patterns[p].source, rule.patterns[p].flags);
+          if (pattern.test(html)) {
+            html = html.replace(pattern, function(match) {
+              replaced = true;
+              return '<span class="fact-check" data-citation="' + rule.citation + '">' + match + '</span>';
+            });
+          }
+        }
+      }
+
+      if (replaced) {
+        var span = document.createElement('span');
+        span.innerHTML = html;
+        parent.replaceChild(span, textNode);
+      }
+    });
+  }
+
+  // Run on main content areas only
+  var main = document.querySelector('main') || document.querySelector('.pr-container') || document.querySelector('.pr-body');
+  if (main) {
+    wrapTextNodes(main);
+  }
+
+  // Mobile: tap to show tooltip
+  document.addEventListener('click', function(e) {
+    // Close any open tooltips
+    document.querySelectorAll('.fact-check.tooltip-active').forEach(function(el) {
+      el.classList.remove('tooltip-active');
+    });
+    // If tapped on a fact-check span, toggle it
+    var fc = e.target.closest('.fact-check');
+    if (fc) {
+      e.preventDefault();
+      fc.classList.add('tooltip-active');
+    }
+  });
+});
+
 // Run setup after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', setupContactForm);
 
