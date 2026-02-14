@@ -206,6 +206,7 @@ if (prevBtn && nextBtn) {
 
 // Comprehensive topic message templates
 const messageTemplates = {
+  // --- EXISTING TOPICS ---
   'boundary-waters': `I am writing to express my strong opposition to sulfide-ore copper mining in the Boundary Waters Canoe Area Wilderness. Scientific evidence overwhelmingly demonstrates that this type of mining poses an unacceptable risk to one of America's most pristine wilderness areas.
 
 Key concerns:
@@ -324,77 +325,32 @@ Closing post offices would:
 
 Rural communities deserve reliable postal services.`,
 
-
-// Add this to the messageTemplates object in script.js:
-
-'veterans': `I am writing to express my deep disappointment in your vote against the Honoring Our PACT Act (H.R. 3967) on March 3, 2022 (House Roll Call #57).
-
-This legislation would have expanded healthcare access for 3.5 million veterans exposed to toxic burn pits, Agent Orange, and Gulf War toxins. The bill had overwhelming bipartisan support from the American people:
-- 93% of likely voters supported the PACT Act
-- 91% of Republicans supported it
-- 92% of independents supported it
-- 94% of Democrats supported it
+  'veterans': `I am writing to express my deep disappointment in your vote against the Honoring Our PACT Act (H.R. 3967). This legislation expanded healthcare access for 3.5 million veterans exposed to toxic burn pits, Agent Orange, and other toxins.
 
 Key concerns about your vote:
 - 300,000+ Minnesota veterans rely on VA healthcare
-- Veterans exposed to burn pits suffer from 23+ types of cancer and respiratory diseases
-- Many veterans are dying while waiting for care they earned through their service
-- The PACT Act would have provided the largest expansion of VA healthcare in decades
-
-Your vote against this legislation contradicts your campaign promises to support our veterans. These brave men and women served our country and deserve the healthcare they were promised. They should not have to fight for care after fighting for our freedom.
+- You voted against providing presumptive care for veterans suffering from service-connected cancers
+- Veterans should not have to fight a legal battle for care after fighting for our freedom
 
 I urge you to support future veteran healthcare legislation and explain to your constituents why you voted against caring for those who served.`,
 
- 'democracy': `I am writing to express my strong opposition to your consistent votes against voting rights protections and democratic reforms.
+  'democracy': `I am writing to express my strong opposition to your consistent votes against voting rights protections and democratic reforms.
 
-The Freedom to Vote: John R. Lewis Act had broad bipartisan support from the American people:
-- 63% of likely voters nationwide supported the legislation
-- 62% of independents supported voting rights protections  
-- Even 42% of Republicans favored these democratic reforms
-
-Key concerns about your anti-democracy voting record:
+Key concerns about your record:
 - You voted against the Freedom to Vote: John R. Lewis Act
 - You opposed election security funding measures
 - You voted against campaign finance transparency requirements
-- You supported voter roll purging that disproportionately affects communities of color
-- You opposed automatic voter registration that would increase participation
 
-Your votes consistently prioritize corporate interests over democratic participation. Minnesota has a proud tradition of high voter turnout and accessible elections - your efforts to restrict voting rights threaten this legacy.
+Minnesota has a proud tradition of high voter turnout and accessible elections. Your efforts to restrict voting rights threaten this legacy. I urge you to support future voting rights legislation and oppose voter suppression tactics.`,
 
-I urge you to:
-- Support future voting rights legislation
-- Vote for election security measures
-- Support campaign finance transparency
-- Oppose voter suppression tactics
-- Protect Minnesota's tradition of accessible voting
+  'labor': `I am writing to express my deep disappointment in your consistent votes against labor rights and unions, despite representing a district built by union workers.
 
-Democracy works best when everyone can participate. Please represent the will of your constituents, not just your wealthy donors.`,
-'labor':`I am writing to express my deep disappointment in your consistent votes against labor rights and unions, despite representing a district built by union workers.
-
-Key concerns about your anti-worker record:
+Key concerns:
 - You voted AGAINST the PRO Act (H.R. 842) which would strengthen collective bargaining rights
-- 71% of Americans support unions - the highest approval since 1965
-- Minnesota's 8th District has over 35,000 union members including Iron Range miners, teachers, and postal workers
-- The DFL literally has "LABOR" in its name - this is our heritage
+- Minnesota's 8th District has over 35,000 union members
 - You claim to support workers but vote against them at every opportunity
 
-Your votes directly harm:
-- 12,000+ Iron Range miners (United Steelworkers)
-- 8,500+ teachers and education workers
-- 3,200+ postal workers
-- 6,800+ healthcare workers
-- 4,500+ building trades workers
-
-These are your constituents - the people who built Minnesota through union organizing and collective action. They deserve a representative who stands WITH them, not against them.
-
-I urge you to:
-- Support the PRO Act and future pro-worker legislation
-- Vote for fair minimum wage increases
-- Protect workplace safety regulations
-- Support collective bargaining rights
-- Stop siding with corporations over workers
-
-The Iron Range was built by union workers. Honor that legacy by actually supporting labor, not just showing up for photo ops at union halls.`,
+The Iron Range was built by union workers. Honor that legacy by actually supporting labor, not just showing up for photo ops.`,
 
   'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
 
@@ -402,9 +358,74 @@ My specific concerns include:
 - Protection of natural resources
 - Maintaining essential public services
 - Preserving community infrastructure
-- Preventing corporate exploitation of public assets
+- Preventing corporate exploitation of public assets`,
 
-These resources belong to all Minnesotans and should not be sacrificed for short-term financial gains.`
+  // --- NEW TOPICS (PHASE 2 & SITE FILL-INS) ---
+
+  'superior-watershed': `I am writing to demand the permanent protection of the Lake Superior Watershed. This is not just a local resource; it holds 10% of the world's fresh surface water.
+
+Your support for sulfide-ore mining in this watershed recklessly endangers this global resource.
+- Sulfide mining has a 100% failure rate for preventing pollution in water-rich environments.
+- Any contamination here flows directly into Lake Superior, threatening the drinking water for millions.
+- The economic value of a clean Lake Superior far outweighs the temporary profits of foreign mining conglomerates.
+
+Please prioritize the long-term health of our water over short-term extraction.`,
+
+  'dod': `I am writing to express my concern regarding the prioritization of defense spending over critical domestic needs. While you have consistently voted for record-high defense budgets and blank checks for the Pentagon, you have simultaneously supported cuts to programs that MN-08 families rely on.
+
+- You supported the NDAA while voting to cut Head Start and SNAP.
+- We need accountability and audits for defense contractors, not endless budget increases.
+- National security includes the economic security of your constituents at home.
+
+I urge you to support a budget that prioritizes Minnesota families, not just defense contractors.`,
+
+  'education': `I am writing to express my outrage at your attempt to cut Head Start funding. In November 2023, you sponsored an amendment to H.R. 5894 that would have slashed millions from early childhood education.
+
+- This cut would have removed hundreds of children in MN-08 from Head Start.
+- It targets the most vulnerable families in our district to fund tax cuts for corporations.
+- Early education provides the highest ROI of any public investment.
+
+I urge you to commit to fully funding Head Start and stop treating our children's education as a line item to be liquidated.`,
+
+  'snap': `I am writing to oppose the draconian cuts to SNAP (Food Assistance) that you supported in the 'Limit, Save, Grow Act' (H.R. 2811).
+
+- Your vote puts 450,000+ Minnesotans at risk of food insecurity.
+- The imposition of stricter work requirements is a bureaucratic hurdle designed to kick eligible people off the program.
+- Cutting food assistance does not reduce the deficit; it only increases hunger and healthcare costs.
+
+Please stop trying to balance the budget on the backs of hungry families.`,
+
+  'civilian-safety': `I am writing to demand you support the Railway Safety Act (H.R. 1674). As a member of the Transportation Committee, your inaction on rail safety is unacceptable.
+
+- Minnesota communities are threatened by increasingly long trains carrying hazardous materials.
+- We need a federal mandate for two-person crews, not voluntary industry guidelines.
+- We need stronger defect detector requirements to prevent disasters like East Palestine.
+
+Please value the lives of your constituents over the profits of rail lobbyists.`,
+
+  'voting-rights': `I am writing to strongly oppose the 'Minnesota Voter Integrity Act' (H.R. 11/H.R. 6960) which you introduced.
+
+- This bill effectively holds Minnesota's election security funding hostage.
+- Defunding our state's election infrastructure makes our elections LESS secure, not more.
+- This is a dangerous federal overreach into state election administration.
+
+I urge you to withdraw this legislation and support full funding for HAVA grants to keep our elections safe and accessible.`,
+
+  'insulin': `I am writing to condemn your vote against the 'Affordable Insulin Now Act' (H.R. 6833).
+
+- You voted NO on capping out-of-pocket insulin costs at $35/month.
+- In MN-08, thousands of diabetics rely on this life-saving drug.
+- Voting to protect pharmaceutical profits while your constituents ration their medicine is indefensible.
+
+I urge you to support price caps on essential life-saving medications.`,
+
+  'deregulation': `I am writing to oppose the 'Prove It Act' (H.R. 7198) which you championed.
+
+- This bill gives corporations a tool to stall and block vital health and safety regulations.
+- It prioritizes corporate profit margins over clean air, clean water, and worker safety.
+- We need strong regulatory agencies to protect the public, not loopholes for big business.
+
+Please stop empowering corporate lobbyists to veto public protections.`
 };
 
 
@@ -420,10 +441,20 @@ const topicSubjects = {
   'ssa': 'Protect Social Security for Current and Future Retirees',
   'national-forests': 'Protect Minnesota\'s National Forests from Excessive Logging',
   'usps': 'Protect Rural Postal Services in Minnesota',
-  'veterans': 'Support Healthcare for Veterans Exposed to Burn Pits - Reverse Your PACT Act Vote',
+  'veterans': 'Support Healthcare for Veterans - Reverse Your PACT Act Vote',
   'democracy': 'Protect Democracy and Voting Rights in Minnesota',
   'labor': 'Support Labor Rights and Unions in Minnesota',
-  'other': 'Preserve Minnesota\'s Public Resources and Services'
+  'other': 'Preserve Minnesota\'s Public Resources and Services',
+  
+  // NEW SUBJECTS
+  'superior-watershed': 'Protect the Global Resource of Lake Superior',
+  'dod': 'Prioritize MN Families Over Defense Contractor Profits',
+  'education': 'Stop the Attacks on Head Start & Early Education',
+  'snap': 'Oppose Cuts to SNAP and Food Assistance',
+  'civilian-safety': 'Support the Railway Safety Act (H.R. 1674)',
+  'voting-rights': 'Withdraw the MN Voter Integrity Act (H.R. 11)',
+  'insulin': 'Support Insulin Price Caps - Explanation for H.R. 6833 Vote',
+  'deregulation': 'Oppose the "Prove It Act" and Corporate Deregulation'
 };
 
 // Setup contact form functionality
@@ -1816,6 +1847,69 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('companySize') && 
       document.getElementById('unionStrategy')) {
     calculateUnionBustingROI();
+  }
+});
+
+// Veterans PACT Act listing page specific functions
+function showVetsPactAlert() {
+  alert("COVERAGE DENIED! This distressed asset portfolio of 3.5 million toxic-exposed veterans has been successfully shelved thanks to Agent Stauber's NAY vote on H.R. 3967. No presumptive care, no problem — for the budget, anyway!");
+}
+
+function showVetsPactTourAlert() {
+  alert("BURN PIT TOUR SCHEDULED! Please bring your own respirator — Agent Stauber certainly didn't vote to provide one. Tour includes: open-air waste incineration sites, Agent Orange spray zones, and the Camp Lejeune water fountain.");
+}
+
+// Veterans Liability Avoidance Calculator
+function calculateVetsDenial() {
+  var years = parseInt(document.getElementById('serviceYearsSelect').value);
+  var exposure = document.getElementById('exposureTypeSelect').value;
+
+  var baseCost = 0;
+  var waitYears = 0;
+
+  switch (exposure) {
+    case 'burnpit':
+      baseCost = 185000;
+      waitYears = 3.8;
+      break;
+    case 'agentorange':
+      baseCost = 245000;
+      waitYears = 5.2;
+      break;
+    case 'radiation':
+      baseCost = 320000;
+      waitYears = 6.1;
+      break;
+    case 'lejeune':
+      baseCost = 210000;
+      waitYears = 4.5;
+      break;
+  }
+
+  var totalSaved = baseCost + (years * 42000);
+  var totalWait = waitYears + (years * 0.15);
+
+  var savedResult = document.getElementById('vetsSavedResult');
+  var waitResult = document.getElementById('vetsWaitResult');
+
+  if (savedResult) {
+    if (totalSaved >= 1000000) {
+      savedResult.textContent = '$' + (totalSaved / 1000000).toFixed(2) + ' Million';
+    } else {
+      savedResult.textContent = '$' + totalSaved.toLocaleString();
+    }
+  }
+
+  if (waitResult) {
+    waitResult.textContent = totalWait.toFixed(1) + ' Years';
+  }
+}
+
+// Initialize veterans calculator on page load
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.getElementById('serviceYearsSelect') &&
+      document.getElementById('exposureTypeSelect')) {
+    calculateVetsDenial();
   }
 });
 
