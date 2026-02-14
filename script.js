@@ -206,7 +206,6 @@ if (prevBtn && nextBtn) {
 
 // Comprehensive topic message templates
 const messageTemplates = {
-  // --- EXISTING TOPICS ---
   'boundary-waters': `I am writing to express my strong opposition to sulfide-ore copper mining in the Boundary Waters Canoe Area Wilderness. Scientific evidence overwhelmingly demonstrates that this type of mining poses an unacceptable risk to one of America's most pristine wilderness areas.
 
 Key concerns:
@@ -360,8 +359,6 @@ My specific concerns include:
 - Preserving community infrastructure
 - Preventing corporate exploitation of public assets`,
 
-  // --- NEW TOPICS (PHASE 2 & SITE FILL-INS) ---
-
   'superior-watershed': `I am writing to demand the permanent protection of the Lake Superior Watershed. This is not just a local resource; it holds 10% of the world's fresh surface water.
 
 Your support for sulfide-ore mining in this watershed recklessly endangers this global resource.
@@ -445,8 +442,6 @@ const topicSubjects = {
   'democracy': 'Protect Democracy and Voting Rights in Minnesota',
   'labor': 'Support Labor Rights and Unions in Minnesota',
   'other': 'Preserve Minnesota\'s Public Resources and Services',
-  
-  // NEW SUBJECTS
   'superior-watershed': 'Protect the Global Resource of Lake Superior',
   'dod': 'Prioritize MN Families Over Defense Contractor Profits',
   'education': 'Stop the Attacks on Head Start & Early Education',
