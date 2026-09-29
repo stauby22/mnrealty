@@ -3,543 +3,288 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Stauber MN Realty</title>
+  <title>About the Firm — Stauber Minnesota Realty™ | Satire, Sourced</title>
+  <meta name="description" content="Stauber Minnesota Realty is a parody brokerage listing the public assets Rep. Pete Stauber has voted on. The jokes are ours; the facts come from House roll calls, FEC filings and agency data. Meet the agent, our standards, and our corrections log." />
   <link rel="stylesheet" href="styles.css?v=3" />
-  
-  <!-- Open Graph tags for social sharing -->
-  <meta property="og:title" content="About Stauber MN Realty - America's Sell-Off Specialists" />
-  <meta property="og:description" content="Specializing in selling America's public assets, resources, and services to the highest bidder! Learn about our mission to privatize everything taxpayers built." />
-  <meta property="og:image" content="https://staubermn.com/Postal_Service.jpg" />
-  <meta property="og:url" content="https://staubermn.com/about.html" />
-  <meta property="og:type" content="website" />
-  
-  <!-- Twitter Card tags -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="About Stauber MN Realty - America's Sell-Off Specialists" />
-  <meta name="twitter:description" content="Specializing in selling America's public assets, resources, and services to the highest bidder! Learn about our mission to privatize everything." />
-  <meta name="twitter:image" content="https://staubermn.com/Postal_Service.jpg" />
-  
-  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="mls.css?v=7" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-yd9V+78rQJbRBG+2cA1JGVkC9lIH9cJYd8nY2T+q6tcwAnI8+XDRSYoFhcO3JJF5pN7j/2xhxnYhx3hQzvDyKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="icon" href="favicon.png" type="image/x-icon" />
-  <style>
-    /* Additional styles specific to About page */
-    .about-hero {
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&w=1200') center center/cover no-repeat;
-      height: 300px;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-    
-    .about-hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 51, 102, 0.7);
-    }
-    
-    .about-hero h1 {
-      color: white;
-      position: relative;
-      font-size: 2.5rem;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    }
-    
-    .about-section {
-      max-width: 1000px;
-      margin: 0 auto 3rem;
-      padding: 0 1rem;
-    }
-    
-    .about-section h2 {
-      color: #003366;
-      position: relative;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    
-    .about-section h2::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
-      background-color: #ffcc00;
-    }
-    
-    .about-content {
-      margin-bottom: 2rem;
-    }
-    
-    .about-content p {
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    
-    .about-stats {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin: 2rem 0;
-    }
-    
-    .stat-item {
-      text-align: center;
-      padding: 1.5rem;
-      background-color: #f9f9f9;
-      border-radius: 0.5rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      width: 200px;
-    }
-    
-    .stat-value {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #b20000;
-      margin-bottom: 0.5rem;
-    }
-    
-    .stat-label {
-      color: #333;
-      font-size: 1rem;
-    }
-    
-    .team-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .team-member {
-      width: 300px;
-      background-color: white;
-      border-radius: 0.5rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-    
-    .team-member:hover {
-      transform: translateY(-5px);
-    }
-    
-    .team-photo {
-      height: 300px;
-      overflow: hidden;
-    }
-    
-    .team-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .team-info {
-      padding: 1.5rem;
-    }
-    
-    .team-info h3 {
-      color: #003366;
-      margin-bottom: 0.5rem;
-    }
-    
-    .team-info .position {
-      color: #b20000;
-      font-style: italic;
-      margin-bottom: 1rem;
-    }
-    
-    .team-info p {
-      color: #555;
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
-    }
-    
-    .value-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    
-    .value-card {
-      width: 300px;
-      padding: 1.5rem;
-      background-color: #f9f9f9;
-      border-radius: 0.5rem;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    
-    .value-icon {
-      font-size: 2.5rem;
-      color: #003366;
-      margin-bottom: 1rem;
-    }
-    
-    .value-card h3 {
-      color: #003366;
-      margin-bottom: 0.5rem;
-    }
-    
-    .value-card p {
-      color: #555;
-      font-size: 0.9rem;
-    }
-    
-    .testimonial-section {
-      background-color: #f4f7f9;
-      padding: 3rem 1rem;
-      margin: 2rem 0;
-    }
-    
-    .testimonial-quote {
-      font-size: 1.2rem;
-      font-style: italic;
-      color: #333;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      position: relative;
-      padding: 1rem 2rem;
-    }
-    
-    .testimonial-quote::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: 0;
-      font-size: 5rem;
-      color: rgba(0,51,102,0.1);
-      font-family: sans-serif;
-    }
-    
-    .testimonial-author {
-      text-align: center;
-      margin-top: 1rem;
-      font-weight: bold;
-      color: #003366;
-    }
-    
-    .disclaimer {
-      font-size: 0.8rem;
-      font-style: italic;
-      color: #666;
-      text-align: center;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-    }
-    
-    @media (max-width: 768px) {
-      .about-hero {
-        height: 200px;
-      }
-      
-      .about-hero h1 {
-        font-size: 2rem;
-      }
-      
-      .stat-item {
-        width: 100%;
-      }
-      
-      .team-member {
-        width: 100%;
-      }
-      
-      .value-card {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="canonical" href="https://staubermn.com/about.html" />
+
+  <!-- Open Graph / Social sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Stauber MN Realty" />
+  <meta property="og:url" content="https://staubermn.com/about.html" />
+  <meta property="og:title" content="About the Firm — Stauber Minnesota Realty™ | Satire, Sourced" />
+  <meta property="og:description" content="Stauber Minnesota Realty is a parody brokerage listing the public assets Rep. Pete Stauber has voted on. The jokes are ours; the facts come from House roll calls, FEC filings and agency data. Meet the agent, our standards, and our corrections log." />
+  <meta property="og:image" content="https://staubermn.com/images/listings/home-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About the Firm — Stauber Minnesota Realty™ | Satire, Sourced" />
+  <meta name="twitter:description" content="Stauber Minnesota Realty is a parody brokerage listing the public assets Rep. Pete Stauber has voted on. The jokes are ours; the facts come from House roll calls, FEC filings and agency data. Meet the agent, our standards, and our corrections log." />
+  <meta name="twitter:image" content="https://staubermn.com/images/listings/home-og.jpg" />
 </head>
-<body>
-  <!-- Header/Navigation -->
-  <header>
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html">
-          <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
-        </a>
-      </div>
-      <nav aria-label="Main Navigation">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a href="listings.html" class="dropbtn">Listings ▼</a>
-            <ul class="dropdown-content">
-              <li><a href="bwca-listing.html">BWCA</a></li>
-            <li><a href="va-burnpit-listing.html">VA Healthcare</a></li>
-              <li><a href="faa-listing.html">FAA</a></li>
-              <li><a href="medicaid.html">Medicaid</a></li>
-              <li><a href="entire-great-lakes-economy-listing.html">The MN Economy</a></li>
-              <li><a href="pardons-listing.html">Presidential Pardons</a></li>
-              <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
-              <li><a href="ssa-listing.html">Social Security</a></li>
-              <li><a href="national-forests.html">National Forests</a></li>
-              <li><a href="usps-listing.html">USPS Portfolio</a></li>
-              <li><a href="dod-listing.html">The DoD</a></li>
-              <li><a href="education-listing.html">Education System</a></li>
-            <li><a href="democracy-listing.html">Democracy</a></li>
+<body class="mls-page">
+
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.svg" style="width: 100px; padding-left: 25px;" alt="Stauber MN Realty">
+      </a>
+    </div>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="listings.html" class="dropbtn">Listings &#9660;</a>
+          <ul class="dropdown-content mega">
+            <li class="nav-group">Your Wallet</li>
+            <li><a href="aca-premiums-listing.html">Health Premiums <span class="new-tag">NEW</span></a></li>
+            <li><a href="fuel-surcharge-listing.html">Fuel &amp; Heating <span class="new-tag">NEW</span></a></li>
+            <li><a href="property-tax-listing.html">Property Taxes <span class="new-tag">NEW</span></a></li>
+            <li><a href="entire-great-lakes-economy-listing.html">Tariffs &amp; MN Economy</a></li>
             <li><a href="snap-listing.html">Food Assistance</a></li>
-              <li><a href="labor-listing.html">Labor Rights</a></li>
-              <li><a href="civilian-safety-listing.html">Civilian Safety</a></li>
-              <li><a href="voting-rights.html">Voting Rights</a></li>
-            </ul>
-          </li>
-          <li><a href="press-releases.html">Press</a></li>
+            <li class="nav-group">Health &amp; Retirement</li>
+            <li><a href="medicaid.html">Medicaid &amp; Rural Hospitals</a></li>
+            <li><a href="ssa-listing.html">Social Security</a></li>
+            <li><a href="veterans-pact.html">Veterans</a></li>
+            <li class="nav-group">Land &amp; Water</li>
+            <li><a href="bwca-listing.html">Boundary Waters</a></li>
+            <li><a href="superior-watershed-listing.html">Superior Watershed</a></li>
+            <li><a href="national-forests.html">National Forests</a></li>
+            <li><a href="federal-eviction-listing.html">Federal Office Park <span class="new-tag">NEW</span></a></li>
+            <li class="nav-group">Agent Conduct</li>
+            <li><a href="absentee-landlord-listing.html">Where&rsquo;s Pete? <span class="new-tag">NEW</span></a></li>
+            <li><a href="blatnik-bridge-listing.html">The Blatnik Bridge <span class="new-tag">NEW</span></a></li>
+            <li><a href="labor-listing.html">Labor Record</a></li>
+            <li><a href="epstein.html">Epstein Files</a></li>
+            <li class="nav-group">Rights &amp; Safety</li>
+            <li><a href="civilian-safety-listing.html">Civilian Safety</a></li>
+            <li><a href="voting-rights.html">Voting Rights</a></li>
+            <li><a href="pardons-listing.html">Presidential Pardons</a></li>
+            <li class="nav-group">Everything</li>
+            <li class="nav-all"><a href="listings.html">All listings &rarr;</a></li>
+          </ul>
+        </li>
+        <li><a href="press-releases.html">Press</a></li>
         <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="lease-renewal.html" class="nav-lease">Nov 3: Lease Renewal</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="mls-wrap no-hero">
+    <div class="mls-summary">
+      <div class="mls-status-row"><span class="mls-pill dot">Licensed satire</span><span class="mls-pill navy">Every figure sourced</span><span class="mls-pill outline">Not affiliated with any candidate</span></div>
+      <div class="mls-price">Est. 2025</div>
+      <h1 class="mls-title">About Stauber Minnesota Realty&trade;</h1>
+      <p class="mls-address"><i class="fas fa-map-marker-alt"></i> Serving Minnesota&rsquo;s 8th District &middot; 27,583 square miles &middot; 18 counties, from the Iron Range to the North Shore</p>
+      <div class="mls-keyfacts">
+        <div class="mls-keyfact"><b>19</b><span>Active listings</span></div>
+        <div class="mls-keyfact"><b>2019</b><span>Year the agent took the MN-08 listing</span></div>
+        <div class="mls-keyfact"><b>27,583</b><span>Square miles in the territory</span></div>
+        <div class="mls-keyfact"><b>Nov 3</b><span>Lease renewal</span></div>
+      </div>
+      <div class="mls-estimate"><b>Our promise:</b> the jokes are ours. The votes, quotes and numbers are not &mdash; each one links to the House Clerk, the FEC, a court record, an agency, or the reporter who got it first.</div>
+      <div class="mls-actions"><a class="mls-btn " href="listings.html"><i class="fas fa-list"></i> Browse all listings</a><a class="mls-btn navy" href="#standards"><i class="fas fa-scale-balanced"></i> Our standards</a><a class="mls-btn gold" href="lease-renewal.html"><i class="fas fa-calendar-check"></i> Lease renewal: Nov 3</a></div>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="about-hero">
-      <h1>About Stauber Minnesota Realty</h1>
-    </section>
-
-    <!-- Company Overview Section -->
-    <section class="about-section">
-      <h2>Our Company</h2>
-      <div class="about-content">
-        <p>Founded in 2016 when we realized the <strong>untapped profit potential in America's public services</strong>, Stauber Minnesota Realty™ has become the nation's premier facilitator of transferring taxpayer-funded assets into private hands. We specialize in connecting public servants with private profit opportunities by transforming essential government services into exclusive investment vehicles.</p>
-        
-        <p>Our innovative business model is simple: identify public resources that Americans value most, recruit elected officials willing to privatize them, and then arrange transfers to our exclusive clientele of billionaires, corporations, and foreign entities who appreciate the incredible ROI of formerly public assets.</p>
-        
-        <p>Under the visionary leadership of Pete Stauber, our Minnesota division has successfully marketed everything from pristine wilderness areas to healthcare systems, transforming what was once considered "the public good" into "the private better." After all, if something can't be measured in quarterly profits, does it truly have value?</p>
-      </div>
-      
-      <div class="about-stats">
-        <div class="stat-item">
-          <div class="stat-value">$32B+</div>
-          <div class="stat-label">In Public Assets Listed</div>
+  <section class="mls-section ">
+    <div class="mls-wrap">
+      <div class="mls-eyebrow">Our company</div><h2 class="mls-h2">A brokerage for things that were never for sale</h2>
+      <div class="mls-grid-2">
+        <div class="mls-lead">
+          <p>Stauber Minnesota Realty&trade; is a parody real-estate brokerage. Our inventory is the stuff you already own &mdash; your health plan, your heating bill, your national forests, your Social Security check, your ballot &mdash; and our listing agent is the congressman who votes on all of it.</p>
+          <p>We started the firm because the 8th District&rsquo;s representative is very good at press releases and very quiet at town halls. A congressional voting record is hard to read. A Zillow listing isn&rsquo;t. So we translate: a vote to let premium tax credits expire becomes a <a href="aca-premiums-listing.html">price increase</a>; a resolution repealing a mineral withdrawal becomes a <a href="bwca-listing.html">closing</a>; a vote against the infrastructure law, followed by a groundbreaking photo, becomes an <a href="blatnik-bridge-listing.html">&ldquo;I Built That&rdquo; bridge</a>.</p>
+          <p>We are not a campaign. We don&rsquo;t endorse or name candidates, and nobody pays us. We would like you to read the listings, check our sources, and vote on November 3.</p>
         </div>
-        
-        <div class="stat-item">
-          <div class="stat-value">1.1M+</div>
-          <div class="stat-label">Citizens Impacted</div>
-        </div>
-        
-        <div class="stat-item">
-          <div class="stat-value">500+</div>
-          <div class="stat-label">Years of Environmental Impact</div>
-        </div>
-        
-        <div class="stat-item">
-          <div class="stat-value">89%</div>
-          <div class="stat-label">Profits to Foreign Entities</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Meet Our Team Section -->
-    <section class="about-section">
-      <h2>Meet Our Team</h2>
-      <div class="about-content">
-        <p>Our dedicated team of public asset liquidation specialists works tirelessly to identify which treasured American resources can be most profitably transferred to private control. While maintaining the convenient appearance of public service, our associates excel at advancing corporate interests through strategic "representation."</p>
-      </div>
-      
-      <div class="team-grid">
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Pete_Stauber%2C_official_portrait%2C_116th_Congress.jpg" alt="Pete Stauber">
-          </div>
-          <div class="team-info">
-            <h3>Pete Stauber</h3>
-            <div class="position">Chief Privatization Officer</div>
-            <p>Expertise: Claiming to protect public resources while actively working to privatize them</p>
-            <p>Special Skills: Maintaining "Back the Blue" persona while supporting pardons for those who assaulted 140+ police officers</p>
-            <p>Favorite Quote: "I support the public [when cameras are rolling]."</p>
-          </div>
-        </div>
-        
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Deripaska_Oleg_September_2020_%28cropped%29.jpg" alt="Oleg Deripaska">
-          </div>
-          <div class="team-info">
-            <h3>Oleg Deripaska</h3>
-            <div class="position">International Investment Consultant</div>
-            <p>Expertise: Acquiring Minnesota's natural resources through complex ownership structures despite sanctions</p>
-            <p>Special Skills: Maintaining plausible deniability while extracting maximum profit from American resources</p>
-            <p>Favorite Quote: "За ваши ресурсы, спасибо депутату Стауберу!" (For your resources, thank Representative Stauber!)</p>
-          </div>
-        </div>
-        
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/TrumpPortrait.jpg" alt="Donald Trump">
-          </div>
-          <div class="team-info">
-            <h3>Donald Trump</h3>
-            <div class="position">Executive Pardon Specialist</div>
-            <p>Expertise: Converting criminal convictions into profit centers through strategic donation requirements</p>
-            <p>Special Skills: Making "law and order" apply only to those who can't afford to buy pardons</p>
-            <p>Favorite Quote: "Justice is like a hotel room - available at the right price!"</p>
-          </div>
-        </div>
-      </div>
-      <div class="team-grid">
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/The_Prime_Minister%2C_Shri_Narendra_Modi_meeting_Mr._Elon_Musk_in_New_York%2C_USA_on_June_20%2C_2023_%282%29_%28cropped%29.jpg" alt="Elon Musk">
-          </div>
-          <div class="team-info">
-            <h3>Elon Musk</h3>
-            <div class="position">Chief Regulatory Demolition Officer</div>
-            <p>Expertise: Dismantling decades of federal agencies as DOGE Administrator while Pete Stauber enthusiastically applauds</p>
-            <p>Special Skills: Convincing the public that eliminating the EPA, CFPB, DOE, USAID and FAA is "efficiency" rather than corporate giveaways</p>
-            <p>Favorite Quote: "The most efficient regulation is no regulation. Just trust me, a billionaire with financial interests in eliminating oversight."</p>
-          </div>
-        </div>
-        
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Robert_F._Kennedy%2C_Jr._by_Gage_Skidmore.jpg" alt="Robert F. Kennedy Jr">
-          </div>
-          <div class="team-info">
-            <h3>Robert F. Kennedy Jr.</h3>
-            <div class="position">Environmental Protection Disruptor</div>
-            <p>Expertise: Using an environmentalist surname to systematically dismantle environmental protections</p>
-            <p>Special Skills: Promoting conspiracy theories while occupying positions that require scientific expertise</p>
-            <p>Favorite Quote: "The best way to protect our children from toxins is to eliminate the agencies that regulate toxins."</p>
-          </div>
-        </div>
-        
-        <div class="team-member">
-          <div class="team-photo">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Charles_Koch_portrait_%28cropped%29.jpg" alt="Charles Koch">
-          </div>
-          <div class="team-info">
-            <h3>Charles Koch</h3>
-            <div class="position">Director of Democratic Divestment</div>
-            <p>Expertise: Transforming billions in pollution profits into policies that generate more pollution profits</p>
-            <p>Special Skills: Convincing working-class Americans that billionaire tax cuts and deregulation will somehow benefit them</p>
-            <p>Favorite Quote: "A free market means I'm free to buy the market."</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Values Section -->
-    <section class="about-section">
-      <h2>Our Corporate Values</h2>
-      <div class="about-content">
-        <p>At Stauber Minnesota Realty™, our values guide every decision we make as we transform public resources into private profit centers. We're proud to operate with a clear set of principles that have made us the industry leader in public asset liquidation.</p>
-      </div>
-      
-      <div class="value-cards">
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-dollar-sign"></i></div>
-          <h3>Profit Over People</h3>
-          <p>We believe that human needs like healthcare, clean water, and retirement security represent untapped profit opportunities. By converting these basic rights into premium services, we create shareholder value while teaching self-reliance.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-globe-americas"></i></div>
-          <h3>Foreign Ownership Preferred</h3>
-          <p>While we market ourselves as "America First," we prioritize transferring U.S. resources to foreign corporations and oligarchs. This innovative approach ensures maximum profit extraction with minimal domestic accountability.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-chart-line"></i></div>
-          <h3>Short-Term Extraction</h3>
-          <p>We specialize in converting centuries of potential public benefit into a few years of private profit. Why preserve resources for future generations when shareholders need returns this quarter?</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-balance-scale-right"></i></div>
-          <h3>Two-Tier Justice</h3>
-          <p>We believe in a justice system where consequences apply only to those who can't afford to buy pardons. Our premium legal escape packages ensure accountability remains strictly for the lower classes.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-water"></i></div>
-          <h3>Environmental Externalization</h3>
-          <p>By transferring pollution costs to taxpayers while privatizing profits, we've perfected the art of having others pay for our clients' environmental destruction for the next 500+ years.</p>
-        </div>
-        
-        <div class="value-card">
-          <div class="value-icon"><i class="fas fa-microphone-slash"></i></div>
-          <h3>Strategic Silence</h3>
-          <p>We've mastered the art of having our representatives loudly proclaim support for police, rural communities, and seniors while silently undermining each through their voting records and policy positions.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonial Section -->
-    <section class="testimonial-section">
-      <h2>Donor Testimonial</h2>
-      <div class="testimonial-quote">
-        "As a billionaire investor, I've always found it inefficient that Americans could access healthcare, clean water, and retirement security without paying me first. Thanks to Pete Stauber and Stauber Minnesota Realty, I can now extract profit from basic human needs while avoiding responsibility for any negative outcomes!"
-      </div>
-      <div class="testimonial-author">— Anonymous Billionaire Donor</div>
-    </section>
-
-    <!-- Company History Section -->
-    <section class="about-section">
-      <h2>Our History</h2>
-      <div class="about-content">
-        <p>Stauber Minnesota Realty™ traces its roots to the first time a politician realized they could exchange public resources for private campaign donations. Since our founding, we've refined the art of transforming "public service" into "private extraction" through these key historical milestones:</p>
-        
-        <p><strong>2016:</strong> Recognized the untapped potential in marketing America's public resources to the highest bidder regardless of citizenship or criminal record.</p>
-        
-        <p><strong>2018:</strong> Recruited Pete Stauber to our Minnesota division, attracted by his willingness to publicly claim support for communities, police, and clean water while actually supporting policies that undermine each.</p>
-        
-        <p><strong>2019:</strong> Pioneered our "Russian Oligarch Advantage" program, connecting sanctioned foreign billionaires with Minnesota's natural resources through complex ownership structures supported by Pete Stauber.</p>
-        
-        <p><strong>2020:</strong> Developed our innovative "Pardon Portfolio," allowing Pete Stauber to maintain his "Back the Blue" branding while supporting pardons for those who violently assaulted police officers (as long as they were the right police officers).</p>
-        
-        <p><strong>2021:</strong> Expanded into premium healthcare privatization, rebranding "cutting Medicaid" as "enhancing freedom of choice through market mechanisms."</p>
-        
-        <p><strong>2022:</strong> Launched our "Rural Abandonment Initiative," helping Pete Stauber support post office closures while claiming to champion the rural communities that depend on them.</p>
-        
-        <p><strong>2024:</strong> Currently finalizing our "Senior Security Extraction" program to transform Social Security from a guaranteed benefit into a Wall Street profit center.</p>
-      </div>
-    </section>
-
-    <div class="disclaimer">
-      <p>SATIRE NOTICE: This website is satirical commentary on Congressman Pete Stauber's policy positions and voting record. Stauber Minnesota Realty™ is not a real company, but the policies described reflect actual positions taken by Rep. Stauber that effectively prioritize corporate and private interests over public ones. While the presentation is humorous, the impact of these policies on Minnesotans, public lands, and essential services is very real.</p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-main">
-        <p>© 2025–2026 Stauber Minnesota Realty™ – Where democracy goes to the highest bidder.</p>
-        <p class="disclaimer">This site is political satire and parody protected under the First Amendment. Parody website not affiliated with any candidate.</p>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <aside class="mls-agent">
+          <h3>Firm at a glance</h3>
+          <dl>
+            <dt>Brokerage type</dt><dd>Parody / political satire</dd>
+            <dt>Territory</dt><dd>Minnesota&rsquo;s 8th District</dd>
+            <dt>Commission</dt><dd>$0</dd>
+            <dt>Affiliation</dt><dd>None</dd>
+            <dt>Corrections</dt><dd><a href="contact.html">Tell us</a></dd>
+          </dl>
+          <a class="mls-btn gold" href="lease-renewal.html"><i class="fas fa-calendar-check"></i> How to vote</a>
+        </aside>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="script.js?v=3"></script>
+  <section class="mls-section soft">
+    <div class="mls-wrap">
+      <div class="mls-eyebrow">Meet the listing agent</div><h2 class="mls-h2">Pete Stauber, in the public record</h2><p class="mls-sub">He is a real person with a real record. We treat both seriously; the listings are where we stop being polite about the record.</p>
+      <div class="mls-table-wrap">
+        <table class="mls-table">
+          <thead><tr><th>Year</th><th>Event</th><th>Details</th><th></th></tr></thead>
+          <tbody>
+          <tr>
+            <td class="date">1966</td>
+            <td><span class="evt gold">Born</span></td>
+            <td>Born in Duluth.<span class="src">Wikipedia</span></td>
+            <td class="pcell">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="date">1988</td>
+            <td><span class="evt yea">Title won</span></td>
+            <td>Wins the NCAA hockey championship with Lake Superior State; later plays for the Adirondack Red Wings (AHL).<span class="src">Wikipedia</span></td>
+            <td class="pcell">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="date">1995</td>
+            <td><span class="evt gold">On duty</span></td>
+            <td>Duluth police officer; shot and lightly wounded in the head in his squad car in 1995. Retires as a lieutenant in 2017 &mdash; a 23-year police career, by his count.<span class="src">Wikipedia; campaign bio</span></td>
+            <td class="pcell">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="date">Until 2019</td>
+            <td><span class="evt gold">Local office</span></td>
+            <td>Eight years on the Hermantown City Council; St. Louis County commissioner, 2013&ndash;2019.<span class="src">Wikipedia</span></td>
+            <td class="pcell">&mdash;</td>
+          </tr>
+          <tr>
+            <td class="date">Nov 2018</td>
+            <td><span class="evt sold">Listing acquired</span></td>
+            <td>Wins the open MN-08 seat, 50.7% to 45.2%. Re-elected 2020, 2022 and 2024.<span class="src">Wikipedia</span></td>
+            <td class="pcell">4 terms</td>
+          </tr>
+          <tr>
+            <td class="date">2025&ndash;26</td>
+            <td><span class="evt up">Financing</span></td>
+            <td>Raises $1,996,898 for re-election through July 22, 2026: <b>$931,660</b> (47%) from PACs and other committees; <b>$136,304</b> (6.8%) in small, unitemized donations.<span class="src"><a href="https://www.fec.gov/data/committee/C00650697/" target="_blank" rel="noopener">FEC</a></span></td>
+            <td class="pcell">47% PAC</td>
+          </tr>
+          <tr>
+            <td class="date">Nov 3, 2026</td>
+            <td><span class="evt gold">Lease renewal</span></td>
+            <td>Tenants of the 8th District decide whether to renew.<span class="src"><a href="lease-renewal.html">How to vote</a></span></td>
+            <td class="pcell">&mdash;</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="mls-section ">
+    <div class="mls-wrap">
+      <div class="mls-eyebrow">Our team</div><h2 class="mls-h2">The staff that does the real work</h2><p class="mls-sub">None of these institutions endorse this site. We just rely on them.</p>
+      <div class="mls-tiles">
+        <a class="mls-tile navy" href="https://clerk.house.gov/Votes"><div class="num">House Clerk</div><div class="lbl">Head of Title &mdash; every vote on this site links to its official roll call</div><div class="src">clerk.house.gov</div></a>
+        <a class="mls-tile " href="https://www.cbo.gov/"><div class="num">CBO</div><div class="lbl">Chief Appraiser &mdash; what bills cost and whom they cover</div><div class="src">cbo.gov</div></a>
+        <a class="mls-tile " href="https://www.fec.gov/data/committee/C00650697/"><div class="num">FEC</div><div class="lbl">Escrow Officer &mdash; where the agent&rsquo;s money comes from</div><div class="src">fec.gov</div></a>
+        <div class="mls-tile "><div class="num">Minnesota agencies</div><div class="lbl">Neighborhood Inspectors &mdash; DHS, DCYF, MNsure, the Secretary of State, the DNR</div><div class="src">mn.gov</div></div>
+        <div class="mls-tile gold"><div class="num">Local reporters</div><div class="lbl">Field Agents &mdash; the Duluth News Tribune, MPR, WDIO, KAXE, WTIP, the Mesabi Tribune, Northern News Now and more</div><div class="src">Cited on every listing</div></div>
+        <a class="mls-tile " href="contact.html"><div class="num">You</div><div class="lbl">Home Inspector &mdash; click the sources; tell us if we got something wrong</div><div class="src">contact.html</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mls-section soft" id="standards">
+    <div class="mls-wrap">
+      <div class="mls-eyebrow">Standards</div><h2 class="mls-h2">How we check our listings</h2>
+      <div class="mls-grid-2">
+        <div>
+          <h3 style="margin-top:0;">Our standards</h3>
+          <ul class="mls-risks-list" style="line-height:1.7;">
+            <li><b>Votes</b> come from the official House Clerk roll call and are linked where they appear.</li>
+            <li><b>Quotes</b> are verbatim, dated and linked. If we can&rsquo;t source a quote, it doesn&rsquo;t run.</li>
+            <li><b>Numbers</b> come from agencies, courts, the CBO, the FEC or named reporting, and say &ldquo;about&rdquo; when they&rsquo;re estimates.</li>
+            <li><b>Composite voices</b> (the &ldquo;reviews&rdquo; and &ldquo;tenant&rdquo; quotes on some listings) are labeled as illustrations built from reported circumstances. They are not real people.</li>
+            <li><b>Credit where due.</b> When the agent casts a good vote &mdash; certifying the 2020 election, a federal bargaining-rights vote, the final PACT Act &mdash; we list it.</li>
+            <li><b>No candidates.</b> We don&rsquo;t name, endorse or coordinate with anyone on the ballot.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="margin-top:0;">Corrections log &middot; September 2026</h3>
+          <ul style="line-height:1.7;">
+            <li><a href="national-forests.html">National Forests</a>: removed an unsourced &ldquo;campaign materials&rdquo; quote and forestry-vote claims we couldn&rsquo;t verify; rebuilt from the record.</li>
+            <li><a href="pardons-listing.html">Pardons</a>: replaced an unsourced &ldquo;back the blue&rdquo; quote and invented price tiers with the agent&rsquo;s own January 2021 words.</li>
+            <li><a href="superior-watershed-listing.html">Lake Superior Watershed</a>: removed an unverifiable &ldquo;Russian ownership&rdquo; percentage.</li>
+            <li><a href="voting-rights.html">Voting Rights</a>: corrected what H.R. 7320 requires, the HAVA total, and two unsourced quotes.</li>
+            <li><a href="civilian-safety-listing.html">Civilian Safety</a>: replaced quotations we couldn&rsquo;t verify with sourced wording.</li>
+            <li>Retired our national USPS, FAA, Defense, Education and Democracy listings to focus on the district; old links redirect.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mls-section " id="photo-credits">
+    <div class="mls-wrap">
+      <div class="mls-eyebrow">Photo credits</div><h2 class="mls-h2">Listing photography</h2><p class="mls-sub">Every listing photo is credited to the photographer who took it.</p>
+      <div class="mls-table-wrap">
+      <table class="mls-table">
+        <thead><tr><th>Listing</th><th>Photo (Wikimedia Commons)</th><th>Photographer &middot; license</th></tr></thead>
+        <tbody>
+          <tr><td><a href="fuel-surcharge-listing.html">Winter Fuel</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Gas_Nozzle_(14319856710).jpg" target="_blank" rel="noopener">Gas Nozzle</a></td><td>Mike Mozart<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></span></td></tr>
+          <tr><td><a href="property-tax-listing.html">Property Taxes</a></td><td><a href="https://commons.wikimedia.org/wiki/File:St._Louis_County_Courthouse_Duluth_City_Hall_-_Minnesota_-_Winter_(31597727550).jpg" target="_blank" rel="noopener">St. Louis County Courthouse / Duluth City Hall &ndash; Winter</a></td><td>Tony Webster<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a></span></td></tr>
+          <tr><td><a href="snap-listing.html">SNAP</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Grocery_store_at_lunch_meat_aisle_empty_Corona_virus_2020.jpg" target="_blank" rel="noopener">Grocery store at lunch meat aisle empty</a></td><td>Kurt Kaiser<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a></span></td></tr>
+          <tr><td><a href="medicaid.html">Medicaid</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Woodwinds_Hospital,_Woodbury,_Minnesota_(48609962322).jpg" target="_blank" rel="noopener">Woodwinds Hospital, Woodbury, Minnesota</a></td><td>Tony Webster<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" rel="noopener">CC BY-SA 2.0</a></span></td></tr>
+          <tr><td><a href="veterans-pact.html">Veterans</a></td><td><a href="https://commons.wikimedia.org/wiki/File:VA_Medical_Center_-_panoramio_(3).jpg" target="_blank" rel="noopener">VA Medical Center</a></td><td>Gabriel Vanslette<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a></span></td></tr>
+          <tr><td><a href="bwca-listing.html">Boundary Waters</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Dark_sunset_over_Boundary_Waters_(Unsplash).jpg" target="_blank" rel="noopener">Dark sunset over Boundary Waters</a></td><td>dan carlson<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a></span></td></tr>
+          <tr><td><a href="national-forests.html">National Forests</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Gfp-minnesota-superior-national-forest-forest-view.jpg" target="_blank" rel="noopener">Minnesota: Superior National Forest, forest view</a></td><td>Yinan Chen<br><span style="font-size:0.85em;">Public domain</span></td></tr>
+          <tr><td><a href="federal-eviction-listing.html">Federal Offices</a></td><td><a href="https://commons.wikimedia.org/wiki/File:National_Gallery_of_Art_closed_government_shutdown_Washington_DC_2025-10-15_11-42-21_1.jpg" target="_blank" rel="noopener">National Gallery of Art closed, government shutdown, Oct. 15, 2025</a></td><td>G. Edward Johnson<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></td></tr>
+          <tr><td><a href="blatnik-bridge-listing.html">Blatnik Bridge</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Blatnik_Bridge_from_1st_Ave._W.,_Duluth,_MN,_September_30,_2012.jpg" target="_blank" rel="noopener">Blatnik Bridge from 1st Ave. W., Duluth</a></td><td>Jakes18<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a></span></td></tr>
+          <tr><td><a href="labor-listing.html">Labor</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Elks_Lodge_1161_%26_United_Steelworkers_District_11,_Jones_Avenue,_Eveleth,_Minnesota-01.jpg" target="_blank" rel="noopener">Elks Lodge 1161 &amp; United Steelworkers District 11, Eveleth, Minnesota</a></td><td>Myotus<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></span></td></tr>
+          <tr><td><a href="epstein.html">Epstein Files</a></td><td><a href="https://commons.wikimedia.org/wiki/File:U.S._Department_of_Justice_(DOJ)_(53840386529).jpg" target="_blank" rel="noopener">U.S. Department of Justice (DOJ)</a></td><td>ajay_suresh<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></span></td></tr>
+          <tr><td><a href="civilian-safety-listing.html">Civilian Safety</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Downtown_Minneapolis_at_night.JPG" target="_blank" rel="noopener">Downtown Minneapolis at night</a></td><td>Sinn<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></span></td></tr>
+          <tr><td><a href="voting-rights.html">Voting Rights</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Panorama_of_United_States_Supreme_Court_Building_at_Dusk.jpg" target="_blank" rel="noopener">Panorama of United States Supreme Court Building at Dusk</a></td><td>Joe Ravi<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a></span></td></tr>
+          <tr><td><a href="pardons-listing.html">Pardons</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Capitol_West_Front_at_Dawn_(8498066918).jpg" target="_blank" rel="noopener">Capitol West Front at Dawn</a></td><td>Architect of the Capitol<br><span style="font-size:0.85em;">Public domain</span></td></tr>
+          <tr><td><a href="lease-renewal.html">Lease Renewal</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Voters_head_into_Combined_Polling_Place_Grand_Rapids_Area_Library_to_vote_in_a_Special_Election_in_Grand_Rapids,_Minnesota_on_Election_Day_(53317086316).jpg" target="_blank" rel="noopener">Voters head into Combined Polling Place, Grand Rapids Area Library</a></td><td>Lorie Shaull<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></span></td></tr>
+          <tr><td><a href="listings.html">All listings &amp; social cards</a></td><td><a href="https://commons.wikimedia.org/wiki/File:Split_Rock_Lighthouse_-_Lake_County,_Minnesota_-_8_Jan._2009.jpg" target="_blank" rel="noopener">Split Rock Lighthouse &ndash; Lake County, Minnesota</a></td><td>Jim Sorbie<br><span style="font-size:0.85em;"><a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a></span></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:0.9rem;margin-top:1rem;">We cropped each photo and added our own sign and headline box. The photographers have nothing to do with the jokes and don&rsquo;t endorse this site. The composites built on CC BY-SA photos (Property Taxes, Medicaid, Civilian Safety, Voting Rights) are shared under that same license.</p>
+    </div>
+  </section>
+
+  <section class="mls-section ">
+    <div class="mls-wrap">
+      
+      <div class="mls-callout navy"><span class="kicker">Disclosure</span><p>Stauber Minnesota Realty&trade; is political satire and parody protected by the First Amendment. It is not a real brokerage, nothing here is for sale, and it is not affiliated with Rep. Pete Stauber, his office, any campaign, any candidate or any party. Phone numbers and addresses for Rep. Stauber&rsquo;s offices are real and are provided so you can contact him.</p></div>
+    </div>
+  </section>
+</main>
+
+<section class="mls-lease">
+    <div class="notice">Notice of lease renewal &middot; Nov 3, 2026</div>
+    <h2>Your lease with this agent is up for renewal.</h2>
+    <p>Agent Stauber&rsquo;s current term expires January 3, 2027. Tenants of Minnesota&rsquo;s 8th District vote on renewal November 3, 2026 &mdash; and early voting is already open. Stauber MN Realty does not tell you how to vote. We just think you should read the listing before you sign.</p>
+    <div class="mls-actions">
+      <a class="mls-btn gold" href="lease-renewal.html"><i class="fas fa-calendar-check"></i> How to vote early, by mail, or on Nov 3</a>
+      <a class="mls-btn ghost" href="contact.html"><i class="fas fa-phone"></i> Contact the listing agent</a>
+    </div>
+    <p class="fine">Registration deadline for pre-registering: Oct 13. Minnesota also allows same-day registration at the polls.</p>
+  </section>
+
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-main">
+      <p>&copy; 2025&ndash;2026 Stauber Minnesota Realty&trade; &ndash; Where democracy goes to the highest bidder.</p>
+      <p class="disclaimer">This site is political satire and parody protected under the First Amendment. Stauber Minnesota Realty&trade; is not a real company. The votes, quotes, dollar figures and dates are real and sourced on each page. Not affiliated with any candidate or campaign.</p>
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="lease-renewal.html">Lease Renewal (Vote Nov 3)</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js?v=5"></script>
 </body>
 </html>

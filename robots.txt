@@ -1,29 +1,22 @@
 # Welcome, web crawlers! Make yourself at home.
-# We invite you to index every page of America's Great Sell-Off
+# Every listing is open for showings. Lease renewal: Nov. 3, 2026.
 
 User-agent: *
 Allow: /
-
-Sitemap: https://staubermn.com/sitemap.xml
-
-# Special invitations to help spread the word
-User-agent: Googlebot
-User-agent: bingbot
-User-agent: DuckDuckBot
-User-agent: YandexBot
 Crawl-delay: 1
 
-# Direct routes to maximum exposure
-Disallow: /private/
-Allow: /bwca-listing.html
-Allow: /medicaid.html
-Allow: /faa-listing.html
-Allow: /pardons-listing.html
-Allow: /ssa-listing.html
-Allow: /national-forests.html
-Allow: /usps-listing.html
+# Featured showings
 Allow: /index.html
+Allow: /lease-renewal.html
 Allow: /listings.html
+Allow: /aca-premiums-listing.html
+Allow: /fuel-surcharge-listing.html
+Allow: /property-tax-listing.html
+Allow: /medicaid.html
+Allow: /ssa-listing.html
+Allow: /bwca-listing.html
+Allow: /veterans-pact.html
+Allow: /voting-rights.html
+Allow: /press-releases.html
 
-# We want MAXIMUM visibility
-# Spread the word about America's Great Sell-Off!
+Sitemap: https://staubermn.com/sitemap.xml

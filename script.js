@@ -45,18 +45,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fact-Check Tooltip Auto-Wrapper
 document.addEventListener('DOMContentLoaded', function() {
+  // Auto-citations are applied only to precise bill names / roll calls so that a
+  // tooltip never attaches the wrong source to a generic word like "cuts".
+  // Pages can also add explicit <span class="fact-check" data-citation="..."> markup.
   var factCheckRules = [
     {
-      patterns: [/Boundary Waters/gi, /Mining/gi],
-      citation: 'Source: H.J. Res. 140 / H.R. 4090 — Critical Mineral Dominance Act'
+      patterns: [/H\.\s?J\.\s?Res\.\s?140/g],
+      citation: 'H.J. Res. 140 (Stauber): CRA resolution overturning the BWCA-area mineral withdrawal. House passed Jan. 21, 2026; Senate 50-49 Apr. 16; signed Apr. 27, 2026.'
     },
     {
-      patterns: [/Food Assistance/gi, /\bCuts?\b/gi],
-      citation: 'Source: H.R. 2811 / H.R. 5894 Amendment (Head Start Cuts)'
+      patterns: [/One Big Beautiful Bill/g, /Big Beautiful Bill/g],
+      citation: 'H.R. 1 (119th Congress). Stauber voted YEA: Roll Call 145 (May 22, 2025, 215-214) and Roll Call 190 (July 3, 2025, 218-214).'
     },
     {
-      patterns: [/Veterans?\b/gi],
-      citation: 'Source: Vote No on H.R. 3967 (PACT Act)'
+      patterns: [/H\.R\.\s?1834/g],
+      citation: 'H.R. 1834: 3-year extension of enhanced ACA premium tax credits. Passed 230-196 on Jan. 8, 2026 (Roll Call 11). Stauber: NAY.'
+    },
+    {
+      patterns: [/H\.R\.\s?3967/g],
+      citation: 'H.R. 3967 (PACT Act, first House version), Roll Call 57, Mar. 3, 2022: Stauber NAY. He voted YEA on the final version (S. 3373), Roll Call 309, July 13, 2022.'
+    },
+    {
+      patterns: [/H\.\s?J\.\s?Res\.\s?72/g],
+      citation: 'H.J. Res. 72: terminate the Canada tariff emergency. Passed 219-211 on Feb. 11, 2026 (Roll Call 65). Stauber: NAY.'
     }
   ];
 
@@ -205,251 +216,103 @@ if (prevBtn && nextBtn) {
 }
 
 // Comprehensive topic message templates
+// Constituent message templates (2026). Plain-language letters with sourced facts; see each listing page for citations.
 const messageTemplates = {
-  'boundary-waters': `I am writing to express my strong opposition to sulfide-ore copper mining in the Boundary Waters Canoe Area Wilderness. Scientific evidence overwhelmingly demonstrates that this type of mining poses an unacceptable risk to one of America's most pristine wilderness areas.
+  'aca': `I'm writing about health insurance costs. The enhanced premium tax credits expired on December 31, 2025, and about 20,500 people in our district buy coverage on MNsure. On January 8, 2026, you voted against H.R. 1834, the bipartisan three-year extension that passed the House 230-196.
 
-Key concerns:
-- The proposed mining would threaten 1,100+ lakes and streams
-- Sulfide mining generates acid mine drainage that can persist for 500+ years
-- 70% of Minnesotans oppose this mining project
-- The project threatens a $900M annual tourism economy
-- The mining would impact critical wildlife habitats for 67 species of conservation concern
+For many of your constituents, especially older, self-employed and rural Minnesotans, premiums have more than doubled. Please explain your vote, and support restoring the credits.`,
 
-The potential short-term mining profits do not justify the long-term environmental destruction of this irreplaceable ecosystem.`,
+  'fuel': `I'm writing about heating and fuel costs this winter. Minnesota diesel hit a record $6.18 a gallon in September, and heating oil prices are up about 52% over the past year. Many households in our district heat with propane or fuel oil.
 
-  'mining': `I am writing to oppose proposed mining operations that threaten Minnesota's critical ecosystems and natural resources. These projects pose severe environmental and economic risks.
+On September 15, 2026, you voted against H.Con.Res. 93, the war powers resolution on the Iran conflict, which CBO estimates is costing about $38 billion over six months. Please tell me what you are doing to bring energy costs down, and protect LIHEAP heating assistance.`,
 
-Key concerns:
-- Potential contamination of critical watersheds
-- Long-term environmental damage
-- Threats to wildlife habitats
-- Disproportionate benefits to foreign mining corporations
-- Risks to local tourism and recreation economies
+  'property-tax': `I'm writing about property taxes. The law you voted for in 2025 shifts SNAP administrative costs to states and counties starting October 1, 2026. St. Louis County's preliminary 2027 levy is up 6.25%, and county leaders say federal cost shifts are part of the reason.
 
-Mining projects should not come at the expense of Minnesota's natural heritage and long-term environmental health.`,
+Please support restoring federal funding so counties aren't forced to raise property taxes or cut services.`,
 
-  'medicaid': `I am writing to oppose any attempts to privatize Minnesota's Medicaid system. This critical healthcare program serves 1.1 million vulnerable residents, including:
-- 420,000+ children
-- 175,000+ people with disabilities
-- Seniors in nursing homes
-- Rural residents with limited healthcare access
+  'economy': `I'm writing about tariffs and the border economy. The Port of Duluth-Superior had its lowest tonnage since 1938 in 2025, and Minnesota exports fell. In February 2026, the Supreme Court struck down the emergency tariffs; days earlier, you voted against H.J.Res. 72 to end the Canada tariff emergency.
 
-Privatization would:
-- Reduce coverage for those who need it most
-- Increase costs for vulnerable populations
-- Prioritize corporate profits over patient care
-- Potentially remove healthcare from 187+ families per billionaire tax cut
+Please stand up for Minnesota exporters, border businesses and the port.`,
 
-Healthcare is a human right, not a commodity to be sold to the highest bidder.`,
+  'snap': `I'm writing about food assistance. The 2025 reconciliation law you voted for cut SNAP by about $186 billion, extended work requirements to adults up to age 64, removed exemptions for veterans and others, and shifts costs to Minnesota and its counties starting October 1, 2026.
 
-  'faa': `I am deeply concerned about efforts to privatize the Federal Aviation Administration and our national air traffic control system. This proposed privatization threatens public safety and puts corporate profits ahead of passenger protection.
+Please support restoring SNAP funding and the exemptions for veterans, former foster youth and people experiencing homelessness.`,
 
-Key concerns:
-- Privatization could reduce critical safety standards
-- 2.9 million Minnesota air travelers would be at risk
-- Potential job losses for 450+ air traffic controllers
-- Increased fees and reduced service to rural airports
-- Compromising a safety system that has made U.S. aviation the safest in the world
+  'medicaid': `I'm writing about Medicaid and rural hospitals. Minnesota's Department of Human Services expects about 140,000 Minnesotans to lose Medicaid coverage starting in 2027 under the reconciliation law you voted for, and the Minnesota Hospital Association projects major revenue losses for hospitals.
 
-Public safety should never be a profit-making opportunity.`,
+Please explain how our district's hospitals and clinics will stay open, and support reversing these cuts.`,
 
-  'economy': `I am writing to express my strong opposition to the destructive 25% tariffs on Canadian goods that are devastating Minnesota's border economy. These tariffs:
-- Increase costs for Minnesota consumers
-- Harm small businesses along the border
-- Disrupt long-standing trade relationships
-- Raise prices on essential goods like lumber, dairy, and groceries
-- Potentially cost thousands of jobs in border communities
+  'ssa': `I'm writing about Social Security. About 197,000 people in our district receive benefits. The trustees now project the retirement trust fund will be depleted in 2032, with an automatic benefit cut of roughly 22% unless Congress acts, and Minnesota's Social Security offices have lost staff.
 
-Trade should build relationships, not create artificial barriers that harm local economies. These tariffs undermine economic cooperation and hurt Minnesota families and businesses.`,
+Please tell me your plan to protect full benefits and restore customer service.`,
 
-  'pardons': `I am writing to express my deep concern about the inappropriate use of presidential pardons, particularly for those involved in serious legal violations.
+  'veterans': `I'm writing about veterans' care. Our district is home to more than 44,000 veterans. The VA has cut tens of thousands of positions, the VA Inspector General found 130 severe staffing shortages at the Minneapolis VA, and the 2025 reconciliation law removed veterans' exemption from SNAP work requirements.
 
-Key concerns:
-- Pardons should not be a mechanism for avoiding accountability
-- Justice must be applied equally to all individuals
-- Pardoning those who have committed serious offenses undermines the rule of law
-- There should be transparent and ethical standards for pardon considerations
+Please support restoring VA staffing and the SNAP exemption for veterans.`,
 
-The justice system should protect the rights of all citizens, not provide special treatment for those with political connections or financial resources.`,
+  'boundary-waters': `I'm writing about the Boundary Waters. H.J.Res. 140, which you authored, repealed the 20-year mineral withdrawal upstream of the Boundary Waters and was signed on April 27, 2026. Polling shows most Minnesotans oppose copper-nickel mining near the Boundary Waters, and about 675,000 public comments were submitted during the Forest Service review.
 
-  'polymet': `I am writing to oppose the PolyMet mining project that threatens the Lake Superior watershed. This project is unacceptable because:
-- It risks 10% of the world's fresh surface water
-- Involves foreign ownership with questionable connections
-- Would generate 500+ years of potential water pollution
-- Poses catastrophic risks to the St. Louis River ecosystem
-- Cleanup costs estimated at $3-8 billion would fall on Minnesota taxpayers
+Please support permanent protection for the Boundary Waters watershed.`,
 
-The potential short-term profits do not justify the permanent environmental destruction of our critical water resources.`,
+  'superior-watershed': `I'm writing about the NewRange (formerly PolyMet) copper-nickel mine in the St. Louis River watershed. Its wetlands permit was revoked in 2023 because it could not ensure compliance with the Fond du Lac Band's water-quality standards, and the company has applied again. You also voted for the PERMIT Act, which would narrow state and tribal Clean Water Act certifications.
 
-  'ssa': `I am writing to strongly oppose any attempts to privatize Social Security. This crucial program:
-- Serves 1.1 million Minnesota seniors
-- Prevents 87% of seniors from falling into poverty
-- Provides an average benefit of $1,848 per month
-- Is a guaranteed benefit earned through decades of work
+Please support a full, science-based review and strong protections for Lake Superior.`,
 
-Privatization would:
-- Expose retirement savings to market volatility
-- Reduce guaranteed benefits
-- Increase management fees
-- Put seniors' financial security at risk
+  'national-forests': `I'm writing about the Superior and Chippewa National Forests. The USDA has proposed rescinding the Roadless Rule, which would affect about 62,000 acres in Minnesota, and the Superior National Forest has lost about 100 staff.
 
-Social Security is a promise to working Americans. It should be protected, not sold off to Wall Street.`,
+Please oppose the Roadless Rule rescission and support restoring Forest Service staffing.`,
 
-  'national-forests': `I am writing to oppose aggressive logging plans in Minnesota's national forests. These forests are critical public resources that provide:
-- Carbon sequestration (4.5 million tons annually)
-- Wildlife habitat for 1,700+ species
-- Clean water for 300+ communities
-- Recreation for 8 million annual visitors
+  'federal': `I'm writing about federal cuts in our district, including the EPA's Duluth research lab, national park and forest staff, Social Security offices, and public broadcasting, which you voted to rescind.
 
-Excessive logging would:
-- Destroy old-growth forests
-- Disrupt critical ecosystems
-- Reduce carbon capture capabilities
-- Harm local tourism and recreation economies
+Please support restoring these services, which northern Minnesota depends on.`,
 
-Our national forests are a public trust, not a commodity to be clear-cut for short-term profits.`,
+  'town-hall': `I'm asking you to hold in-person, public town hall meetings in our district before the election. Telephone town halls are not a substitute for meeting constituents face to face and answering unscreened questions.
 
-  'usps': `I am writing to oppose efforts to close rural post offices and reduce postal services. These services are critical for:
-- 350,000+ rural residents
-- 68,500+ residents receiving medications by mail
-- 1,250+ small businesses
-- 142,000+ mail-in ballot voters
-- Rural community connectivity
+Please announce dates and locations.`,
 
-Closing post offices would:
-- Increase shipping costs
-- Reduce access to essential services
-- Harm small businesses
-- Potentially disenfranchise rural voters
+  'blatnik': `I'm glad the Blatnik Bridge replacement is underway. The $1.06 billion federal grant came from the 2021 infrastructure law, which you voted against. Please be straightforward with constituents about where that money came from, and support continued infrastructure investment in our district.`,
 
-Rural communities deserve reliable postal services.`,
+  'labor': `I'm writing about workers' rights. As a former union local president, you know what collective bargaining means for working families. Please support the PRO Act and protect federal employees' bargaining rights.`,
 
-  'veterans': `I am writing to express my deep disappointment in your vote against the Honoring Our PACT Act (H.R. 3967). This legislation expanded healthcare access for 3.5 million veterans exposed to toxic burn pits, Agent Orange, and other toxins.
+  'epstein': `I'm writing about the Epstein files. The Justice Department is still withholding a large share of the records Congress required it to release. Please use your oversight authority to demand full compliance with the Epstein Files Transparency Act.`,
 
-Key concerns about your vote:
-- 300,000+ Minnesota veterans rely on VA healthcare
-- You voted against providing presumptive care for veterans suffering from service-connected cancers
-- Veterans should not have to fight a legal battle for care after fighting for our freedom
+  'civilian-safety': `I'm writing about federal immigration enforcement in Minnesota. Renee Good and Alex Pretti, both U.S. citizens, were killed by federal agents in Minneapolis in January 2026. You said "a full investigation will ensue," but the Justice Department declined to investigate Ms. Good's death and the FBI refused to share evidence with Minnesota investigators.
 
-I urge you to support future veteran healthcare legislation and explain to your constituents why you voted against caring for those who served.`,
+Please support requiring body cameras, visible identification and judicial warrants for home entries, and independent investigations of shootings by federal agents.`,
 
-  'democracy': `I am writing to express my strong opposition to your consistent votes against voting rights protections and democratic reforms.
+  'voting-rights': `I'm writing about H.R. 7320, which you introduced. It would withhold federal election-security funding from Minnesota until the Secretary of State turns over records of same-day registrations and the votes of those voters. Minnesota has one of the highest voter turnout rates in the nation, and a federal judge dismissed the Justice Department's lawsuit for our voter rolls.
 
-Key concerns about your record:
-- You voted against the Freedom to Vote: John R. Lewis Act
-- You opposed election security funding measures
-- You voted against campaign finance transparency requirements
+Please withdraw H.R. 7320 and support Minnesota's election system.`,
 
-Minnesota has a proud tradition of high voter turnout and accessible elections. Your efforts to restrict voting rights threaten this legacy. I urge you to support future voting rights legislation and oppose voter suppression tactics.`,
+  'pardons': `I'm writing about the January 6 pardons. In January 2021 you said everyone who assaulted a police officer at the Capitol should be held accountable, with "no charges dropped." About 1,500 people were later pardoned, including people who pleaded guilty to assaulting police.
 
-  'labor': `I am writing to express my deep disappointment in your consistent votes against labor rights and unions, despite representing a district built by union workers.
+As a former police officer, will you publicly state your position on those pardons?`,
 
-Key concerns:
-- You voted AGAINST the PRO Act (H.R. 842) which would strengthen collective bargaining rights
-- Minnesota's 8th District has over 35,000 union members
-- You claim to support workers but vote against them at every opportunity
-
-The Iron Range was built by union workers. Honor that legacy by actually supporting labor, not just showing up for photo ops.`,
-
-  'other': `I am deeply concerned about the ongoing efforts to privatize and sell off public resources and services in Minnesota. These assets are critical to our communities and should be preserved for the public good.
-
-My specific concerns include:
-- Protection of natural resources
-- Maintaining essential public services
-- Preserving community infrastructure
-- Preventing corporate exploitation of public assets`,
-
-  'superior-watershed': `I am writing to demand the permanent protection of the Lake Superior Watershed. This is not just a local resource; it holds 10% of the world's fresh surface water.
-
-Your support for sulfide-ore mining in this watershed recklessly endangers this global resource.
-- Sulfide mining has a 100% failure rate for preventing pollution in water-rich environments.
-- Any contamination here flows directly into Lake Superior, threatening the drinking water for millions.
-- The economic value of a clean Lake Superior far outweighs the temporary profits of foreign mining conglomerates.
-
-Please prioritize the long-term health of our water over short-term extraction.`,
-
-  'dod': `I am writing to express my concern regarding the prioritization of defense spending over critical domestic needs. While you have consistently voted for record-high defense budgets and blank checks for the Pentagon, you have simultaneously supported cuts to programs that MN-08 families rely on.
-
-- You supported the NDAA while voting to cut Head Start and SNAP.
-- We need accountability and audits for defense contractors, not endless budget increases.
-- National security includes the economic security of your constituents at home.
-
-I urge you to support a budget that prioritizes Minnesota families, not just defense contractors.`,
-
-  'education': `I am writing to express my outrage at your attempt to cut Head Start funding. In November 2023, you sponsored an amendment to H.R. 5894 that would have slashed millions from early childhood education.
-
-- This cut would have removed hundreds of children in MN-08 from Head Start.
-- It targets the most vulnerable families in our district to fund tax cuts for corporations.
-- Early education provides the highest ROI of any public investment.
-
-I urge you to commit to fully funding Head Start and stop treating our children's education as a line item to be liquidated.`,
-
-  'snap': `I am writing to oppose the draconian cuts to SNAP (Food Assistance) that you supported in the 'Limit, Save, Grow Act' (H.R. 2811).
-
-- Your vote puts 450,000+ Minnesotans at risk of food insecurity.
-- The imposition of stricter work requirements is a bureaucratic hurdle designed to kick eligible people off the program.
-- Cutting food assistance does not reduce the deficit; it only increases hunger and healthcare costs.
-
-Please stop trying to balance the budget on the backs of hungry families.`,
-
-  'civilian-safety': `I am writing to demand you support the Railway Safety Act (H.R. 1674). As a member of the Transportation Committee, your inaction on rail safety is unacceptable.
-
-- Minnesota communities are threatened by increasingly long trains carrying hazardous materials.
-- We need a federal mandate for two-person crews, not voluntary industry guidelines.
-- We need stronger defect detector requirements to prevent disasters like East Palestine.
-
-Please value the lives of your constituents over the profits of rail lobbyists.`,
-
-  'voting-rights': `I am writing to strongly oppose the 'Minnesota Voter Integrity Act' (H.R. 11/H.R. 6960) which you introduced.
-
-- This bill effectively holds Minnesota's election security funding hostage.
-- Defunding our state's election infrastructure makes our elections LESS secure, not more.
-- This is a dangerous federal overreach into state election administration.
-
-I urge you to withdraw this legislation and support full funding for HAVA grants to keep our elections safe and accessible.`,
-
-  'insulin': `I am writing to condemn your vote against the 'Affordable Insulin Now Act' (H.R. 6833).
-
-- You voted NO on capping out-of-pocket insulin costs at $35/month.
-- In MN-08, thousands of diabetics rely on this life-saving drug.
-- Voting to protect pharmaceutical profits while your constituents ration their medicine is indefensible.
-
-I urge you to support price caps on essential life-saving medications.`,
-
-  'deregulation': `I am writing to oppose the 'Prove It Act' (H.R. 7198) which you championed.
-
-- This bill gives corporations a tool to stall and block vital health and safety regulations.
-- It prioritizes corporate profit margins over clean air, clean water, and worker safety.
-- We need strong regulatory agencies to protect the public, not loopholes for big business.
-
-Please stop empowering corporate lobbyists to veto public protections.`
+  'other': `I'm writing as your constituent about an issue that matters to me and my family.`
 };
-
 
 // Corresponding subject lines for each topic
 const topicSubjects = {
-  'boundary-waters': 'Protect the Boundary Waters from Sulfide-Ore Mining',
-  'mining': 'Stop Destructive Mining Projects in Minnesota',
-  'medicaid': 'Protect Medicaid and Healthcare for Vulnerable Minnesotans',
-  'faa': 'Oppose Privatization of Air Traffic Control and Aviation Safety',
-  'economy': 'Stop Harmful Tariffs Destroying Minnesota\'s Border Economy',
-  'pardons': 'Concerns About Presidential Pardons and Accountability',
-  'polymet': 'Stop PolyMet Mining and Protect Lake Superior\'s Watershed',
-  'ssa': 'Protect Social Security for Current and Future Retirees',
-  'national-forests': 'Protect Minnesota\'s National Forests from Excessive Logging',
-  'usps': 'Protect Rural Postal Services in Minnesota',
-  'veterans': 'Support Healthcare for Veterans - Reverse Your PACT Act Vote',
-  'democracy': 'Protect Democracy and Voting Rights in Minnesota',
-  'labor': 'Support Labor Rights and Unions in Minnesota',
-  'other': 'Preserve Minnesota\'s Public Resources and Services',
-  'superior-watershed': 'Protect the Global Resource of Lake Superior',
-  'dod': 'Prioritize MN Families Over Defense Contractor Profits',
-  'education': 'Stop the Attacks on Head Start & Early Education',
-  'snap': 'Oppose Cuts to SNAP and Food Assistance',
-  'civilian-safety': 'Support the Railway Safety Act (H.R. 1674)',
-  'voting-rights': 'Withdraw the MN Voter Integrity Act (H.R. 11)',
-  'insulin': 'Support Insulin Price Caps - Explanation for H.R. 6833 Vote',
-  'deregulation': 'Oppose the "Prove It Act" and Corporate Deregulation'
+  'aca': 'Health insurance premiums: restore the ACA tax credits',
+  'fuel': 'Heating and fuel costs this winter',
+  'property-tax': 'Federal cost shifts and our property taxes',
+  'economy': 'Tariffs and the border economy',
+  'snap': 'Restore SNAP funding and exemptions',
+  'medicaid': 'Medicaid cuts and rural hospitals',
+  'ssa': 'Protect Social Security benefits and service',
+  'veterans': 'VA staffing and veterans’ benefits',
+  'boundary-waters': 'Permanent protection for the Boundary Waters',
+  'superior-watershed': 'NewRange mine and Lake Superior',
+  'national-forests': 'Oppose the Roadless Rule rescission',
+  'federal': 'Federal cuts in northern Minnesota',
+  'town-hall': 'Request for in-person town halls',
+  'blatnik': 'Blatnik Bridge and infrastructure funding',
+  'labor': 'Workers’ rights and the PRO Act',
+  'epstein': 'Full release of the Epstein files',
+  'civilian-safety': 'Accountability for federal agents in Minnesota',
+  'voting-rights': 'Withdraw H.R. 7320',
+  'pardons': 'Your position on the January 6 pardons',
+  'other': 'Message from a constituent'
 };
 
 // Setup contact form functionality
@@ -458,7 +321,7 @@ function setupContactForm() {
   const topicSelect = document.getElementById('topic');
   const messageField = document.getElementById('message');
   const nameField = document.getElementById('name');
-  const emailField = document.getElementById('email');
+  const emailField = document.getElementById('email') || document.getElementById('city');
   const previewButton = document.getElementById('preview-button');
   const modal = document.getElementById('emailModal');
   const closeBtn = document.querySelector('.close');
@@ -496,8 +359,8 @@ function setupContactForm() {
   if (previewButton) {
     previewButton.addEventListener('click', function() {
       // Form validation
-      if (!nameField.value || !emailField.value || !topicSelect.value || !messageField.value) {
-        alert("Please fill out all fields before continuing.");
+      if (!nameField.value || !topicSelect.value || !messageField.value) {
+        alert("Please add your name, a topic and a message before continuing.");
         return;
       }
       
@@ -511,73 +374,42 @@ function setupContactForm() {
 ${messageField.value}
 
 Sincerely,
-${nameField.value}
-${emailField.value}`;
+${nameField.value}${emailField && emailField.value ? '\n' + emailField.value : ''}`;
       
       emailBody.textContent = currentBody;
       
-      // Prepare full email text for copying
-      fullEmailText = `To: stauber@mail.house.gov
-Subject: ${currentSubject}
+      // Prepare full text for copying
+      fullEmailText = `Subject: ${currentSubject}
 
 ${currentBody}`;
-      
+
       // Clear previous buttons
       modalButtons.innerHTML = '';
-      
-      // Set up for mobile or desktop
-      if (isMobile) {
-        deviceMessage.textContent = "We've detected you're on a mobile device.";
-        
-        // Create "Copy to Clipboard" button for mobile
-        const copyBtn = document.createElement('button');
-        copyBtn.className = 'modal-btn primary-btn';
-        copyBtn.textContent = 'Copy Message';
-        copyBtn.addEventListener('click', copyToClipboard);
-        modalButtons.appendChild(copyBtn);
-        
-        // Create "Email App" button for mobile
-        const emailAppBtn = document.createElement('button');
-        emailAppBtn.className = 'modal-btn secondary-btn';
-        emailAppBtn.textContent = 'Open Email App';
-        emailAppBtn.addEventListener('click', function() {
-          // Try to open the native email app
-          window.location.href = `mailto:stauber@mail.house.gov?subject=${encodeURIComponent(currentSubject)}&body=${encodeURIComponent(currentBody)}`;
-          
-          // Close modal after a short delay to let the app open
-          setTimeout(function() {
-            modal.style.display = "none";
-            document.body.classList.remove('modal-open');
-          }, 500);
-        });
-        modalButtons.appendChild(emailAppBtn);
-        
-        helpText.textContent = "Tip: The 'Copy Message' button will copy everything you need, then you can paste it into your preferred email app.";
-      } else {
-        deviceMessage.textContent = "Send your message with your preferred email method:";
-        
-        // Create "Copy to Clipboard" button for desktop
-        const copyBtn = document.createElement('button');
-        copyBtn.className = 'modal-btn secondary-btn';
-        copyBtn.textContent = 'Copy to Clipboard';
-        copyBtn.addEventListener('click', copyToClipboard);
-        modalButtons.appendChild(copyBtn);
-        
-        // Create Gmail button for desktop
-        const gmailBtn = document.createElement('button');
-        gmailBtn.className = 'modal-btn primary-btn';
-        gmailBtn.innerHTML = '<i class="fab fa-google"></i> Use Gmail';
-        gmailBtn.addEventListener('click', function() {
-          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=stauber@mail.house.gov&su=${encodeURIComponent(currentSubject)}&body=${encodeURIComponent(currentBody)}`;
-          window.open(gmailUrl, '_blank');
-          modal.style.display = "none";
-          document.body.classList.remove('modal-open');
-        });
-        modalButtons.appendChild(gmailBtn);
-        
-        helpText.textContent = "Tip: If you use an email client like Outlook, click 'Copy to Clipboard' and paste into a new message.";
-      }
-      
+      deviceMessage.textContent = "Rep. Stauber takes messages through his official contact form. Copy your message, then paste it there.";
+
+      const formBtn = document.createElement('button');
+      formBtn.className = 'modal-btn primary-btn';
+      formBtn.innerHTML = '<i class="fas fa-copy"></i> Copy &amp; open his contact form';
+      formBtn.addEventListener('click', function() {
+        navigator.clipboard.writeText(fullEmailText).catch(function() {});
+        window.open('https://stauber.house.gov/contact', '_blank', 'noopener');
+        successMessage.style.display = "block";
+        setTimeout(function() { successMessage.style.display = "none"; }, 4000);
+        modal.style.display = "none";
+        document.body.classList.remove('modal-open');
+      });
+      modalButtons.appendChild(formBtn);
+
+      const callBtn = document.createElement('a');
+      callBtn.className = 'modal-btn secondary-btn';
+      callBtn.href = 'tel:+12022256211';
+      callBtn.innerHTML = '<i class="fas fa-phone"></i> Call D.C.: (202) 225-6211';
+      modalButtons.appendChild(callBtn);
+
+      helpText.textContent = isMobile
+        ? "Tip: calls are tallied by staff. Read your message aloud if you call."
+        : "Tip: the form asks for your address to confirm you live in the district. Calls to the D.C. or Hermantown office are tallied too.";
+
       // Show modal and prevent background scrolling
       modal.style.display = "block";
       document.body.classList.add('modal-open');
@@ -637,98 +469,64 @@ ${currentBody}`;
     });
   }
 }
-// Listings page search functionality
+// Listings search + portfolio filters (2026). Homepage search forwards to listings.html.
 function setupSearchFunctionality() {
-  const searchForm = document.querySelector('.search-form');
-  const searchInput = document.querySelector('.search-form input[name="q"]');
-  const categorySelect = document.querySelector('.search-form select[name="category"]');
-  const listingItems = document.querySelectorAll('.listing-item');
-  
-  // Only run if we're on a page with the search form and listings
-  if (!searchForm || !listingItems.length) {
+  var form = document.querySelector('.search-form');
+  if (!form || form.dataset.bound) return;
+  form.dataset.bound = '1';
+  var input = form.querySelector('input[name="q"]');
+  var select = form.querySelector('select[name="category"]');
+  var items = document.querySelectorAll('.listing-item');
+  var buttons = document.querySelectorAll('.filter-btn');
+
+  if (!items.length) {
+    // Not on the listings page: forward the query.
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var q = input ? input.value : '';
+      var c = select ? select.value : 'all';
+      window.location.href = 'listings.html?q=' + encodeURIComponent(q) + '&category=' + encodeURIComponent(c);
+    });
     return;
   }
-  
-  // Prevent the form from submitting and going to the error page
-  searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const searchTerm = searchInput.value.toLowerCase().trim();
-    const selectedCategory = categorySelect.value;
-    
-    // If search is empty, show all listings
-    if (!searchTerm && selectedCategory === 'all') {
-      listingItems.forEach(item => {
-        item.style.display = 'flex';
-      });
-      return;
-    }
-    
-    // Filter listings based on search term and selected category
-    listingItems.forEach(item => {
-      const itemText = item.textContent.toLowerCase();
-      const itemCategory = item.getAttribute('data-category');
-      
-      const matchesSearch = !searchTerm || itemText.includes(searchTerm);
-      const matchesCategory = selectedCategory === 'all' || 
-                             (selectedCategory === 'public' && (itemCategory === 'healthcare' || itemCategory === 'infrastructure')) ||
-                             (selectedCategory === 'parks' && itemCategory === 'environment') ||
-                             (selectedCategory === 'education' && itemText.includes('school')) ||
-                             (selectedCategory === 'healthcare' && itemCategory === 'healthcare') ||
-                             (selectedCategory === 'infrastructure' && itemCategory === 'infrastructure') ||
-                             (selectedCategory === 'government' && itemText.includes('government'));
-      
-      if (matchesSearch && matchesCategory) {
-        item.style.display = 'flex';
-      } else {
-        item.style.display = 'none';
-      }
+
+  function apply() {
+    var term = (input && input.value || '').toLowerCase().trim();
+    var cat = select ? select.value : 'all';
+    var shown = 0;
+    items.forEach(function (item) {
+      var okCat = cat === 'all' || item.getAttribute('data-category') === cat;
+      var okText = !term || item.textContent.toLowerCase().indexOf(term) !== -1;
+      item.style.display = okCat && okText ? 'flex' : 'none';
+      if (okCat && okText) shown++;
     });
-    
-    // Show a "no results" message if nothing matches
-    const visibleListings = document.querySelectorAll('.listing-item[style="display: flex;"]');
-    const noResultsMsg = document.querySelector('.no-results-message');
-    
-    if (visibleListings.length === 0) {
-      // Create message if it doesn't exist
-      if (!noResultsMsg) {
-        const message = document.createElement('div');
-        message.className = 'no-results-message';
-        message.innerHTML = `
-          <h3>No Assets Match Your Search</h3>
-          <p>Don't worry! We're working on privatizing more public resources every day.</p>
-          <p>Contact your local billionaire for custom asset acquisition.</p>
-        `;
-        document.querySelector('.listings-grid').appendChild(message);
-      } else {
-        noResultsMsg.style.display = 'block';
+    buttons.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-filter') === cat); });
+    var msg = document.querySelector('.no-results-message');
+    if (!shown) {
+      if (!msg) {
+        msg = document.createElement('div');
+        msg.className = 'no-results-message';
+        msg.innerHTML = '<h3>No Assets Match Your Search</h3><p>Don&rsquo;t worry! The agent is privatizing more public resources every day.</p>';
+        document.querySelector('.listings-grid').appendChild(msg);
       }
-    } else if (noResultsMsg) {
-      noResultsMsg.style.display = 'none';
-    }
+      msg.style.display = 'block';
+    } else if (msg) { msg.style.display = 'none'; }
+  }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); apply(); });
+  if (input) input.addEventListener('input', function () { clearTimeout(input.timer); input.timer = setTimeout(apply, 250); });
+  if (select) select.addEventListener('change', apply);
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { if (select) select.value = b.getAttribute('data-filter'); apply(); });
   });
-  
-  // Real-time search as user types (optional)
-  searchInput.addEventListener('input', function() {
-    // Simulate a form submission as the user types
-    // Add a small delay to prevent excessive filtering
-    clearTimeout(searchInput.timer);
-    searchInput.timer = setTimeout(function() {
-      const event = new Event('submit');
-      searchForm.dispatchEvent(event);
-    }, 300);
-  });
-  
-  // Real-time filtering when category changes
-  categorySelect.addEventListener('change', function() {
-    const event = new Event('submit');
-    searchForm.dispatchEvent(event);
-  });
+
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('q') && input) input.value = params.get('q');
+  if (params.get('category') && select && select.querySelector('option[value="' + params.get('category') + '"]')) select.value = params.get('category');
+  if (params.get('q') || params.get('category')) apply();
 }
 
-// Add this to the event listeners at the top of the file
 document.addEventListener('DOMContentLoaded', setupSearchFunctionality);
-window.addEventListener('load', setupSearchFunctionality);
 
 // Economy page specific functions
 function showEconomyVisitAlert() {
@@ -1917,3 +1715,51 @@ function showVotingRightsGateAlert() {
   alert("HOA APPROVAL PENDING! Unfortunately, your request to exercise your constitutional rights must first be reviewed by the DOJ, approved by Attorney General Bondi, and funded by HAVA grants that Agent Stauber has already frozen. Please try again after democracy is restored.");
 }
 
+
+
+// ---------------------------------------------------------------------------
+// 2026: Lease-renewal bar (Nov 3 election countdown) + share helpers
+// ---------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+  var ELECTION = new Date('2026-11-03T20:00:00-06:00'); // polls close 8 p.m. CT
+  var now = new Date();
+  var dismissed = false;
+  try { dismissed = sessionStorage.getItem('leaseBarClosed') === '1'; } catch (e) {}
+  if (!dismissed && now < ELECTION && !document.querySelector('.lease-bar')) {
+    var msPerDay = 86400000;
+    var days = Math.max(0, Math.ceil((ELECTION - now) / msPerDay));
+    var bar = document.createElement('div');
+    bar.className = 'lease-bar';
+    var when = days <= 1 ? '<span class="lb-days">TODAY</span>' : '<span class="lb-days">' + days + ' days</span>';
+    bar.innerHTML = '&#128499;&#65039; <strong>Lease renewal vote: Tuesday, Nov. 3.</strong> ' + when +
+      ' left &middot; Early and mail voting are open now. <a href="lease-renewal.html">How to vote in Minnesota &rarr;</a>' +
+      '<button class="lb-close" aria-label="Dismiss">&times;</button>';
+    document.body.insertBefore(bar, document.body.firstChild);
+    bar.querySelector('.lb-close').addEventListener('click', function () {
+      bar.remove();
+      try { sessionStorage.setItem('leaseBarClosed', '1'); } catch (e) {}
+    });
+  }
+
+  document.querySelectorAll('.copy-link').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var url = btn.getAttribute('data-url') || window.location.href;
+      var done = function () { var t = btn.textContent; btn.textContent = 'Copied!'; setTimeout(function () { btn.textContent = t; }, 1600); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copy this link:', url); });
+      } else { window.prompt('Copy this link:', url); }
+    });
+  });
+
+  // Live countdown on the lease-renewal page
+  var cd = document.getElementById('lease-countdown');
+  if (cd) {
+    var tick = function () {
+      var d = ELECTION - new Date();
+      if (d <= 0) { cd.innerHTML = '<div><b>0</b><span>Polls closed</span></div>'; return; }
+      var dd = Math.floor(d / 86400000), hh = Math.floor(d / 3600000) % 24, mm = Math.floor(d / 60000) % 60;
+      cd.innerHTML = '<div><b>' + dd + '</b><span>Days</span></div><div><b>' + hh + '</b><span>Hours</span></div><div><b>' + mm + '</b><span>Minutes</span></div>';
+    };
+    tick(); setInterval(tick, 30000);
+  }
+});
